@@ -508,10 +508,18 @@ public:
             delete instance;
     }
        
-     if (nom == "Kaiminus") { 
-         int KaiBonus = 20; //bonus de puissance pour le roi Kaiminus
-         HP = HP * KaiBonus;
-         degats = degats * KaiBonus; }
+     
+        if (nom == "Kaiminus") {
+            int KaiBonus = 20; //bonus de puissance pour le roi Kaiminus
+
+            leRoiKai(KaiBonus);
+
+            std::cout << "Le roi entre en scène" << std::endl;
+
+            std::cout << nom << " active sa capacité 'Aura du roi'" << std::endl;
+           
+
+        }
 
     } //fin du constructeur
 
@@ -522,6 +530,12 @@ public:
     virtual std::unordered_map<std::string, float> getResistances() {
         return resistances;
     }
+
+    virtual void leRoiKai(int KaiBonus) {
+        HP *= KaiBonus;
+        degats *= KaiBonus;
+    }
+    
 
     virtual void attaquer(Pokemon& cible) {
         float multiplicateur = 1.0;
@@ -539,8 +553,10 @@ public:
                 multiplicateur *= cible.resistances[TypeAttaque];
 
             }
+            std::cout << "degats de l'attaque de " <<nom<< " : " << degats << std::endl;
 
             int degatsFinal = static_cast<int>(degats * multiplicateur); //statit_cast pour mettre en int
+            std::cout << "degats final infligé a la cible "<<cible.nom<< " :" << degatsFinal << std::endl;
             
             cible.recevoireDegats(degatsFinal); //la cible prend un pied bouche
             if (multiplicateur == 1) {
@@ -551,7 +567,7 @@ public:
                 std::cout << nom << " attaque " << cible.nom << " avec " << attaque <<". C'est super efficace !" << std::endl;
 
             }
-            else if (0 < multiplicateur < 1) {
+            else if ((0 < multiplicateur) and (multiplicateur < 1)) {
                 std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << std::endl;
 
             }
@@ -559,7 +575,7 @@ public:
                 std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet ! (noob)" << std::endl;
 
             }
-
+            cible.afficherDegats(degatsFinal);
     
     }
 
@@ -567,9 +583,35 @@ public:
     virtual void recevoireDegats(int degatsReçus) {
         HP -= degatsReçus;
         if (HP < 0) { HP = 0; }
-        std::cout << nom << " reçoit " << degatsReçus << " dégats. Il lui reste " << HP << " HP." << std::endl;
+    }
+
+    virtual void afficherDegats(int degatsFinal) {
+    std::cout << nom << " reçoit " << degatsFinal << " dégats. Il lui reste " << HP << " HP." << std::endl;
+
     }
 
     
 
 };
+
+int main() {
+    Pokemon pikachu("Pikachu", { "Electrik" }, 100, "Eclair", "Electrik", 40);
+    Pokemon bulbizarre("Bulbizarre", { "Plante" , "Poison"}, 80, "Fouet Lianes", "Plante", 30);
+    Pokemon kaiminus("Kaiminus", { "Eau" }, 50, "Morsure", "Tenebres", 60);
+    Pokemon topiqueur("Topiqueur", { "Sol" }, 50, "Seisme", "Sol", 100);
+
+
+    //td::cout << kaiminus.degats << std::endl;
+
+    //pika attaque top
+
+    pikachu.attaquer(topiqueur);
+
+
+    //le roi Kai attaque pika
+
+    kaiminus.attaquer(pikachu);
+
+
+
+}
