@@ -432,15 +432,18 @@ public:
     std::unordered_map<std::string, float> resistances;
 
     int HP;
-    std::string attaque;
+    std::string attaque; //pour l'instant que une attaque (on verra si on en fait plus apres)
+    std::string TypeAttaque;
     int degats;
-    int KaiBonus = 20; //bonus de puissance pour le roi Kaiminus
+    
      
     Pokemon(std::string nom,
         std::vector<std::string> t,
         int HP,
         std::string attaque,
-        int degats) : nom(nom), types(t), HP(HP), attaque(attaque), degats(degats) { //debut constructeur
+        std::string TypeAttaque,
+        int degats) : nom(nom), types(t), HP(HP), attaque(attaque),
+        TypeAttaque(TypeAttaque) , degats(degats) { //debut constructeur
 
 
         std::vector<Type*> instances;
@@ -505,7 +508,10 @@ public:
             delete instance;
     }
        
-     if (nom == "Kaiminus") { HP = HP * KaiBonus; degats = degats * KaiBonus; }
+     if (nom == "Kaiminus") { 
+         int KaiBonus = 20; //bonus de puissance pour le roi Kaiminus
+         HP = HP * KaiBonus;
+         degats = degats * KaiBonus; }
 
     } //fin du constructeur
 
@@ -521,9 +527,39 @@ public:
         float multiplicateur = 1.0;
         //on regarde les faiblesses et res de la cible
 
-        for (const auto& type : types) {
-            if (cible.faiblesses.find())
-        }
+        
+            if (cible.faiblesses.find(TypeAttaque) != cible.faiblesses.end()) {
+                /*faiblesse.find() = faiblesse.end() ça veut dire que find n'a rien trouvé */
+
+                multiplicateur *= cible.faiblesses[TypeAttaque];
+
+            }
+            if (cible.resistances.find(TypeAttaque) != cible.resistances.end()) {
+
+                multiplicateur *= cible.resistances[TypeAttaque];
+
+            }
+
+            int degatsFinal = static_cast<int>(degats * multiplicateur); //statit_cast pour mettre en int
+            
+            cible.recevoireDegats(degatsFinal); //la cible prend un pied bouche
+            if (multiplicateur == 1) {
+                std::cout << nom << " attaque " << cible.nom << " avec " << attaque <<"."<< std::endl;
+
+            }
+            else if (multiplicateur > 1) {
+                std::cout << nom << " attaque " << cible.nom << " avec " << attaque <<". C'est super efficace !" << std::endl;
+
+            }
+            else if (0 < multiplicateur < 1) {
+                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << std::endl;
+
+            }
+            else if (multiplicateur == 0) {
+                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet !" << std::endl;
+
+            }
+
     
     }
 
