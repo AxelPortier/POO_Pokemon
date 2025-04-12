@@ -16,7 +16,7 @@ class Type {
 public: //vu qu'on veut y avoir accès facilement
 	std::string nom; //nom du type (eau, feu...)
 	std::unordered_map<std::string, float> faiblesses;
-	//c'est juste un dico, la clef est un string et la valeurs un double
+	//c'est juste un dico, la clef est un string et la valeurs un float
 
 	std::unordered_map<std::string, float> resistances;
 
