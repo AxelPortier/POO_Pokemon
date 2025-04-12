@@ -28,6 +28,31 @@ public: //vu qu'on veut y avoir accès facilement
 	virtual void defResistances() = 0;
 
 };
+
+/*
+les faiblesses et resistances sot def a partir des données du jeu trouvées 
+sur internet et non sur le tableau du sujet qui est incomplet
+
+*/
+
+class TypeNormal : public Type {
+public:
+    TypeNormal() : Type("Normal") {
+        defFaiblesses();
+        defResistances(); // on appelle nos fonctions
+    }
+
+    void defFaiblesses() override {
+        faiblesses["Combat"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
+    }
+
+    void defResistances() override {
+        resistances["Spectre"] = 0.0; 
+        // pareil avec les résistances, ici le type Normal n'est pas affécté par le type spectre donc mult = 0
+        
+    }
+};
+
 class TypeFeu : public Type {
 public:
     TypeFeu() : Type("Feu") {
@@ -37,7 +62,7 @@ public:
 
     void defFaiblesses() override {
         faiblesses["Eau"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
-        faiblesses["Roche"] = 2.0;
+        //faiblesses["Roche"] = 2.0;
         faiblesses["Sol"] = 2.0;
     }
 
@@ -46,7 +71,8 @@ public:
         resistances["Glace"] = 0.5;
         resistances["Insecte"] = 0.5;
         resistances["Acier"] = 0.5;
-        resistances["Fée"] = 0.5;
+        //resistances["Fée"] = 0.5;
+        resistances["Feu"] = 0.5;
     }
 };
 
@@ -66,7 +92,7 @@ public:
         resistances["Feu"] = 0.5; // pareil avec les résistances
         resistances["Eau"] = 0.5;
         resistances["Glace"] = 0.5;
-        resistances["Acier"] = 0.5;
+        //resistances["Acier"] = 0.5;
     }
 };
 
@@ -88,7 +114,15 @@ public:
     void defResistances() override {
         resistances["Eau"] = 0.5;
         resistances["Sol"] = 0.5;
-        resistances["Roche"] = 0.5;
+        //resistances["Roche"] = 0.5;
+        resistances["Plante"] = 0.5;
+        resistances["Electrik"] = 0.5;
+        resistances["Acier"] = 0.5;
+        resistances["Fée"] = 0.5;
+
+
+
+
     }
 };
 
@@ -186,6 +220,9 @@ public:
     void defResistances() override {
         resistances["Poison"] = 0.5;
         resistances["Roche"] = 0.5;
+        resistances["Electrik"] = 0.0; //sol pas affecté par elec
+
+
     }
 };
 
@@ -286,6 +323,10 @@ public:
     void defResistances() override {
         resistances["Poison"] = 0.5;
         resistances["Insecte"] = 0.5;
+        resistances["Normal"] = 0.0; //spectre pas affecté par normal
+        resistances["Combat"] = 0.0; //spectre pas affecté par combat
+
+
     }
 };
 
@@ -325,7 +366,7 @@ public:
 
     void defResistances() override {
         resistances["Spectre"] = 0.5;
-        resistances["Psy"] = 0.5;
+        resistances["Psy"] = 0.0; //tenebre pas affecté par psy
         resistances["Ténèbres"] = 0.5;
     }
 };
@@ -354,6 +395,8 @@ public:
         resistances["Dragon"] = 0.5;
         resistances["Acier"] = 0.5;
         resistances["Fée"] = 0.5;
+        resistances["Poison"] = 0.0;
+
     }
 };
 
@@ -373,9 +416,11 @@ public:
         resistances["Combat"] = 0.5;
         resistances["Insecte"] = 0.5;
         resistances["Ténèbres"] = 0.5;
-        resistances["Dragon"] = 0.5;
+        resistances["Dragon"] = 0.0; //fée pas affecté par dragon
     }
 };
+
+
 
 class Pokemon {
 public:
@@ -423,6 +468,7 @@ public:
             else if (typeNom == "Ténèbres") { instances.push_back(new TypeTenebres()); }
             else if (typeNom == "Acier") { instances.push_back(new TypeAcier()); }
             else if (typeNom == "Fée") { instances.push_back(new TypeFee()); }
+            else if (typeNom == "Normal") { instances.push_back(new TypeNormal()); }
 
         }
 
@@ -461,11 +507,6 @@ public:
 
     } //fin du constructeur
 
-    virtual void attaquer() {}
-
-
-    virtual void recevoireDegats() {}
-
     virtual std::unordered_map<std::string, float> getFaiblesses() {
         return faiblesses;
     }
@@ -473,5 +514,24 @@ public:
     virtual std::unordered_map<std::string, float> getResistances() {
         return resistances;
     }
+
+    virtual void attaquer(Pokemon& cible) {
+        float multiplicateur = 1.0;
+        //on regarde les faiblesses et res de la cible
+
+        for (const auto& type : types) {
+            if (cible.faiblesses.find())
+        }
+    
+    }
+
+
+    virtual void recevoireDegats(int degatsReçus) {
+        HP -= degatsReçus;
+        if (HP < 0) { HP = 0; }
+        std::cout << nom << " reçoit " << degatsReçus << " dégats. Il lui reste " << HP << " HP." << std::endl;
+    }
+
+    
 
 };
