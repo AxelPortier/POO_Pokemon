@@ -434,7 +434,8 @@ public:
     int HP;
     std::string attaque;
     int degats;
-
+    int KaiBonus = 20; //bonus de puissance pour le roi Kaiminus
+     
     Pokemon(std::string nom,
         std::vector<std::string> t,
         int HP,
@@ -504,6 +505,7 @@ public:
             delete instance;
     }
        
+     if (nom == "Kaiminus") { HP = HP * KaiBonus; degats = degats * KaiBonus; }
 
     } //fin du constructeur
 
