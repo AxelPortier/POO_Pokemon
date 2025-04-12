@@ -556,7 +556,7 @@ public:
 
             }
             else if (multiplicateur == 0) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet !" << std::endl;
+                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet ! (noob)" << std::endl;
 
             }
 
