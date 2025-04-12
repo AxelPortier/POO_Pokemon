@@ -590,6 +590,21 @@ public:
 
     }
 
+    virtual void afficherFaiblesses() {
+        std::cout << "Faiblesses de " << nom << " : "<<std::endl;
+        for (const auto& f : faiblesses) {
+            std::cout << f.first << std::endl;
+        }
+    }
+
+    virtual void afficherResistances() {
+        std::cout << "Resistances de " << nom << " : " << std::endl;
+
+        for (const auto& r : resistances) {
+            std::cout << r.first << std::endl;
+        }
+    }
+    
     
 
 };
@@ -602,6 +617,8 @@ int main() {
 
 
     //td::cout << kaiminus.degats << std::endl;
+
+    kaiminus.afficherFaiblesses();
 
     //pika attaque top
 
