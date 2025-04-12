@@ -394,15 +394,75 @@ public:
         std::vector<std::string> t,
         int HP,
         std::string attaque,
-        int degats) : nom(nom), types(t) , HP(HP), attaque(attaque), degats(degats) {
+        int degats) : nom(nom), types(t), HP(HP), attaque(attaque), degats(degats) { //debut constructeur
 
 
+        std::vector<Type*> instances;
+        /*
+       vecteur de Type qu'on va remplir d'instances des classes TypeTruc
+       en fonction des string qu'on a mis en entrée
 
+       on va donc créer des instances de Type en parcourant le vecteur de string
+        */
+
+        for (const std::string& typeNom : t) {
+            if (typeNom == "Feu") { instances.push_back(new TypeFeu()); }
+            else if (typeNom == "Eau") { instances.push_back(new TypeEau()); }
+            else if (typeNom == "Plante") { instances.push_back(new TypePlante()); }
+            else if (typeNom == "Électrik") { instances.push_back(new TypeElectrik()); }
+            else if (typeNom == "Glace") { instances.push_back(new TypeGlace()); }
+            else if (typeNom == "Combat") { instances.push_back(new TypeCombat()); }
+            else if (typeNom == "Poison") { instances.push_back(new TypePoison()); }
+            else if (typeNom == "Sol") { instances.push_back(new TypeSol()); }
+            else if (typeNom == "Vol") { instances.push_back(new TypeVol()); }
+            else if (typeNom == "Psy") { instances.push_back(new TypePsy()); }
+            else if (typeNom == "Insecte") { instances.push_back(new TypeInsecte()); }
+            else if (typeNom == "Roche") { instances.push_back(new TypeRoche()); }
+            else if (typeNom == "Spectre") { instances.push_back(new TypeSpectre()); }
+            else if (typeNom == "Dragon") { instances.push_back(new TypeDragon()); }
+            else if (typeNom == "Ténèbres") { instances.push_back(new TypeTenebres()); }
+            else if (typeNom == "Acier") { instances.push_back(new TypeAcier()); }
+            else if (typeNom == "Fée") { instances.push_back(new TypeFee()); }
+
+        }
+
+        /*
+        ensuite on met a jour les faiblesses et res du pokemon en fusionnant ceux de
+        chaques types ( si y'en a plusieurs)
+
+        auto& type parce que faut que ça s'adapte a la class en question
+
+        type-> faiblesses c'est les faiblesses du type et this->faiblesses c'est les faiblesses du pokemon
+
+    this->faiblesses[f.first] += f.second;
+    f.first c'est le nom du type auquel on est faible et f.second c'est le mult (2 ici)
+    si la faiblesse du type est pas deja dans les faiblesses du pok on l'ajoute
+    et si elle y est déja on met juste a jour sa valeurs
+
+
+        */
+
+        for (const auto& type : instances) { //on parcours le ou les Types de instances
+            for (const auto& f : type->faiblesses) {
+                this->faiblesses[f.first] += f.second; //mise a jours des faiblesses
+            }
+
+            for (const auto& r : type->resistances) {
+                this->resistances[r.first] += r.second;//mise a j des res
+            }
+        }
+
+        //on degage les pointeurs
+
+        for (auto instance : instances){
+            delete instance;
     }
+       
+
+    } //fin du constructeur
 
     virtual void attaquer() {}
 
 
     virtual void recevoireDegats() {}
 };
-
