@@ -465,4 +465,13 @@ public:
 
 
     virtual void recevoireDegats() {}
+
+    virtual std::unordered_map<std::string, float> getFaiblesses() {
+        return faiblesses;
+    }
+
+    virtual std::unordered_map<std::string, float> getResistances() {
+        return resistances;
+    }
+
 };
