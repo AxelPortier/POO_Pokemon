@@ -13,19 +13,24 @@
 
 
 class Type {
-public: //vu qu'on veut y avoir accès facilement
+protected: 
 	std::string nom; //nom du type (eau, feu...)
 	std::unordered_map<std::string, float> faiblesses;
-	//c'est juste un dico, la clef est un string et la valeurs un float
+	//c'est juste un dico, la clef est un string et la valeurs un float (type : multiplicateur)
 
 	std::unordered_map<std::string, float> resistances;
 
+public:
 	Type(std::string n) : nom(n) {}
 
 	~Type() {}
 
 	virtual void defFaiblesses() = 0; //on va les override dans les ss classes
 	virtual void defResistances() = 0;
+
+    std::unordered_map<std::string, float> getFaiblesses() { return faiblesses; }
+    std::unordered_map<std::string, float> getResistances() { return resistances; }
+
 
 };
 
@@ -39,7 +44,10 @@ class TypeNormal : public Type {
 public:
     TypeNormal() : Type("Normal") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -57,7 +65,10 @@ class TypeFeu : public Type {
 public:
     TypeFeu() : Type("Feu") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -80,7 +91,10 @@ class TypeEau : public Type {
 public:
     TypeEau() : Type("Eau") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -100,7 +114,10 @@ class TypePlante : public Type {
 public:
     TypePlante() : Type("Plante") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -130,7 +147,10 @@ class TypeElectrik : public Type {
 public:
     TypeElectrik() : Type("Électrik") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -148,7 +168,10 @@ class TypeGlace : public Type {
 public:
     TypeGlace() : Type("Glace") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -167,7 +190,10 @@ class TypeCombat : public Type {
 public:
     TypeCombat() : Type("Combat") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -187,7 +213,10 @@ class TypePoison : public Type {
 public:
     TypePoison() : Type("Poison") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -208,7 +237,10 @@ class TypeSol : public Type {
 public:
     TypeSol() : Type("Sol") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -230,7 +262,10 @@ class TypeVol : public Type {
 public:
     TypeVol() : Type("Vol") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -250,7 +285,10 @@ class TypePsy : public Type {
 public:
     TypePsy() : Type("Psy") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -269,7 +307,10 @@ class TypeInsecte : public Type {
 public:
     TypeInsecte() : Type("Insecte") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -289,7 +330,10 @@ class TypeRoche : public Type {
 public:
     TypeRoche() : Type("Roche") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -312,7 +356,10 @@ class TypeSpectre : public Type {
 public:
     TypeSpectre() : Type("Spectre") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -334,7 +381,10 @@ class TypeDragon : public Type {
 public:
     TypeDragon() : Type("Dragon") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -355,7 +405,10 @@ class TypeTenebres : public Type {
 public:
     TypeTenebres() : Type("Ténèbres") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -375,7 +428,10 @@ class TypeAcier : public Type {
 public:
     TypeAcier() : Type("Acier") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -404,7 +460,10 @@ class TypeFee : public Type {
 public:
     TypeFee() : Type("Fée") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions
+        defResistances(); // on appelle nos fonctions pour les overrides
+
+        getFaiblesses();
+        getResistances();
     }
 
     void defFaiblesses() override {
@@ -423,20 +482,20 @@ public:
 
 
 class Pokemon {
-public:
+private:
     std::string nom;
 
     std::vector<std::string> types; //vecteur qui prend 1 ou 2 noms de types
 
-    std::unordered_map<std::string, float> faiblesses;
-    std::unordered_map<std::string, float> resistances;
+    std::unordered_map<std::string, float> faiblesses_Pokemon;
+    std::unordered_map<std::string, float> resistances_Pokemon;
 
     int HP;
     std::string attaque; //pour l'instant que une attaque (on verra si on en fait plus apres)
     std::string TypeAttaque;
     int degats;
     
-     
+public:  
     Pokemon(std::string nom,
         std::vector<std::string> t,
         int HP,
@@ -492,13 +551,15 @@ public:
 
         */
 
+
+
         for (const auto& type : instances) { //on parcours le ou les Types de instances
-            for (const auto& f : type->faiblesses) {
-                this->faiblesses[f.first] += f.second; //mise a jours des faiblesses
+            for (const auto& f : type->getFaiblesses()) {
+                this->faiblesses_Pokemon[f.first] += f.second; //mise a jours des faiblesses
             }
 
-            for (const auto& r : type->resistances) {
-                this->resistances[r.first] += r.second;//mise a j des res
+            for (const auto& r : type->getResistances()) {
+                this->resistances_Pokemon[r.first] += r.second;//mise a j des res
             }
         }
 
@@ -522,13 +583,20 @@ public:
         }
 
     } //fin du constructeur
+    /*
+    nom(nom), types(t), HP(HP), attaque(attaque),
+        TypeAttaque(TypeAttaque) , degats(degats)*/
 
-    virtual std::unordered_map<std::string, float> getFaiblesses() {
-        return faiblesses;
+
+
+    virtual std::string getNom() { return nom; }
+
+    virtual std::unordered_map<std::string, float> getFaiblesses_Pokemon() {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
+        return faiblesses_Pokemon;
     }
 
-    virtual std::unordered_map<std::string, float> getResistances() {
-        return resistances;
+    virtual std::unordered_map<std::string, float> getResistances_Pokemon() {
+        return resistances_Pokemon;
     }
 
     virtual void leRoiKai(int KaiBonus) {
@@ -537,20 +605,20 @@ public:
     }
     
 
-    virtual void attaquer(Pokemon& cible) {
+    virtual void attaquer(Pokemon& cible) { //là j'ai mis faiblesses_pokemon, je capte pas trop pk il aime pas quand je met plutot getFaiblesses_Pokemon mais bon ça marche donc on va pas le triturer
         float multiplicateur = 1.0;
         //on regarde les faiblesses et res de la cible
 
         
-            if (cible.faiblesses.find(TypeAttaque) != cible.faiblesses.end()) {
+            if (cible.faiblesses_Pokemon.find(TypeAttaque) != cible.faiblesses_Pokemon.end()) {
                 /*faiblesse.find() = faiblesse.end() ça veut dire que find n'a rien trouvé */
 
-                multiplicateur *= cible.faiblesses[TypeAttaque];
+                multiplicateur *= cible.faiblesses_Pokemon[TypeAttaque];
 
             }
-            if (cible.resistances.find(TypeAttaque) != cible.resistances.end()) {
+            if (cible.resistances_Pokemon.find(TypeAttaque) != cible.resistances_Pokemon.end()) {
 
-                multiplicateur *= cible.resistances[TypeAttaque];
+                multiplicateur *= cible.resistances_Pokemon[TypeAttaque];
 
             }
             std::cout << "degats de l'attaque de " <<nom<< " : " << degats << std::endl;
@@ -592,7 +660,7 @@ public:
 
     virtual void afficherFaiblesses() {
         std::cout << "Faiblesses de " << nom << " : "<<std::endl;
-        for (const auto& f : faiblesses) {
+        for (const auto& f : faiblesses_Pokemon) {
             std::cout << f.first << std::endl;
         }
     }
@@ -600,35 +668,12 @@ public:
     virtual void afficherResistances() {
         std::cout << "Resistances de " << nom << " : " << std::endl;
 
-        for (const auto& r : resistances) {
+        for (const auto& r : resistances_Pokemon) {
             std::cout << r.first << std::endl;
         }
     }
     
-    
+     
 
 };
 
-int main() {
-    Pokemon pikachu("Pikachu", { "Electrik" }, 100, "Eclair", "Electrik", 40);
-    Pokemon bulbizarre("Bulbizarre", { "Plante" , "Poison"}, 80, "Fouet Lianes", "Plante", 30);
-    Pokemon kaiminus("Kaiminus", { "Eau" }, 50, "Morsure", "Tenebres", 60);
-    Pokemon topiqueur("Topiqueur", { "Sol" }, 50, "Seisme", "Sol", 100);
-
-
-    //td::cout << kaiminus.degats << std::endl;
-
-    kaiminus.afficherFaiblesses();
-
-    //pika attaque top
-
-    pikachu.attaquer(topiqueur);
-
-
-    //le roi Kai attaque pika
-
-    kaiminus.attaquer(pikachu);
-
-
-
-}
