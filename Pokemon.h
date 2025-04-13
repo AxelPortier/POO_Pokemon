@@ -571,7 +571,7 @@ public:
        
      
         if (nom == "Kaiminus") {
-            int KaiBonus = 20; //bonus de puissance pour le roi Kaiminus
+            int KaiBonus = 5; //bonus de puissance pour le roi Kaiminus
 
             leRoiKai(KaiBonus);
 
@@ -591,6 +591,9 @@ public:
 
     virtual std::string getNom() { return nom; }
 
+    virtual int getHP() { return HP; }
+    virtual int getDegats() { return degats; }
+
     virtual std::unordered_map<std::string, float> getFaiblesses_Pokemon() {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
         return faiblesses_Pokemon;
     }
@@ -599,9 +602,17 @@ public:
         return resistances_Pokemon;
     }
 
-    virtual void leRoiKai(int KaiBonus) {
-        HP *= KaiBonus;
-        degats *= KaiBonus;
+    virtual void setDegats(float newDegats) {
+        degats = static_cast<int>(std::round(newDegats)); //pour garder les degats en int j'arrondie et je met en int (le mult du maitre est un float ça m'a bien cassé la tete)
+    }
+
+    virtual void setHP(int newHP) {
+        HP = newHP;
+    }
+
+    virtual void leRoiKai(int KaiBonus) { //si on a kaiminus
+        setDegats(degats * KaiBonus);
+        setHP(HP * KaiBonus);
     }
     
 
