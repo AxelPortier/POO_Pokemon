@@ -2,14 +2,14 @@
 #include <iostream>
 #include <vector>
 #include <utility>
-#include <iostream>
-#include <vector>
 #include <algorithm>
 #include <map>
 #include <set>
 #include <string>
 #include <Windows.h>
 #include <unordered_map>
+#include <cstdlib> // Pour rand() et srand()
+#include <ctime>   // Pour time()
 
 
 class Type {
@@ -28,8 +28,8 @@ public:
 	virtual void defFaiblesses() = 0; //on va les override dans les ss classes
 	virtual void defResistances() = 0;
 
-    std::unordered_map<std::string, float> getFaiblesses() { return faiblesses; }
-    std::unordered_map<std::string, float> getResistances() { return resistances; }
+    std::unordered_map<std::string, float> getFaiblesses() const { return faiblesses; }
+    std::unordered_map<std::string, float> getResistances() const { return resistances; }
 
 
 };
@@ -46,8 +46,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -67,8 +66,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -93,8 +91,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -116,8 +113,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -149,8 +145,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -170,8 +165,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+       
     }
 
     void defFaiblesses() override {
@@ -192,8 +186,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -215,8 +208,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -239,8 +231,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -264,8 +255,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+       
     }
 
     void defFaiblesses() override {
@@ -287,8 +277,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -309,8 +298,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -332,8 +320,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -358,8 +345,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -383,8 +369,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -407,8 +392,6 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
     }
 
     void defFaiblesses() override {
@@ -430,8 +413,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -462,8 +444,7 @@ public:
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
 
-        getFaiblesses();
-        getResistances();
+        
     }
 
     void defFaiblesses() override {
@@ -479,10 +460,13 @@ public:
     }
 };
 
-
+void toLowerCase(std::string& str) {
+    std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+}
 
 class Pokemon {
 private:
+    bool KO = false;
     std::string nom;
 
     std::vector<std::string> types; //vecteur qui prend 1 ou 2 noms de types
@@ -494,6 +478,7 @@ private:
     std::string attaque; //pour l'instant que une attaque (on verra si on en fait plus apres)
     std::string TypeAttaque;
     int degats;
+    int HPmax; //juste pour faire HP/HPmax sur l'interface (les pv restants quoi)
     
 public:  
     Pokemon(std::string nom,
@@ -504,7 +489,7 @@ public:
         int degats) : nom(nom), types(t), HP(HP), attaque(attaque),
         TypeAttaque(TypeAttaque) , degats(degats) { //debut constructeur
 
-
+        HPmax = HP;
         std::vector<Type*> instances;
         /*
        vecteur de Type qu'on va remplir d'instances des classes TypeTruc
@@ -513,25 +498,28 @@ public:
        on va donc créer des instances de Type en parcourant le vecteur de string
         */
 
-        for (const std::string& typeNom : t) {
-            if (typeNom == "Feu") { instances.push_back(new TypeFeu()); }
-            else if (typeNom == "Eau") { instances.push_back(new TypeEau()); }
-            else if (typeNom == "Plante") { instances.push_back(new TypePlante()); }
-            else if (typeNom == "Électrik") { instances.push_back(new TypeElectrik()); }
-            else if (typeNom == "Glace") { instances.push_back(new TypeGlace()); }
-            else if (typeNom == "Combat") { instances.push_back(new TypeCombat()); }
-            else if (typeNom == "Poison") { instances.push_back(new TypePoison()); }
-            else if (typeNom == "Sol") { instances.push_back(new TypeSol()); }
-            else if (typeNom == "Vol") { instances.push_back(new TypeVol()); }
-            else if (typeNom == "Psy") { instances.push_back(new TypePsy()); }
-            else if (typeNom == "Insecte") { instances.push_back(new TypeInsecte()); }
-            else if (typeNom == "Roche") { instances.push_back(new TypeRoche()); }
-            else if (typeNom == "Spectre") { instances.push_back(new TypeSpectre()); }
-            else if (typeNom == "Dragon") { instances.push_back(new TypeDragon()); }
-            else if (typeNom == "Ténèbres") { instances.push_back(new TypeTenebres()); }
-            else if (typeNom == "Acier") { instances.push_back(new TypeAcier()); }
-            else if (typeNom == "Fée") { instances.push_back(new TypeFee()); }
-            else if (typeNom == "Normal") { instances.push_back(new TypeNormal()); }
+
+
+        for (std::string& typeNom : t) {
+            toLowerCase(typeNom); //pour eviter de causer des prblms si on oublis les majuscules (pour les accents c'est trop chiant on fait sans)
+            if (typeNom == "feu") { instances.push_back(new TypeFeu()); }
+            else if (typeNom == "eau") { instances.push_back(new TypeEau()); }
+            else if (typeNom == "plante") { instances.push_back(new TypePlante()); }
+            else if (typeNom == "electrik") { instances.push_back(new TypeElectrik()); }
+            else if (typeNom == "glace") { instances.push_back(new TypeGlace()); }
+            else if (typeNom == "combat") { instances.push_back(new TypeCombat()); }
+            else if (typeNom == "poison") { instances.push_back(new TypePoison()); }
+            else if (typeNom == "sol") { instances.push_back(new TypeSol()); }
+            else if (typeNom == "vol") { instances.push_back(new TypeVol()); }
+            else if (typeNom == "psy") { instances.push_back(new TypePsy()); }
+            else if (typeNom == "insecte") { instances.push_back(new TypeInsecte()); }
+            else if (typeNom == "roche") { instances.push_back(new TypeRoche()); }
+            else if (typeNom == "spectre") { instances.push_back(new TypeSpectre()); }
+            else if (typeNom == "dragon") { instances.push_back(new TypeDragon()); }
+            else if (typeNom == "tenebres") { instances.push_back(new TypeTenebres()); }
+            else if (typeNom == "acier") { instances.push_back(new TypeAcier()); }
+            else if (typeNom == "fee") { instances.push_back(new TypeFee()); }
+            else if (typeNom == "normal") { instances.push_back(new TypeNormal()); }
 
         }
 
@@ -587,36 +575,37 @@ public:
     nom(nom), types(t), HP(HP), attaque(attaque),
         TypeAttaque(TypeAttaque) , degats(degats)*/
 
+    //les getters
 
+     std::string getNom() const { return nom; }
+     int getHP() const { return HP; }
+     int getDegats() const { return degats; }
 
-    virtual std::string getNom() { return nom; }
-
-    virtual int getHP() { return HP; }
-    virtual int getDegats() { return degats; }
-
-    virtual std::unordered_map<std::string, float> getFaiblesses_Pokemon() {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
+     std::unordered_map<std::string, float> getFaiblesses_Pokemon() const {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
         return faiblesses_Pokemon;
     }
 
-    virtual std::unordered_map<std::string, float> getResistances_Pokemon() {
+     std::unordered_map<std::string, float> getResistances_Pokemon() const {
         return resistances_Pokemon;
     }
 
-    virtual void setDegats(float newDegats) {
+    //les setters
+
+     void setDegats(float newDegats) {
         degats = static_cast<int>(std::round(newDegats)); //pour garder les degats en int j'arrondie et je met en int (le mult du maitre est un float ça m'a bien cassé la tete)
     }
 
-    virtual void setHP(int newHP) {
+     void setHP(int newHP) {
         HP = newHP;
     }
 
-    virtual void leRoiKai(int KaiBonus) { //si on a kaiminus
+     void leRoiKai(int KaiBonus) { //si on a kaiminus
         setDegats(degats * KaiBonus);
         setHP(HP * KaiBonus);
     }
     
 
-    virtual void attaquer(Pokemon& cible) { //là j'ai mis faiblesses_pokemon, je capte pas trop pk il aime pas quand je met plutot getFaiblesses_Pokemon mais bon ça marche donc on va pas le triturer
+     void attaquer(Pokemon& cible) { 
         float multiplicateur = 1.0;
         //on regarde les faiblesses et res de la cible
 
@@ -659,30 +648,38 @@ public:
     }
 
 
-    virtual void recevoireDegats(int degatsReçus) {
+     void recevoireDegats(int degatsReçus) {
         HP -= degatsReçus;
         if (HP < 0) { HP = 0; }
     }
 
-    virtual void afficherDegats(int degatsFinal) {
+     void afficherDegats(int degatsFinal) {
     std::cout << nom << " reçoit " << degatsFinal << " dégats. Il lui reste " << HP << " HP." << std::endl;
 
     }
 
-    virtual void afficherFaiblesses() {
+     void afficherFaiblesses() {
         std::cout << "Faiblesses de " << nom << " : "<<std::endl;
         for (const auto& f : faiblesses_Pokemon) {
             std::cout << f.first << std::endl;
         }
     }
 
-    virtual void afficherResistances() {
+     void afficherResistances() {
         std::cout << "Resistances de " << nom << " : " << std::endl;
 
         for (const auto& r : resistances_Pokemon) {
             std::cout << r.first << std::endl;
         }
     }
+
+     bool estKO() { //verif si le Pokemon est KO
+         bool estKO = false;
+         if (HP == 0) {
+             estKO = true;
+         }
+         return estKO;
+     }
     
      
 
