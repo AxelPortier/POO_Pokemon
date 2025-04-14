@@ -1,47 +1,54 @@
 #include "Pokemon.h"
 #include "Entraineurs.h"
-#include <iostream>
-#include <vector>
-#include <utility>
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <map>
-#include <set>
-#include <string>
-#include <Windows.h>
 
-class Bagarre {
+
+class Combat {
 private:
-    Joueurs joueur;
-    Entraineurs adversaire;
+
+    //on fait ref au joueur et a son adversaire on les recréer pas en lançant la bagarre donc on met &
+
+    Joueurs& joueur;
+    Entraineurs& adversaire; 
+
+  //pointeurs vers le pokemon qui se bagarre actuellement, il va pointer vers diff pokemon au cours du combat du coup
+    //en fait on fait pas de pointeur parce que getPokemon() renvoie un Pokemon et pas un pointeur donc c'est foireu
+
+    Pokemon pokemonActuel_Joueur;
+    Pokemon pokemonActuel_Adversaire;
+
+    //bool finDuCombat;
+    
+
 
 public:
-    Bagarre(Joueurs joueur, Entraineurs adversaire) : joueur(joueur) , adversaire(adversaire) {}
+    Combat(Joueurs& joueur, Entraineurs& adversaire , Pokemon pokemonActuel_Joueur , Pokemon pokemonActuel_Adversaire) : joueur(joueur) , adversaire(adversaire) {
+        pokemonActuel_Joueur = joueur.getPokemon();
+        pokemonActuel_Adversaire = adversaire.getPokemon();
+
+    }
+
 };
 
 int main() {
-    Pokemon pikachu("Pikachu", { "Electrik" }, 100, "Eclair", "Electrik", 40);
-    Pokemon bulbizarre("Bulbizarre", { "Plante" , "Poison" }, 80, "Fouet Lianes", "Plante", 30);
-    Pokemon kaiminus("Kaiminus", { "Eau" }, 50, "Morsure", "Tenebres", 60);
-    Pokemon topiqueur("Topiqueur", { "Sol" }, 50, "Seisme", "Sol", 100);
+    srand(time(0)); //on initialise le random pour les dialogues 
+    
+    Pokemon Pikachu("Pikachu", { "Electrik" }, 30, "Eclair", "Electrik", 50);
+    std::cout << Pikachu.getHP()<<std::endl;
+    std::cout << Pikachu.getDegats()<<std::endl;
 
+    Pokemon Kaiminus("Kaiminus", { "eau" }, 50, "Morsure", "Tenebre", 60);
+    std::cout << Kaiminus.getHP()<<std::endl;
+    std::cout << Kaiminus.getDegats()<<std::endl;
 
-    std::cout << kaiminus.getDegats() << std::endl;
+    Entraineurs Sascha("Sascha", { Pikachu });
 
-   
+    Maitres Victor("Victor", { Kaiminus });
 
-    //pika attaque top
+    Victor.parler_victoireCombat(Sascha);
 
-    pikachu.attaquer(topiqueur);
+    Sascha.parler_defaiteCombat(Victor);
 
-
-    //le roi Kai attaque pika
-
-    kaiminus.attaquer(pikachu);
-
-
-
+    
 }
 
 
