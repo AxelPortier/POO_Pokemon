@@ -10,6 +10,7 @@
 #include <unordered_map>
 #include <cstdlib> // Pour rand() et srand()
 #include <ctime>   // Pour time()
+#include <cmath> // Pour round()
 using namespace std;
 
 class Type {
@@ -45,8 +46,6 @@ public:
     TypeNormal() : Type("Normal") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -112,8 +111,6 @@ public:
     TypePlante() : Type("Plante") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -132,10 +129,6 @@ public:
         resistances["Electrik"] = 0.5;
         resistances["Acier"] = 0.5;
         resistances["Fée"] = 0.5;
-
-
-
-
     }
 };
 
@@ -144,8 +137,6 @@ public:
     TypeElectrik() : Type("Électrik") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -163,9 +154,7 @@ class TypeGlace : public Type {
 public:
     TypeGlace() : Type("Glace") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions pour les overrides
-
-       
+        defResistances(); // on appelle nos fonctions pour les overrides 
     }
 
     void defFaiblesses() override {
@@ -185,8 +174,6 @@ public:
     TypeCombat() : Type("Combat") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -206,9 +193,7 @@ class TypePoison : public Type {
 public:
     TypePoison() : Type("Poison") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions pour les overrides
-
-        
+        defResistances(); // on appelle nos fonctions pour les overrides 
     }
 
     void defFaiblesses() override {
@@ -229,9 +214,7 @@ class TypeSol : public Type {
 public:
     TypeSol() : Type("Sol") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions pour les overrides
-
-        
+        defResistances(); // on appelle nos fonctions pour les overrides 
     }
 
     void defFaiblesses() override {
@@ -243,9 +226,7 @@ public:
     void defResistances() override {
         resistances["Poison"] = 0.5;
         resistances["Roche"] = 0.5;
-        resistances["Electrik"] = 0.0; //sol pas affecté par elec
-
-
+        resistances["Electrik"] = 0.0; //sol pas affecté par electrik
     }
 };
 
@@ -254,8 +235,6 @@ public:
     TypeVol() : Type("Vol") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-       
     }
 
     void defFaiblesses() override {
@@ -276,8 +255,6 @@ public:
     TypePsy() : Type("Psy") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -296,9 +273,7 @@ class TypeInsecte : public Type {
 public:
     TypeInsecte() : Type("Insecte") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions pour les overrides
-
-        
+        defResistances(); // on appelle nos fonctions pour les overrides       
     }
 
     void defFaiblesses() override {
@@ -319,8 +294,6 @@ public:
     TypeRoche() : Type("Roche") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -344,8 +317,6 @@ public:
     TypeSpectre() : Type("Spectre") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -358,8 +329,6 @@ public:
         resistances["Insecte"] = 0.5;
         resistances["Normal"] = 0.0; //spectre pas affecté par normal
         resistances["Combat"] = 0.0; //spectre pas affecté par combat
-
-
     }
 };
 
@@ -368,8 +337,6 @@ public:
     TypeDragon() : Type("Dragon") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
-        
     }
 
     void defFaiblesses() override {
@@ -391,7 +358,6 @@ public:
     TypeTenebres() : Type("Ténèbres") {
         defFaiblesses();
         defResistances(); // on appelle nos fonctions pour les overrides
-
     }
 
     void defFaiblesses() override {
@@ -411,9 +377,7 @@ class TypeAcier : public Type {
 public:
     TypeAcier() : Type("Acier") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions pour les overrides
-
-        
+        defResistances(); // on appelle nos fonctions pour les overrides   
     }
 
     void defFaiblesses() override {
@@ -442,9 +406,7 @@ class TypeFee : public Type {
 public:
     TypeFee() : Type("Fée") {
         defFaiblesses();
-        defResistances(); // on appelle nos fonctions pour les overrides
-
-        
+        defResistances(); // on appelle nos fonctions pour les overrides 
     }
 
     void defFaiblesses() override {
@@ -498,8 +460,6 @@ public:
        on va donc créer des instances de Type en parcourant le vecteur de string
         */
 
-
-
         for (string& typeNom : t) {
             toLowerCase(typeNom); //pour eviter de causer des prblms si on oublis les majuscules (pour les accents c'est trop chiant on fait sans)
             if (typeNom == "feu") { instances.push_back(new TypeFeu()); }
@@ -535,8 +495,6 @@ public:
     f.first c'est le nom du type auquel on est faible et f.second c'est le mult (2 ici)
     si la faiblesse du type est pas deja dans les faiblesses du pok on l'ajoute
     et si elle y est déja on met juste a jour sa valeurs
-
-
         */
 
 
@@ -605,7 +563,7 @@ public:
     }
     
 
-     void attaquer(Pokemon& cible) { 
+    void attaquer(Pokemon& cible) { 
         float multiplicateur = 1.0;
         //on regarde les faiblesses et res de la cible
 
@@ -635,7 +593,7 @@ public:
                 cout << nom << " attaque " << cible.nom << " avec " << attaque <<". C'est super efficace !" << endl;
 
             }
-            else if ((0 < multiplicateur) and (multiplicateur < 1)) {
+            else if ((0 < multiplicateur) && (multiplicateur < 1)) {
                 cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << endl;
 
             }
@@ -648,9 +606,11 @@ public:
     }
 
 
-     void recevoireDegats(int degatsReçus) {
+    void recevoireDegats(int degatsReçus) {
         HP -= degatsReçus;
-        if (HP < 0) { HP = 0; }
+        if (HP < 0) { //si HP < 0 on met HP a 0
+            HP = 0; 
+        }
     }
 
      void afficherDegats(int degatsFinal) {
@@ -660,21 +620,21 @@ public:
 
      void afficherFaiblesses() {
         cout << "Faiblesses de " << nom << " : "<<endl;
-        for (const auto& f : faiblesses_Pokemon) {
-            cout << f.first << endl;
+        for (const auto& f : faiblesses_Pokemon) { //on parcours le dico des faiblesses
+            cout << f.first << endl; //on affiche le nom de la faiblesse
         }
     }
 
      void afficherResistances() {
         cout << "Resistances de " << nom << " : " << endl;
 
-        for (const auto& r : resistances_Pokemon) {
-            cout << r.first << endl;
+        for (const auto& r : resistances_Pokemon) { //on parcours le dico des resistances
+            cout << r.first << endl; //on affiche le nom de la resistance
         }
     }
 
      bool estKO() { //verif si le Pokemon est KO
-         bool estKO = false;
+        bool estKO = false;
          if (HP == 0) {
              estKO = true;
          }

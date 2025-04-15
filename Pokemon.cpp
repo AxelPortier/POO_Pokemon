@@ -1,5 +1,7 @@
 #include "Pokemon.h"
 #include "Entraineurs.h"
+#include <cmath>
+
 using namespace std;
 
 class Combat {
@@ -21,12 +23,9 @@ private:
 
 
 public:
-    Combat(Joueurs& joueur, Entraineurs& adversaire , Pokemon pokemonActuel_Joueur , Pokemon pokemonActuel_Adversaire) : joueur(joueur) , adversaire(adversaire) {
-        pokemonActuel_Joueur = joueur.getPokemon();
-        pokemonActuel_Adversaire = adversaire.getPokemon();
-
-    }
-
+    Combat(Joueurs& joueur, Entraineurs& adversaire) : joueur(joueur), adversaire(adversaire),
+                pokemonActuel_Joueur(joueur.getPokemon()),
+                pokemonActuel_Adversaire(adversaire.getPokemon()) {}
 };
 
 int main() {
