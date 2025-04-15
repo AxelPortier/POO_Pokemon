@@ -1,6 +1,6 @@
 #include "Pokemon.h"
 #include "Entraineurs.h"
-
+using namespace std;
 
 class Combat {
 private:
@@ -33,12 +33,12 @@ int main() {
     srand(time(0)); //on initialise le random pour les dialogues 
     
     Pokemon Pikachu("Pikachu", { "Electrik" }, 30, "Eclair", "Electrik", 50);
-    std::cout << Pikachu.getHP()<<std::endl;
-    std::cout << Pikachu.getDegats()<<std::endl;
+    cout << Pikachu.getHP()<<endl;
+    cout << Pikachu.getDegats()<<endl;
 
     Pokemon Kaiminus("Kaiminus", { "eau" }, 50, "Morsure", "Tenebre", 60);
-    std::cout << Kaiminus.getHP()<<std::endl;
-    std::cout << Kaiminus.getDegats()<<std::endl;
+    cout << Kaiminus.getHP()<<endl;
+    cout << Kaiminus.getDegats()<<endl;
 
     Entraineurs Sascha("Sascha", { Pikachu });
 

@@ -10,26 +10,26 @@
 #include <unordered_map>
 #include <cstdlib> // Pour rand() et srand()
 #include <ctime>   // Pour time()
-
+using namespace std;
 
 class Type {
 protected: 
-	std::string nom; //nom du type (eau, feu...)
-	std::unordered_map<std::string, float> faiblesses;
+	string nom; //nom du type (eau, feu...)
+	unordered_map<string, float> faiblesses;
 	//c'est juste un dico, la clef est un string et la valeurs un float (type : multiplicateur)
 
-	std::unordered_map<std::string, float> resistances;
+	unordered_map<string, float> resistances;
 
 public:
-	Type(std::string n) : nom(n) {}
+	Type(string n) : nom(n) {}
 
 	~Type() {}
 
 	virtual void defFaiblesses() = 0; //on va les override dans les ss classes
 	virtual void defResistances() = 0;
 
-    std::unordered_map<std::string, float> getFaiblesses() const { return faiblesses; }
-    std::unordered_map<std::string, float> getResistances() const { return resistances; }
+    unordered_map<string, float> getFaiblesses() const { return faiblesses; }
+    unordered_map<string, float> getResistances() const { return resistances; }
 
 
 };
@@ -460,37 +460,37 @@ public:
     }
 };
 
-void toLowerCase(std::string& str) {
-    std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+void toLowerCase(string& str) {
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
 }
 
 class Pokemon {
 private:
     bool KO = false;
-    std::string nom;
+    string nom;
 
-    std::vector<std::string> types; //vecteur qui prend 1 ou 2 noms de types
+    vector<string> types; //vecteur qui prend 1 ou 2 noms de types
 
-    std::unordered_map<std::string, float> faiblesses_Pokemon;
-    std::unordered_map<std::string, float> resistances_Pokemon;
+    unordered_map<string, float> faiblesses_Pokemon;
+    unordered_map<string, float> resistances_Pokemon;
 
     int HP;
-    std::string attaque; //pour l'instant que une attaque (on verra si on en fait plus apres)
-    std::string TypeAttaque;
+    string attaque; //pour l'instant que une attaque (on verra si on en fait plus apres)
+    string TypeAttaque;
     int degats;
     int HPmax; //juste pour faire HP/HPmax sur l'interface (les pv restants quoi)
     
 public:  
-    Pokemon(std::string nom,
-        std::vector<std::string> t,
+    Pokemon(string nom,
+        vector<string> t,
         int HP,
-        std::string attaque,
-        std::string TypeAttaque,
+        string attaque,
+        string TypeAttaque,
         int degats) : nom(nom), types(t), HP(HP), attaque(attaque),
         TypeAttaque(TypeAttaque) , degats(degats) { //debut constructeur
 
         HPmax = HP;
-        std::vector<Type*> instances;
+        vector<Type*> instances;
         /*
        vecteur de Type qu'on va remplir d'instances des classes TypeTruc
        en fonction des string qu'on a mis en entrée
@@ -500,7 +500,7 @@ public:
 
 
 
-        for (std::string& typeNom : t) {
+        for (string& typeNom : t) {
             toLowerCase(typeNom); //pour eviter de causer des prblms si on oublis les majuscules (pour les accents c'est trop chiant on fait sans)
             if (typeNom == "feu") { instances.push_back(new TypeFeu()); }
             else if (typeNom == "eau") { instances.push_back(new TypeEau()); }
@@ -563,9 +563,9 @@ public:
 
             leRoiKai(KaiBonus);
 
-            std::cout << "Le roi entre en scène" << std::endl;
+            cout << "Le roi entre en scène" << endl;
 
-            std::cout << nom << " active sa capacité 'Aura du roi'" << std::endl;
+            cout << nom << " active sa capacité 'Aura du roi'" << endl;
            
 
         }
@@ -577,22 +577,22 @@ public:
 
     //les getters
 
-     std::string getNom() const { return nom; }
+     string getNom() const { return nom; }
      int getHP() const { return HP; }
      int getDegats() const { return degats; }
 
-     std::unordered_map<std::string, float> getFaiblesses_Pokemon() const {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
+     unordered_map<string, float> getFaiblesses_Pokemon() const {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
         return faiblesses_Pokemon;
     }
 
-     std::unordered_map<std::string, float> getResistances_Pokemon() const {
+     unordered_map<string, float> getResistances_Pokemon() const {
         return resistances_Pokemon;
     }
 
     //les setters
 
      void setDegats(float newDegats) {
-        degats = static_cast<int>(std::round(newDegats)); //pour garder les degats en int j'arrondie et je met en int (le mult du maitre est un float ça m'a bien cassé la tete)
+        degats = static_cast<int>(round(newDegats)); //pour garder les degats en int j'arrondie et je met en int (le mult du maitre est un float ça m'a bien cassé la tete)
     }
 
      void setHP(int newHP) {
@@ -621,26 +621,26 @@ public:
                 multiplicateur *= cible.resistances_Pokemon[TypeAttaque];
 
             }
-            std::cout << "degats de l'attaque de " <<nom<< " : " << degats << std::endl;
+            cout << "degats de l'attaque de " <<nom<< " : " << degats << endl;
 
             int degatsFinal = static_cast<int>(degats * multiplicateur); //statit_cast pour mettre en int
-            std::cout << "degats final infligé a la cible "<<cible.nom<< " :" << degatsFinal << std::endl;
+            cout << "degats final infligé a la cible "<<cible.nom<< " :" << degatsFinal << endl;
             
             cible.recevoireDegats(degatsFinal); //la cible prend un pied bouche
             if (multiplicateur == 1) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque <<"."<< std::endl;
+                cout << nom << " attaque " << cible.nom << " avec " << attaque <<"."<< endl;
 
             }
             else if (multiplicateur > 1) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque <<". C'est super efficace !" << std::endl;
+                cout << nom << " attaque " << cible.nom << " avec " << attaque <<". C'est super efficace !" << endl;
 
             }
             else if ((0 < multiplicateur) and (multiplicateur < 1)) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << std::endl;
+                cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << endl;
 
             }
             else if (multiplicateur == 0) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet ! (noob)" << std::endl;
+                cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet ! (noob)" << endl;
 
             }
             cible.afficherDegats(degatsFinal);
@@ -654,22 +654,22 @@ public:
     }
 
      void afficherDegats(int degatsFinal) {
-    std::cout << nom << " reçoit " << degatsFinal << " dégats. Il lui reste " << HP << " HP." << std::endl;
+    cout << nom << " reçoit " << degatsFinal << " dégats. Il lui reste " << HP << " HP." << endl;
 
     }
 
      void afficherFaiblesses() {
-        std::cout << "Faiblesses de " << nom << " : "<<std::endl;
+        cout << "Faiblesses de " << nom << " : "<<endl;
         for (const auto& f : faiblesses_Pokemon) {
-            std::cout << f.first << std::endl;
+            cout << f.first << endl;
         }
     }
 
      void afficherResistances() {
-        std::cout << "Resistances de " << nom << " : " << std::endl;
+        cout << "Resistances de " << nom << " : " << endl;
 
         for (const auto& r : resistances_Pokemon) {
-            std::cout << r.first << std::endl;
+            cout << r.first << endl;
         }
     }
 
