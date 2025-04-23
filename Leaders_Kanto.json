@@ -1,0 +1,332 @@
+
+{
+    "champions": [
+      {
+        "nom": "Pierre",
+        "badge": "Badge Roche",
+        "gymnase": "Argenta",
+        "equipe": [
+          {
+            "pokemon": "Racaillou",
+            "niveau": 12,
+            "attaques": [
+              { "nom": "Charge", "type": "Normal", "puissance": 40 },
+              { "nom": "Armure", "type": "Normal", "puissance": 0 },
+              { "nom": "Jet de Sable", "type": "Sol", "puissance": 0 },
+              { "nom": "Roulade", "type": "Roche", "puissance": 30 }
+            ]
+          },
+          {
+            "pokemon": "Onix",
+            "niveau": 14,
+            "attaques": [
+              { "nom": "Étreinte", "type": "Normal", "puissance": 15 },
+              { "nom": "Hurlement", "type": "Normal", "puissance": 0 },
+              { "nom": "Jet de Pierres", "type": "Roche", "puissance": 50 },
+              { "nom": "Séisme", "type": "Sol", "puissance": 100 }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Ondine",
+        "badge": "Badge Cascade",
+        "gymnase": "Azuria",
+        "equipe": [
+          {
+            "pokemon": "Stari",
+            "niveau": 18,
+            "attaques": [
+              { "nom": "Pistolet à O", "type": "Eau", "puissance": 40 },
+              { "nom": "Rafale Psy", "type": "Psy", "puissance": 65 },
+              { "nom": "Soin", "type": "Normal", "puissance": 0 },
+              { "nom": "Laser Glace", "type": "Glace", "puissance": 90 }
+            ]
+          },
+          {
+            "pokemon": "Staross",
+            "niveau": 21,
+            "attaques": [
+              { "nom": "Hydrocanon", "type": "Eau", "puissance": 110 },
+              { "nom": "Onde Boréale", "type": "Glace", "puissance": 65 },
+              { "nom": "Psyko", "type": "Psy", "puissance": 90 },
+              { "nom": "Soin", "type": "Normal", "puissance": 0 }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Major Bob",
+        "badge": "Badge Foudre",
+        "gymnase": "Carmin sur Mer",
+        "equipe": [
+          {
+            "pokemon": "Voltorbe",
+            "niveau": 21,
+            "attaques": [
+              { "nom": "Charge", "type": "Normal", "puissance": 40 },
+              { "nom": "Sonic Boom", "type": "Normal", "puissance": 0 },
+              { "nom": "Cage-Éclair", "type": "Électrik", "puissance": 0 },
+              { "nom": "Ultrason", "type": "Normal", "puissance": 0 }
+            ]
+          },
+          {
+            "pokemon": "Pikachu",
+            "niveau": 18,
+            "attaques": [
+              { "nom": "Éclair", "type": "Électrik", "puissance": 40 },
+              { "nom": "Vive-Attaque", "type": "Normal", "puissance": 40 },
+              { "nom": "Cage-Éclair", "type": "Électrik", "puissance": 0 },
+              { "nom": "Double Team", "type": "Normal", "puissance": 0 }
+            ]
+          },
+          {
+            "pokemon": "Raichu",
+            "niveau": 24,
+            "attaques": [
+              { "nom": "Fatal-Foudre", "type": "Électrik", "puissance": 110 },
+              { "nom": "Coup d'Jus", "type": "Électrik", "puissance": 80 },
+              { "nom": "Vive-Attaque", "type": "Normal", "puissance": 40 },
+              { "nom": "Double Team", "type": "Normal", "puissance": 0 }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Erika",
+        "badge": "Badge Prisme",
+        "gymnase": "Céladopole",
+        "equipe": [
+          {
+            "pokemon": "Chétiflor",
+            "niveau": 29,
+            "attaques": [
+              { "nom": "Tranch'Herbe", "type": "Plante", "puissance": 55 },
+              { "nom": "Poudre Dodo", "type": "Plante", "puissance": 0 },
+              { "nom": "Acide", "type": "Poison", "puissance": 40 },
+              { "nom": "Croissance", "type": "Normal", "puissance": 0 }
+            ]
+          },
+          {
+            "pokemon": "Empiflor",
+            "niveau": 32,
+            "attaques": [
+              { "nom": "Fouet Lianes", "type": "Plante", "puissance": 45 },
+              { "nom": "Acide", "type": "Poison", "puissance": 40 },
+              { "nom": "Poudre Dodo", "type": "Plante", "puissance": 0 },
+              { "nom": "Croissance", "type": "Normal", "puissance": 0 }
+            ]
+          },
+          {
+            "pokemon": "Joliflor",
+            "niveau": 32,
+            "attaques": [
+              { "nom": "Doux Parfum", "type": "Normal", "puissance": 0 },
+              { "nom": "Tranch'Herbe", "type": "Plante", "puissance": 55 },
+              { "nom": "Poudre Dodo", "type": "Plante", "puissance": 0 },
+              { "nom": "Croissance", "type": "Normal", "puissance": 0 }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Koga",
+        "badge": "Badge Âme",
+        "gymnase": "Parmanie",
+        "equipe": [
+            {
+            "pokemon": "Smogo",
+            "niveau": 37,
+            "attaques": [
+              { "nom": "Gaz Toxik", "type": "Poison", "puissance": 0 },
+              { "nom": "Brouillard", "type": "Normal", "puissance": 0 },
+              { "nom": "Déflagration", "type": "Feu", "puissance": 110 },
+              { "nom": "Explosion", "type": "Normal", "puissance": 250 }
+            ]
+          },
+          {
+            "pokemon": "Smogo",
+            "niveau": 39,
+            "attaques": [
+              { "nom": "Gaz Toxik", "type": "Poison", "puissance": 0 },
+              { "nom": "Brouillard", "type": "Normal", "puissance": 0 },
+              { "nom": "Bombe Beurk", "type": "Poison", "puissance": 90 },
+              { "nom": "Explosion", "type": "Normal", "puissance": 250 }
+            ]
+          },
+          {
+            "pokemon": "Smogogo",
+            "niveau": 43,
+            "attaques": [
+              { "nom": "Gaz Toxik", "type": "Poison", "puissance": 0 },
+              { "nom": "Brouillard", "type": "Normal", "puissance": 0 },
+              { "nom": "Bombe Beurk", "type": "Poison", "puissance": 90 },
+              { "nom": "Explosion", "type": "Normal", "puissance": 250 }
+            ]
+          },
+          {
+            "pokemon": "Aéromite",
+            "niveau": 41,
+            "attaques": [
+              { "nom": "Poudre Toxik", "type": "Poison", "puissance": 0 },
+              { "nom": "Choc Mental", "type": "Psy", "puissance": 50 },
+              { "nom": "Ultrason", "type": "Normal", "puissance": 0 },
+              { "nom": "Dard-Venin", "type": "Poison", "puissance": 15 }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Morgane",
+        "badge": "Badge Marais",
+        "gymnase": "Safrania",
+        "equipe": [
+          {
+            "pokemon": "Kadabra",
+            "niveau": 38,
+            "attaques": [
+              { "nom": "Psyko", "type": "Psy", "puissance": 90 },
+              { "nom": "Téléport", "type": "Psy", "puissance": 0 },
+              { "nom": "Grincement", "type": "Normal", "puissance": 0 },
+              { "nom": "Rafale Psy", "type": "Psy", "puissance": 65 }
+            ]
+          },
+          {
+            "pokemon": "Soporifik",
+            "niveau": 37,
+            "attaques": [
+              { "nom": "Hypnose", "type": "Psy", "puissance": 0 },
+              { "nom": "Poing-Karaté", "type": "Combat", "puissance": 50 },
+              { "nom": "Écras'Face", "type": "Normal", "puissance": 40 },
+              { "nom": "Cauchemar", "type": "Psy", "puissance": 100 }
+            ]
+          },
+          {
+            "pokemon": "Hypnomade",
+            "niveau": 38,
+            "attaques": [
+              { "nom": "Hypnose", "type": "Psy", "puissance": 0 },
+              { "nom": "Poing de Feu", "type": "Feu", "puissance": 75 },
+              { "nom": "Choc Mental", "type": "Psy", "puissance": 50 },
+              { "nom": "Psyko", "type": "Psy", "puissance": 90 }
+            ]
+          },
+          {
+            "pokemon": "Alakazam",
+            "niveau": 43,
+            "attaques": [
+              { "nom": "Psyko", "type": "Psy", "puissance": 90 },
+              { "nom": "Grincement", "type": "Normal", "puissance": 0 },
+              { "nom": "Teleport", "type": "Psy", "puissance": 0 },
+              { "nom": "Choc Mental", "type": "Psy", "puissance": 50 }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Auguste",
+        "badge": "Badge Volcan",
+        "gymnase": "Cramois'île",
+        "equipe": [
+          {
+            "pokemon": "Magmar",
+            "niveau": 42,
+            "attaques": [
+              { "nom": "Lance-Flammes", "type": "Feu", "puissance": 90 },
+              { "nom": "Poing de Feu", "type": "Feu", "puissance": 75 },
+              { "nom": "Fouet de Feu", "type": "Feu", "puissance": 80 },
+              { "nom": "Para-Spore", "type": "Plante", "puissance": 0 }
+            ]
+          },
+          {
+            "pokemon": "Galopa",
+            "niveau": 47,
+            "attaques": [
+              { "nom": "Flammèche", "type": "Feu", "puissance": 40 },
+              { "nom": "Vive-Attaque", "type": "Normal", "puissance": 40 },
+              { "nom": "Damoclès", "type": "Normal", "puissance": 120 },
+              { "nom": "Déflagration", "type": "Feu", "puissance": 110 }
+            ]
+          },
+          {
+            "pokemon": "Caninos",
+            "niveau": 40,
+            "attaques": [
+              { "nom": "Crocs Feu", "type": "Feu", "puissance": 65 },
+              { "nom": "Hurlement", "type": "Normal", "puissance": 0 },
+              { "nom": "Morsure", "type": "Ténèbres", "puissance": 60 },
+              { "nom": "Rugissement", "type": "Normal", "puissance": 0 }
+            ]
+          },
+          {
+            "pokemon": "Sulfura",
+            "niveau": 50,
+            "attaques": [
+              { "nom": "Danse Flammes", "type": "Feu", "puissance": 35 },
+              { "nom": "Vol", "type": "Vol", "puissance": 90 },
+              { "nom": "Puissance", "type": "Normal", "puissance": 0 },
+              { "nom": "Déflagration", "type": "Feu", "puissance": 110 }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Giovanni",
+        "badge": "Badge Terre",
+        "gymnase": "Jadielle",
+        "equipe": [
+          {
+            "pokemon": "Rhinoféros",
+            "niveau": 50,
+            "attaques": [
+              { "nom": "Séisme", "type": "Sol", "puissance": 100 },
+              { "nom": "Mégacorne", "type": "Insecte", "puissance": 120 },
+              { "nom": "Frénésie", "type": "Normal", "puissance": 90 },
+              { "nom": "Coud’Boue", "type": "Sol", "puissance": 20 }
+            ]
+          },
+          {
+            "pokemon": "Nidoking",
+            "niveau": 45,
+            "attaques": [
+              { "nom": "Queue de Fer", "type": "Acier", "puissance": 100 },
+              { "nom": "Tonnerre", "type": "Électrik", "puissance": 110 },
+              { "nom": "Séisme", "type": "Sol", "puissance": 100 },
+              { "nom": "Laser Glace", "type": "Glace", "puissance": 90 }
+            ]
+          },
+          {
+            "pokemon": "Nidoqueen",
+            "niveau": 44,
+            "attaques": [
+              { "nom": "Poing de Feu", "type": "Feu", "puissance": 75 },
+              { "nom": "Tonnerre", "type": "Électrik", "puissance": 110 },
+              { "nom": "Laser Glace", "type": "Glace", "puissance": 90 },
+              { "nom": "Séisme", "type": "Sol", "puissance": 100 }
+            ]
+          },
+          {
+            "pokemon": "Dugtrio",
+            "niveau": 42,
+            "attaques": [
+              { "nom": "Tunnel", "type": "Sol", "puissance": 80 },
+              { "nom": "Tranche", "type": "Normal", "puissance": 70 },
+              { "nom": "Séisme", "type": "Sol", "puissance": 100 },
+              { "nom": "Crocs Éclair", "type": "Électrik", "puissance": 65 }
+            ]
+          },
+          {
+            "pokemon": "Persian",
+            "niveau": 43,
+            "attaques": [
+              { "nom": "Griffe", "type": "Normal", "puissance": 40 },
+              { "nom": "Combo-Griffe", "type": "Normal", "puissance": 18 },
+              { "nom": "Morsure", "type": "Ténèbres", "puissance": 60 },
+              { "nom": "Hypnose", "type": "Psy", "puissance": 0 }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

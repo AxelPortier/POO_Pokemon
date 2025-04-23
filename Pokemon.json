@@ -1,0 +1,8642 @@
+[
+    {
+        "nom": "Bulbizarre",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Herbizarre",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Florizarre",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Salamèche",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 39,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Reptincel",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Dracaufeu",
+        "type1": "Feu",
+        "type2": "Vol",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Carapuce",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 44,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Carabaffe",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 59,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Tortank",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 79,
+        "attaques": "",
+        "vitesse": 78
+    },
+    {
+        "nom": "Chenipan",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Chrysacier",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Papilusion",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Aspicot",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Coconfort",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Dardargnan",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Roucool",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 56
+    },
+    {
+        "nom": "Roucoups",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 63,
+        "attaques": "",
+        "vitesse": 71
+    },
+    {
+        "nom": "Roucarnage",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 83,
+        "attaques": "",
+        "vitesse": 101
+    },
+    {
+        "nom": "Rattata",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Rattatac",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Piafabec",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Rapasdepic",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Abo",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Arbok",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Pikachu",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Raichu",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Sabelette",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Sablaireau",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Nidoran♀",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 41
+    },
+    {
+        "nom": "Nidorina",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 56
+    },
+    {
+        "nom": "Nidoqueen",
+        "type1": "Poison",
+        "type2": "Sol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 76
+    },
+    {
+        "nom": "Nidoran♂",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 46,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Nidorino",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Nidoking",
+        "type1": "Poison",
+        "type2": "Sol",
+        "pv": 81,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Mélofée",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Mélodelfe",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Goupix",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Feunard",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 73,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Rondoudou",
+        "type1": "Normal",
+        "type2": "Fée",
+        "pv": 115,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Grodoudou",
+        "type1": "Normal",
+        "type2": "Fée",
+        "pv": 140,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Nosferapti",
+        "type1": "Poison",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Nosferalto",
+        "type1": "Poison",
+        "type2": "Vol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Mystherbe",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Ortide",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Rafflesia",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Paras",
+        "type1": "Insecte",
+        "type2": "Plante",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Parasect",
+        "type1": "Insecte",
+        "type2": "Plante",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Mimitoss",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Aéromite",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Taupiqueur",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 10,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Triopikeur",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Miaouss",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Persian",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Psykokwak",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Akwakwak",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Férosinge",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Colossinge",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Caninos",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Arcanin",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Ptitard",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Têtarte",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Tartard",
+        "type1": "Eau",
+        "type2": "Combat",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Abra",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 25,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Kadabra",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Alakazam",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Machoc",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Machopeur",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Mackogneur",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Chétiflor",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Boustiflor",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Empiflor",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Tentacool",
+        "type1": "Eau",
+        "type2": "Poison",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Tentacruel",
+        "type1": "Eau",
+        "type2": "Poison",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Racaillou",
+        "type1": "Roche",
+        "type2": "Sol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Gravalanch",
+        "type1": "Roche",
+        "type2": "Sol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Grolem",
+        "type1": "Roche",
+        "type2": "Sol",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Ponyta",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Galopa",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Ramoloss",
+        "type1": "Eau",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Flagadoss",
+        "type1": "Eau",
+        "type2": "Psy",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Magnéti",
+        "type1": "Électrik",
+        "type2": "Acier",
+        "pv": 25,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Magnéton",
+        "type1": "Électrik",
+        "type2": "Acier",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Canarticho",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 52,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Doduo",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Dodrio",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Otaria",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Lamantine",
+        "type1": "Eau",
+        "type2": "Glace",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Tadmorv",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Grotadmorv",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Kokiyas",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Crustabri",
+        "type1": "Eau",
+        "type2": "Glace",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Fantominus",
+        "type1": "Spectre",
+        "type2": "Poison",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Spectrum",
+        "type1": "Spectre",
+        "type2": "Poison",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Ectoplasma",
+        "type1": "Spectre",
+        "type2": "Poison",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Onix",
+        "type1": "Roche",
+        "type2": "Sol",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Soporifik",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Hypnomade",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 67
+    },
+    {
+        "nom": "Krabby",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Krabboss",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Voltorbe",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Électrode",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 150
+    },
+    {
+        "nom": "Noeunoeuf",
+        "type1": "Plante",
+        "type2": "Psy",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Noadkoko",
+        "type1": "Plante",
+        "type2": "Psy",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Osselait",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Ossatueur",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Kicklee",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 87
+    },
+    {
+        "nom": "Tygnon",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 76
+    },
+    {
+        "nom": "Excelangue",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Smogo",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Smogogo",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Rhinocorne",
+        "type1": "Sol",
+        "type2": "Roche",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Rhinoféros",
+        "type1": "Sol",
+        "type2": "Roche",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Leveinard",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 250,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Saquedeneu",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Kangourex",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Hypotrempe",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Hypocéan",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Poissirène",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 63
+    },
+    {
+        "nom": "Poissoroy",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 68
+    },
+    {
+        "nom": "Stari",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Staross",
+        "type1": "Eau",
+        "type2": "Psy",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "M. Mime",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Insécateur",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Lippoutou",
+        "type1": "Glace",
+        "type2": "Psy",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Élektek",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Magmar",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 93
+    },
+    {
+        "nom": "Scarabrute",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Tauros",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Magicarpe",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 20,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Léviator",
+        "type1": "Eau",
+        "type2": "Vol",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 81
+    },
+    {
+        "nom": "Lokhlass",
+        "type1": "Eau",
+        "type2": "Glace",
+        "pv": 130,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Métamorph",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 48,
+        "attaques": "",
+        "vitesse": 48
+    },
+    {
+        "nom": "Évoli",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Aquali",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 130,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Voltali",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 130
+    },
+    {
+        "nom": "Pyroli",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Porygon",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Amonita",
+        "type1": "Roche",
+        "type2": "Eau",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Amonistar",
+        "type1": "Roche",
+        "type2": "Eau",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Kabuto",
+        "type1": "Roche",
+        "type2": "Eau",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Kabutops",
+        "type1": "Roche",
+        "type2": "Eau",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Ptéra",
+        "type1": "Roche",
+        "type2": "Vol",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 130
+    },
+    {
+        "nom": "Ronflex",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 160,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Artikodin",
+        "type1": "Glace",
+        "type2": "Vol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Électhor",
+        "type1": "Électrik",
+        "type2": "Vol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Sulfura",
+        "type1": "Feu",
+        "type2": "Vol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Minidraco",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 41,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Draco",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Dracolosse",
+        "type1": "Dragon",
+        "type2": "Vol",
+        "pv": 91,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Mewtwo",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 106,
+        "attaques": "",
+        "vitesse": 130
+    },
+    {
+        "nom": "Mew",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Germignon",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Macronium",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Méganium",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Héricendre",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 39,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Feurisson",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Typhlosion",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Kaiminus",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Crocrodil",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Aligatueur",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 78
+    },
+    {
+        "nom": "Fouinette",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Fouinar",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Hoothoot",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Noarfang",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Coxy",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Coxyclaque",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Mimigal",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Migalos",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Nostenfer",
+        "type1": "Poison",
+        "type2": "Vol",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 130
+    },
+    {
+        "nom": "Loupio",
+        "type1": "Eau",
+        "type2": "Électrik",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 67
+    },
+    {
+        "nom": "Lanturn",
+        "type1": "Eau",
+        "type2": "Électrik",
+        "pv": 125,
+        "attaques": "",
+        "vitesse": 67
+    },
+    {
+        "nom": "Pichu",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 20,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Mélo",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Toudoudou",
+        "type1": "Normal",
+        "type2": "Fée",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Togepi",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Togetic",
+        "type1": "Fée",
+        "type2": "Vol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Natu",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Xatu",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Wattouat",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Lainergie",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Pharamp",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Joliflor",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Marill",
+        "type1": "Eau",
+        "type2": "Fée",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Azumarill",
+        "type1": "Eau",
+        "type2": "Fée",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Simularbre",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Tarpaud",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Granivol",
+        "type1": "Plante",
+        "type2": "Vol",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Floravol",
+        "type1": "Plante",
+        "type2": "Vol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Cotovol",
+        "type1": "Plante",
+        "type2": "Vol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Capumain",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Tournegrin",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Héliatronc",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Yanma",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Axoloto",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Maraiste",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Mentali",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Noctali",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Cornèbre",
+        "type1": "Ténèbres",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 91
+    },
+    {
+        "nom": "Roigada",
+        "type1": "Eau",
+        "type2": "Psy",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Feuforêve",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Zarbi",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 48,
+        "attaques": "",
+        "vitesse": 48
+    },
+    {
+        "nom": "Qulbutoké",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 190,
+        "attaques": "",
+        "vitesse": 33
+    },
+    {
+        "nom": "Girafarig",
+        "type1": "Normal",
+        "type2": "Psy",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Pomdepik",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Foretress",
+        "type1": "Insecte",
+        "type2": "Acier",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Insolourdo",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Scorplane",
+        "type1": "Sol",
+        "type2": "Vol",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Steelix",
+        "type1": "Acier",
+        "type2": "Sol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Snubbull",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Granbull",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Qwilfish",
+        "type1": "Eau",
+        "type2": "Poison",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Cizayox",
+        "type1": "Insecte",
+        "type2": "Acier",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Caratroc",
+        "type1": "Insecte",
+        "type2": "Roche",
+        "pv": 20,
+        "attaques": "",
+        "vitesse": 5
+    },
+    {
+        "nom": "Scarhino",
+        "type1": "Insecte",
+        "type2": "Combat",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Farfuret",
+        "type1": "Ténèbres",
+        "type2": "Glace",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Teddiursa",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Ursaring",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Limagma",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Volcaropod",
+        "type1": "Feu",
+        "type2": "Roche",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Marcacrin",
+        "type1": "Glace",
+        "type2": "Sol",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Cochignon",
+        "type1": "Glace",
+        "type2": "Sol",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Corayon",
+        "type1": "Eau",
+        "type2": "Roche",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Rémoraid",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Octillery",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Cadoizo",
+        "type1": "Glace",
+        "type2": "Vol",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Démanta",
+        "type1": "Eau",
+        "type2": "Vol",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Airmure",
+        "type1": "Acier",
+        "type2": "Vol",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Malosse",
+        "type1": "Ténèbres",
+        "type2": "Feu",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Démolosse",
+        "type1": "Ténèbres",
+        "type2": "Feu",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Hyporoi",
+        "type1": "Eau",
+        "type2": "Dragon",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Phanpy",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Donphan",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Porygon2",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Cerfrousse",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 73,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Queulorior",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Debugant",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Kapoera",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Lippouti",
+        "type1": "Glace",
+        "type2": "Psy",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Élekid",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Magby",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 83
+    },
+    {
+        "nom": "Écrémeuh",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Leuphorie",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 255,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Raikou",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Entei",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 115,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Suicune",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Embrylex",
+        "type1": "Roche",
+        "type2": "Sol",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 41
+    },
+    {
+        "nom": "Ymphect",
+        "type1": "Roche",
+        "type2": "Sol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 51
+    },
+    {
+        "nom": "Tyranocif",
+        "type1": "Roche",
+        "type2": "Ténèbres",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 61
+    },
+    {
+        "nom": "Lugia",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 106,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Ho-Oh",
+        "type1": "Feu",
+        "type2": "Vol",
+        "pv": 106,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Celebi",
+        "type1": "Psy",
+        "type2": "Plante",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Arcko",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Massko",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Jungko",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Poussifeu",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Galifeu",
+        "type1": "Feu",
+        "type2": "Combat",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Braségali",
+        "type1": "Feu",
+        "type2": "Combat",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Gobou",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Flobio",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Laggron",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Medhyèna",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Grahyèna",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Zigzaton",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Linéon",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Chenipotte",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Armulys",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Charmillon",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Blindalys",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Papinox",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Nénupiot",
+        "type1": "Eau",
+        "type2": "Plante",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Lombre",
+        "type1": "Eau",
+        "type2": "Plante",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Ludicolo",
+        "type1": "Eau",
+        "type2": "Plante",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Grainipiot",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Pifeuil",
+        "type1": "Plante",
+        "type2": "Ténèbres",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Tengalice",
+        "type1": "Plante",
+        "type2": "Ténèbres",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Nirondelle",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Hélédelle",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 125
+    },
+    {
+        "nom": "Goélise",
+        "type1": "Eau",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Bekipan",
+        "type1": "Eau",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Tarsal",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 28,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Kirlia",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Gardevoir",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Arakdo",
+        "type1": "Insecte",
+        "type2": "Eau",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Maskadra",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Balignon",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Chapignon",
+        "type1": "Plante",
+        "type2": "Combat",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Parecool",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Vigoroth",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Monaflèmit",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 150,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Ningale",
+        "type1": "Insecte",
+        "type2": "Sol",
+        "pv": 31,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Ninjask",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 160
+    },
+    {
+        "nom": "Munja",
+        "type1": "Insecte",
+        "type2": "Spectre",
+        "pv": 1,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Chuchmur",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 64,
+        "attaques": "",
+        "vitesse": 28
+    },
+    {
+        "nom": "Ramboum",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 84,
+        "attaques": "",
+        "vitesse": 48
+    },
+    {
+        "nom": "Brouhabam",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 104,
+        "attaques": "",
+        "vitesse": 68
+    },
+    {
+        "nom": "Makuhita",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Hariyama",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 144,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Azurill",
+        "type1": "Normal",
+        "type2": "Fée",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Tarinor",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Skitty",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Delcatty",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Ténéfix",
+        "type1": "Ténèbres",
+        "type2": "Spectre",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Mysdibule",
+        "type1": "Acier",
+        "type2": "Fée",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Galekid",
+        "type1": "Acier",
+        "type2": "Roche",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Galegon",
+        "type1": "Acier",
+        "type2": "Roche",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Galeking",
+        "type1": "Acier",
+        "type2": "Roche",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Méditikka",
+        "type1": "Combat",
+        "type2": "Psy",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Charmina",
+        "type1": "Combat",
+        "type2": "Psy",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Dynavolt",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Élecsprint",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Posipi",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Négapi",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Muciole",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Lumivole",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Rosélia",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Gloupti",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Avaltout",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Carvanha",
+        "type1": "Eau",
+        "type2": "Ténèbres",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Sharpedo",
+        "type1": "Eau",
+        "type2": "Ténèbres",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Wailmer",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 130,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Wailord",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 170,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Chamallot",
+        "type1": "Feu",
+        "type2": "Sol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Camérupt",
+        "type1": "Feu",
+        "type2": "Sol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Chartor",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Spoink",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Groret",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Spinda",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Kraknoix",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 10
+    },
+    {
+        "nom": "Vibraninf",
+        "type1": "Sol",
+        "type2": "Dragon",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Libégon",
+        "type1": "Sol",
+        "type2": "Dragon",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Cacnea",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Cacturne",
+        "type1": "Plante",
+        "type2": "Ténèbres",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Tylton",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Altaria",
+        "type1": "Dragon",
+        "type2": "Vol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Mangriff",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 73,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Séviper",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 73,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Séléroc",
+        "type1": "Roche",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Solaroc",
+        "type1": "Roche",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Barloche",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Barbicha",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Écrapince",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 43,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Colhomard",
+        "type1": "Eau",
+        "type2": "Ténèbres",
+        "pv": 63,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Balbuto",
+        "type1": "Sol",
+        "type2": "Psy",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Kaorine",
+        "type1": "Sol",
+        "type2": "Psy",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Lilia",
+        "type1": "Roche",
+        "type2": "Plante",
+        "pv": 66,
+        "attaques": "",
+        "vitesse": 23
+    },
+    {
+        "nom": "Vacilys",
+        "type1": "Roche",
+        "type2": "Plante",
+        "pv": 86,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Anorith",
+        "type1": "Roche",
+        "type2": "Insecte",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Armaldo",
+        "type1": "Roche",
+        "type2": "Insecte",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Barpau",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 20,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Milobellus",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 81
+    },
+    {
+        "nom": "Morphéo",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Kecleon",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Polichombr",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 44,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Branette",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 64,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Skelénox",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 20,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Téraclope",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Tropius",
+        "type1": "Plante",
+        "type2": "Vol",
+        "pv": 99,
+        "attaques": "",
+        "vitesse": 51
+    },
+    {
+        "nom": "Éoko",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Absol",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Okéoké",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 23
+    },
+    {
+        "nom": "Stalgamin",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Oniglali",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Obalie",
+        "type1": "Glace",
+        "type2": "Eau",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Phogleur",
+        "type1": "Glace",
+        "type2": "Eau",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Kaimorse",
+        "type1": "Glace",
+        "type2": "Eau",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Coquiperl",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 32
+    },
+    {
+        "nom": "Serpang",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 52
+    },
+    {
+        "nom": "Rosabyss",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 52
+    },
+    {
+        "nom": "Relicanth",
+        "type1": "Eau",
+        "type2": "Roche",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Lovdisc",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 43,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Draby",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Drackhaus",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Drattak",
+        "type1": "Dragon",
+        "type2": "Vol",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Terhal",
+        "type1": "Acier",
+        "type2": "Psy",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Métang",
+        "type1": "Acier",
+        "type2": "Psy",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Métalosse",
+        "type1": "Acier",
+        "type2": "Psy",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Regirock",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Regice",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Registeel",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Latias",
+        "type1": "Dragon",
+        "type2": "Psy",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Latios",
+        "type1": "Dragon",
+        "type2": "Psy",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Kyogre",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Groudon",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Rayquaza",
+        "type1": "Dragon",
+        "type2": "Vol",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Jirachi",
+        "type1": "Acier",
+        "type2": "Psy",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Deoxys",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 180
+    },
+    {
+        "nom": "Tortipouss",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 31
+    },
+    {
+        "nom": "Boskara",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 36
+    },
+    {
+        "nom": "Torterra",
+        "type1": "Plante",
+        "type2": "Sol",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 56
+    },
+    {
+        "nom": "Ouisticram",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 44,
+        "attaques": "",
+        "vitesse": 61
+    },
+    {
+        "nom": "Chimpenfeu",
+        "type1": "Feu",
+        "type2": "Combat",
+        "pv": 64,
+        "attaques": "",
+        "vitesse": 81
+    },
+    {
+        "nom": "Simiabraz",
+        "type1": "Feu",
+        "type2": "Combat",
+        "pv": 76,
+        "attaques": "",
+        "vitesse": 108
+    },
+    {
+        "nom": "Tiplouf",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 53,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Prinplouf",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 64,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Pingoléon",
+        "type1": "Eau",
+        "type2": "Acier",
+        "pv": 84,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Étourmi",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Étourvol",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Étouraptor",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Keunotor",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 59,
+        "attaques": "",
+        "vitesse": 31
+    },
+    {
+        "nom": "Castorno",
+        "type1": "Normal",
+        "type2": "Eau",
+        "pv": 79,
+        "attaques": "",
+        "vitesse": 71
+    },
+    {
+        "nom": "Crikzik",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 37,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Mélokrik",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 77,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Lixy",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Luxio",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Luxray",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Rozbouton",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Roserade",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Kranidos",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 67,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Charkos",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 97,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Dinoclier",
+        "type1": "Roche",
+        "type2": "Acier",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Bastiodon",
+        "type1": "Roche",
+        "type2": "Acier",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Cheniti",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 36
+    },
+    {
+        "nom": "Cheniselle",
+        "type1": "Insecte",
+        "type2": "Plante",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 36
+    },
+    {
+        "nom": "Papilord",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 66
+    },
+    {
+        "nom": "Apitrini",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Apireine",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Pachirisu",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Mustébouée",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Mustéflott",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Ceribou",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Ceriflor",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Sancoki",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 76,
+        "attaques": "",
+        "vitesse": 34
+    },
+    {
+        "nom": "Tritosor",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 111,
+        "attaques": "",
+        "vitesse": 39
+    },
+    {
+        "nom": "Capidextre",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Baudrive",
+        "type1": "Spectre",
+        "type2": "Vol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Grodrive",
+        "type1": "Spectre",
+        "type2": "Vol",
+        "pv": 150,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Laporeille",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Lockpin",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Magirêve",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Corboss",
+        "type1": "Ténèbres",
+        "type2": "Vol",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 71
+    },
+    {
+        "nom": "Chaglam",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 49,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Chaffreux",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 71,
+        "attaques": "",
+        "vitesse": 112
+    },
+    {
+        "nom": "Korillon",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Moufouette",
+        "type1": "Poison",
+        "type2": "Ténèbres",
+        "pv": 63,
+        "attaques": "",
+        "vitesse": 74
+    },
+    {
+        "nom": "Moufflair",
+        "type1": "Poison",
+        "type2": "Ténèbres",
+        "pv": 103,
+        "attaques": "",
+        "vitesse": 84
+    },
+    {
+        "nom": "Archéomire",
+        "type1": "Acier",
+        "type2": "Psy",
+        "pv": 57,
+        "attaques": "",
+        "vitesse": 23
+    },
+    {
+        "nom": "Archéodong",
+        "type1": "Acier",
+        "type2": "Psy",
+        "pv": 67,
+        "attaques": "",
+        "vitesse": 33
+    },
+    {
+        "nom": "Manzaï",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 10
+    },
+    {
+        "nom": "Mime Jr.",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 20,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Ptiravi",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Pijako",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 76,
+        "attaques": "",
+        "vitesse": 91
+    },
+    {
+        "nom": "Spiritomb",
+        "type1": "Spectre",
+        "type2": "Ténèbres",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Griknot",
+        "type1": "Dragon",
+        "type2": "Sol",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Carmache",
+        "type1": "Dragon",
+        "type2": "Sol",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 82
+    },
+    {
+        "nom": "Carchacrok",
+        "type1": "Dragon",
+        "type2": "Sol",
+        "pv": 108,
+        "attaques": "",
+        "vitesse": 102
+    },
+    {
+        "nom": "Goinfrex",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 135,
+        "attaques": "",
+        "vitesse": 5
+    },
+    {
+        "nom": "Riolu",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Lucario",
+        "type1": "Combat",
+        "type2": "Acier",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Hippopotas",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 32
+    },
+    {
+        "nom": "Hippodocus",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 108,
+        "attaques": "",
+        "vitesse": 47
+    },
+    {
+        "nom": "Rapion",
+        "type1": "Poison",
+        "type2": "Insecte",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Drascore",
+        "type1": "Poison",
+        "type2": "Ténèbres",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Cradopaud",
+        "type1": "Poison",
+        "type2": "Combat",
+        "pv": 48,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Coatox",
+        "type1": "Poison",
+        "type2": "Combat",
+        "pv": 83,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Vortente",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 74,
+        "attaques": "",
+        "vitesse": 46
+    },
+    {
+        "nom": "Écayon",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 49,
+        "attaques": "",
+        "vitesse": 66
+    },
+    {
+        "nom": "Luminéon",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 69,
+        "attaques": "",
+        "vitesse": 91
+    },
+    {
+        "nom": "Babimanta",
+        "type1": "Eau",
+        "type2": "Vol",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Blizzi",
+        "type1": "Plante",
+        "type2": "Glace",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Blizzaroi",
+        "type1": "Plante",
+        "type2": "Glace",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Dimoret",
+        "type1": "Ténèbres",
+        "type2": "Glace",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 125
+    },
+    {
+        "nom": "Magnézone",
+        "type1": "Électrik",
+        "type2": "Acier",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Coudlangue",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Rhinastoc",
+        "type1": "Sol",
+        "type2": "Roche",
+        "pv": 115,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Bouldeneu",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Élekable",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Maganon",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 83
+    },
+    {
+        "nom": "Togekiss",
+        "type1": "Fée",
+        "type2": "Vol",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Yanmega",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 86,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Phyllali",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Givrali",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Scorvol",
+        "type1": "Sol",
+        "type2": "Vol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Mammochon",
+        "type1": "Glace",
+        "type2": "Sol",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Porygon-Z",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Gallame",
+        "type1": "Psy",
+        "type2": "Combat",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Tarinorme",
+        "type1": "Roche",
+        "type2": "Acier",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Noctunoir",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Momartik",
+        "type1": "Glace",
+        "type2": "Spectre",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Motisma",
+        "type1": "Électrik",
+        "type2": "Spectre",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 91
+    },
+    {
+        "nom": "Créhelf",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Créfollet",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Créfadet",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Dialga",
+        "type1": "Acier",
+        "type2": "Dragon",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Palkia",
+        "type1": "Eau",
+        "type2": "Dragon",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Heatran",
+        "type1": "Feu",
+        "type2": "Acier",
+        "pv": 91,
+        "attaques": "",
+        "vitesse": 77
+    },
+    {
+        "nom": "Regigigas",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Giratina",
+        "type1": "Spectre",
+        "type2": "Dragon",
+        "pv": 150,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Cresselia",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 120,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Phione",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Manaphy",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Darkrai",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 125
+    },
+    {
+        "nom": "Shaymin",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Arceus",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 120,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Victini",
+        "type1": "Psy",
+        "type2": "Feu",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Vipélierre",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 63
+    },
+    {
+        "nom": "Lianaja",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 83
+    },
+    {
+        "nom": "Majaspic",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 113
+    },
+    {
+        "nom": "Gruikui",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Grotichon",
+        "type1": "Feu",
+        "type2": "Combat",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Roitiflam",
+        "type1": "Feu",
+        "type2": "Combat",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Moustillon",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Mateloutre",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Clamiral",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Ratentif",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Miradar",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 77
+    },
+    {
+        "nom": "Ponchiot",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Ponchien",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Mastouffe",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Chacripan",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 41,
+        "attaques": "",
+        "vitesse": 66
+    },
+    {
+        "nom": "Léopardus",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 64,
+        "attaques": "",
+        "vitesse": 106
+    },
+    {
+        "nom": "Feuillajou",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 64
+    },
+    {
+        "nom": "Feuiloutan",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 101
+    },
+    {
+        "nom": "Flamajou",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 64
+    },
+    {
+        "nom": "Flamoutan",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 101
+    },
+    {
+        "nom": "Flotajou",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 64
+    },
+    {
+        "nom": "Flotoutan",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 101
+    },
+    {
+        "nom": "Munna",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 76,
+        "attaques": "",
+        "vitesse": 24
+    },
+    {
+        "nom": "Mushana",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 116,
+        "attaques": "",
+        "vitesse": 29
+    },
+    {
+        "nom": "Poichigeon",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Colombeau",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Déflaisan",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 93
+    },
+    {
+        "nom": "Zébibron",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 76
+    },
+    {
+        "nom": "Zéblitz",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 116
+    },
+    {
+        "nom": "Nodulithe",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Géolithe",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Gigalithe",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Chovsourir",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Rhinolove",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 67,
+        "attaques": "",
+        "vitesse": 114
+    },
+    {
+        "nom": "Rototaupe",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 68
+    },
+    {
+        "nom": "Minotaupe",
+        "type1": "Sol",
+        "type2": "Acier",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 88
+    },
+    {
+        "nom": "Nanméouïe",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 103,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Charpenti",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Ouvrifier",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Bétochef",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Tritonde",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 64
+    },
+    {
+        "nom": "Batracné",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 69
+    },
+    {
+        "nom": "Crapustule",
+        "type1": "Eau",
+        "type2": "Sol",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 74
+    },
+    {
+        "nom": "Judokrak",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 120,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Karaclée",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Larveyette",
+        "type1": "Insecte",
+        "type2": "Plante",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Couverdure",
+        "type1": "Insecte",
+        "type2": "Plante",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Manternel",
+        "type1": "Insecte",
+        "type2": "Plante",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 92
+    },
+    {
+        "nom": "Venipatte",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 57
+    },
+    {
+        "nom": "Scobolide",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 47
+    },
+    {
+        "nom": "Brutapode",
+        "type1": "Insecte",
+        "type2": "Poison",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 112
+    },
+    {
+        "nom": "Doudouvet",
+        "type1": "Plante",
+        "type2": "Fée",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 66
+    },
+    {
+        "nom": "Farfaduvet",
+        "type1": "Plante",
+        "type2": "Fée",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 116
+    },
+    {
+        "nom": "Chlorobule",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Fragilady",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Bargantua",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 98
+    },
+    {
+        "nom": "Mascaïman",
+        "type1": "Sol",
+        "type2": "Ténèbres",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Escroco",
+        "type1": "Sol",
+        "type2": "Ténèbres",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 74
+    },
+    {
+        "nom": "Crocorible",
+        "type1": "Sol",
+        "type2": "Ténèbres",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 92
+    },
+    {
+        "nom": "Darumarond",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Darumacho",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Maracachi",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Crabicoque",
+        "type1": "Insecte",
+        "type2": "Roche",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Crabaraque",
+        "type1": "Insecte",
+        "type2": "Roche",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Baggiguane",
+        "type1": "Ténèbres",
+        "type2": "Combat",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 48
+    },
+    {
+        "nom": "Baggaïd",
+        "type1": "Ténèbres",
+        "type2": "Combat",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Cryptéro",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Tutafeh",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Tutankafer",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Carapagos",
+        "type1": "Eau",
+        "type2": "Roche",
+        "pv": 54,
+        "attaques": "",
+        "vitesse": 22
+    },
+    {
+        "nom": "Mégapagos",
+        "type1": "Eau",
+        "type2": "Roche",
+        "pv": 74,
+        "attaques": "",
+        "vitesse": 32
+    },
+    {
+        "nom": "Arkéapti",
+        "type1": "Roche",
+        "type2": "Vol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Aéroptéryx",
+        "type1": "Roche",
+        "type2": "Vol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Miamiasme",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Miasmax",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Zorua",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Zoroark",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Chinchidou",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Pashmilla",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Scrutella",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Mesmérella",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Sidérella",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Nucléos",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Méios",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Symbios",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Couaneton",
+        "type1": "Eau",
+        "type2": "Vol",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Lakmécygne",
+        "type1": "Eau",
+        "type2": "Vol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 98
+    },
+    {
+        "nom": "Sorbébé",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 36,
+        "attaques": "",
+        "vitesse": 44
+    },
+    {
+        "nom": "Sorboul",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 51,
+        "attaques": "",
+        "vitesse": 59
+    },
+    {
+        "nom": "Sorbouboul",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 71,
+        "attaques": "",
+        "vitesse": 79
+    },
+    {
+        "nom": "Vivaldaim",
+        "type1": "Normal",
+        "type2": "Plante",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Haydaim",
+        "type1": "Normal",
+        "type2": "Plante",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Emolga",
+        "type1": "Électrik",
+        "type2": "Vol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 103
+    },
+    {
+        "nom": "Carabing",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Lançargot",
+        "type1": "Insecte",
+        "type2": "Acier",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Trompignon",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 69,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Gaulet",
+        "type1": "Plante",
+        "type2": "Poison",
+        "pv": 114,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Viskuse",
+        "type1": "Eau",
+        "type2": "Spectre",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Moyade",
+        "type1": "Eau",
+        "type2": "Spectre",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Mamanbo",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 165,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Statitik",
+        "type1": "Insecte",
+        "type2": "Électrik",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Mygavolt",
+        "type1": "Insecte",
+        "type2": "Électrik",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 108
+    },
+    {
+        "nom": "Grindur",
+        "type1": "Plante",
+        "type2": "Acier",
+        "pv": 44,
+        "attaques": "",
+        "vitesse": 10
+    },
+    {
+        "nom": "Noacier",
+        "type1": "Plante",
+        "type2": "Acier",
+        "pv": 74,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Tic",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Clic",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Cliticlic",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Anchwatt",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Lampéroie",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Ohmassacre",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Lewsor",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Neitram",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Funécire",
+        "type1": "Spectre",
+        "type2": "Feu",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Mélancolux",
+        "type1": "Spectre",
+        "type2": "Feu",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Lugulabre",
+        "type1": "Spectre",
+        "type2": "Feu",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Coupenotte",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 46,
+        "attaques": "",
+        "vitesse": 57
+    },
+    {
+        "nom": "Incisache",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 66,
+        "attaques": "",
+        "vitesse": 67
+    },
+    {
+        "nom": "Tranchodon",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 76,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Polarhume",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Polagriffe",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Hexagel",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Escargaume",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Limaspeed",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 145
+    },
+    {
+        "nom": "Limonde",
+        "type1": "Sol",
+        "type2": "Électrik",
+        "pv": 109,
+        "attaques": "",
+        "vitesse": 32
+    },
+    {
+        "nom": "Kungfouine",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Shaofouine",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Drakkarmin",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 77,
+        "attaques": "",
+        "vitesse": 48
+    },
+    {
+        "nom": "Gringolem",
+        "type1": "Sol",
+        "type2": "Spectre",
+        "pv": 59,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Golemastoc",
+        "type1": "Sol",
+        "type2": "Spectre",
+        "pv": 89,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Scalpion",
+        "type1": "Ténèbres",
+        "type2": "Acier",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Scalproie",
+        "type1": "Ténèbres",
+        "type2": "Acier",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Frison",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Furaiglon",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Gueriaigle",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Vostourno",
+        "type1": "Ténèbres",
+        "type2": "Vol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Vaututrice",
+        "type1": "Ténèbres",
+        "type2": "Vol",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Aflamanoir",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Fermite",
+        "type1": "Insecte",
+        "type2": "Acier",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 109
+    },
+    {
+        "nom": "Solochi",
+        "type1": "Ténèbres",
+        "type2": "Dragon",
+        "pv": 52,
+        "attaques": "",
+        "vitesse": 38
+    },
+    {
+        "nom": "Diamat",
+        "type1": "Ténèbres",
+        "type2": "Dragon",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Trioxhydre",
+        "type1": "Ténèbres",
+        "type2": "Dragon",
+        "pv": 92,
+        "attaques": "",
+        "vitesse": 98
+    },
+    {
+        "nom": "Pyronille",
+        "type1": "Insecte",
+        "type2": "Feu",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Pyrax",
+        "type1": "Insecte",
+        "type2": "Feu",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Cobaltium",
+        "type1": "Acier",
+        "type2": "Combat",
+        "pv": 91,
+        "attaques": "",
+        "vitesse": 108
+    },
+    {
+        "nom": "Terrakium",
+        "type1": "Roche",
+        "type2": "Combat",
+        "pv": 91,
+        "attaques": "",
+        "vitesse": 108
+    },
+    {
+        "nom": "Viridium",
+        "type1": "Plante",
+        "type2": "Combat",
+        "pv": 91,
+        "attaques": "",
+        "vitesse": 108
+    },
+    {
+        "nom": "Boréas",
+        "type1": "Vol",
+        "type2": "",
+        "pv": 79,
+        "attaques": "",
+        "vitesse": 111
+    },
+    {
+        "nom": "Fulguris",
+        "type1": "Électrik",
+        "type2": "Vol",
+        "pv": 79,
+        "attaques": "",
+        "vitesse": 111
+    },
+    {
+        "nom": "Reshiram",
+        "type1": "Dragon",
+        "type2": "Feu",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Zekrom",
+        "type1": "Dragon",
+        "type2": "Électrik",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Démétéros",
+        "type1": "Sol",
+        "type2": "Vol",
+        "pv": 89,
+        "attaques": "",
+        "vitesse": 101
+    },
+    {
+        "nom": "Kyurem",
+        "type1": "Dragon",
+        "type2": "Glace",
+        "pv": 125,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Keldeo",
+        "type1": "Eau",
+        "type2": "Combat",
+        "pv": 91,
+        "attaques": "",
+        "vitesse": 108
+    },
+    {
+        "nom": "Meloetta",
+        "type1": "Normal",
+        "type2": "Psy",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Genesect",
+        "type1": "Insecte",
+        "type2": "Acier",
+        "pv": 71,
+        "attaques": "",
+        "vitesse": 99
+    },
+    {
+        "nom": "Marisson",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 56,
+        "attaques": "",
+        "vitesse": 38
+    },
+    {
+        "nom": "Boguérisse",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 57
+    },
+    {
+        "nom": "Blindépique",
+        "type1": "Plante",
+        "type2": "Combat",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 64
+    },
+    {
+        "nom": "Feunnec",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Roussil",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 59,
+        "attaques": "",
+        "vitesse": 73
+    },
+    {
+        "nom": "Goupelin",
+        "type1": "Feu",
+        "type2": "Psy",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 104
+    },
+    {
+        "nom": "Grenousse",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 41,
+        "attaques": "",
+        "vitesse": 71
+    },
+    {
+        "nom": "Croâporal",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 54,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Amphinobi",
+        "type1": "Eau",
+        "type2": "Ténèbres",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 132
+    },
+    {
+        "nom": "Sapereau",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 57
+    },
+    {
+        "nom": "Excavarenne",
+        "type1": "Normal",
+        "type2": "Sol",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 78
+    },
+    {
+        "nom": "Passerouge",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 62
+    },
+    {
+        "nom": "Braisillon",
+        "type1": "Feu",
+        "type2": "Vol",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 84
+    },
+    {
+        "nom": "Flambusard",
+        "type1": "Feu",
+        "type2": "Vol",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 126
+    },
+    {
+        "nom": "Lépidonille",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Pérégrain",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 29
+    },
+    {
+        "nom": "Prismillon",
+        "type1": "Insecte",
+        "type2": "Vol",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 89
+    },
+    {
+        "nom": "Hélionceau",
+        "type1": "Feu",
+        "type2": "Normal",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Némélios",
+        "type1": "Feu",
+        "type2": "Normal",
+        "pv": 86,
+        "attaques": "",
+        "vitesse": 106
+    },
+    {
+        "nom": "Flabébé",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 44,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Floette",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 54,
+        "attaques": "",
+        "vitesse": 52
+    },
+    {
+        "nom": "Florges",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Cabriolaine",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 66,
+        "attaques": "",
+        "vitesse": 52
+    },
+    {
+        "nom": "Chevroum",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 123,
+        "attaques": "",
+        "vitesse": 68
+    },
+    {
+        "nom": "Pandespiègle",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 67,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Pandarbare",
+        "type1": "Combat",
+        "type2": "Ténèbres",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Couafarel",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 102
+    },
+    {
+        "nom": "Psystigri",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 68
+    },
+    {
+        "nom": "Mistigrix",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 74,
+        "attaques": "",
+        "vitesse": 104
+    },
+    {
+        "nom": "Monorpale",
+        "type1": "Acier",
+        "type2": "Spectre",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 28
+    },
+    {
+        "nom": "Dimoclès",
+        "type1": "Acier",
+        "type2": "Spectre",
+        "pv": 59,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Exagide",
+        "type1": "Acier",
+        "type2": "Spectre",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Fluvetin",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 23
+    },
+    {
+        "nom": "Cocotine",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 101,
+        "attaques": "",
+        "vitesse": 29
+    },
+    {
+        "nom": "Sucroquin",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 49
+    },
+    {
+        "nom": "Cupcanaille",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 82,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Sepiatop",
+        "type1": "Ténèbres",
+        "type2": "Psy",
+        "pv": 53,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Sepiatroce",
+        "type1": "Ténèbres",
+        "type2": "Psy",
+        "pv": 86,
+        "attaques": "",
+        "vitesse": 73
+    },
+    {
+        "nom": "Opermine",
+        "type1": "Roche",
+        "type2": "Eau",
+        "pv": 42,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Golgopathe",
+        "type1": "Roche",
+        "type2": "Eau",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 68
+    },
+    {
+        "nom": "Venalgue",
+        "type1": "Poison",
+        "type2": "Eau",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Kravarech",
+        "type1": "Poison",
+        "type2": "Dragon",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 44
+    },
+    {
+        "nom": "Flingouste",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 44
+    },
+    {
+        "nom": "Gamblast",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 71,
+        "attaques": "",
+        "vitesse": 59
+    },
+    {
+        "nom": "Galvaran",
+        "type1": "Électrik",
+        "type2": "Normal",
+        "pv": 44,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Iguolta",
+        "type1": "Électrik",
+        "type2": "Normal",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 109
+    },
+    {
+        "nom": "Ptyranidur",
+        "type1": "Roche",
+        "type2": "Dragon",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 48
+    },
+    {
+        "nom": "Rexillius",
+        "type1": "Roche",
+        "type2": "Dragon",
+        "pv": 82,
+        "attaques": "",
+        "vitesse": 71
+    },
+    {
+        "nom": "Amagara",
+        "type1": "Roche",
+        "type2": "Glace",
+        "pv": 77,
+        "attaques": "",
+        "vitesse": 46
+    },
+    {
+        "nom": "Dragmara",
+        "type1": "Roche",
+        "type2": "Glace",
+        "pv": 123,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Nymphali",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Brutalibré",
+        "type1": "Combat",
+        "type2": "Vol",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 118
+    },
+    {
+        "nom": "Dedenne",
+        "type1": "Électrik",
+        "type2": "Fée",
+        "pv": 67,
+        "attaques": "",
+        "vitesse": 101
+    },
+    {
+        "nom": "Strassie",
+        "type1": "Roche",
+        "type2": "Fée",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Mucuscule",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Colimucus",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Muplodocus",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Trousselin",
+        "type1": "Acier",
+        "type2": "Fée",
+        "pv": 57,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Brocélôme",
+        "type1": "Spectre",
+        "type2": "Plante",
+        "pv": 43,
+        "attaques": "",
+        "vitesse": 38
+    },
+    {
+        "nom": "Desséliande",
+        "type1": "Spectre",
+        "type2": "Plante",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 56
+    },
+    {
+        "nom": "Pitrouille",
+        "type1": "Spectre",
+        "type2": "Plante",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 46
+    },
+    {
+        "nom": "Banshitrouye",
+        "type1": "Spectre",
+        "type2": "Plante",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 69
+    },
+    {
+        "nom": "Grelaçon",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 28
+    },
+    {
+        "nom": "Séracrawl",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 28
+    },
+    {
+        "nom": "Sonistrelle",
+        "type1": "Vol",
+        "type2": "Dragon",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Bruyverne",
+        "type1": "Vol",
+        "type2": "Dragon",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 123
+    },
+    {
+        "nom": "Xerneas",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 126,
+        "attaques": "",
+        "vitesse": 99
+    },
+    {
+        "nom": "Yveltal",
+        "type1": "Ténèbres",
+        "type2": "Vol",
+        "pv": 126,
+        "attaques": "",
+        "vitesse": 99
+    },
+    {
+        "nom": "Zygarde",
+        "type1": "Dragon",
+        "type2": "Sol",
+        "pv": 108,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Diancie",
+        "type1": "Roche",
+        "type2": "Fée",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Hoopa",
+        "type1": "Psy",
+        "type2": "Spectre",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Volcanion",
+        "type1": "Feu",
+        "type2": "Eau",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Brindibou",
+        "type1": "Plante",
+        "type2": "Vol",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Efflèche",
+        "type1": "Plante",
+        "type2": "Vol",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 52
+    },
+    {
+        "nom": "Archéduc",
+        "type1": "Plante",
+        "type2": "Spectre",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Flamiaou",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Matoufeu",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Félinferno",
+        "type1": "Feu",
+        "type2": "Ténèbres",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Otaquin",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Otarlette",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Oratoria",
+        "type1": "Eau",
+        "type2": "Fée",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Picassaut",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Piclairon",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Bazoucan",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Manglouton",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 48,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Argouste",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Larvibule",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 47,
+        "attaques": "",
+        "vitesse": 46
+    },
+    {
+        "nom": "Chrysapile",
+        "type1": "Insecte",
+        "type2": "Électrik",
+        "pv": 57,
+        "attaques": "",
+        "vitesse": 36
+    },
+    {
+        "nom": "Lucanon",
+        "type1": "Insecte",
+        "type2": "Électrik",
+        "pv": 77,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Crabagarre",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 47,
+        "attaques": "",
+        "vitesse": 63
+    },
+    {
+        "nom": "Crabominable",
+        "type1": "Combat",
+        "type2": "Glace",
+        "pv": 97,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Plumeline",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 93
+    },
+    {
+        "nom": "Bombydou",
+        "type1": "Insecte",
+        "type2": "Fée",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 84
+    },
+    {
+        "nom": "Rubombelle",
+        "type1": "Insecte",
+        "type2": "Fée",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 124
+    },
+    {
+        "nom": "Rocabot",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Lougaroc",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 112
+    },
+    {
+        "nom": "Froussardine",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Vorastérie",
+        "type1": "Poison",
+        "type2": "Eau",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Prédastérie",
+        "type1": "Poison",
+        "type2": "Eau",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Tiboudet",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Bourrinos",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Araqua",
+        "type1": "Eau",
+        "type2": "Insecte",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 27
+    },
+    {
+        "nom": "Tarenbulle",
+        "type1": "Eau",
+        "type2": "Insecte",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Mimantis",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Floramantis",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Spododo",
+        "type1": "Plante",
+        "type2": "Fée",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Lampignon",
+        "type1": "Plante",
+        "type2": "Fée",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Tritox",
+        "type1": "Poison",
+        "type2": "Feu",
+        "pv": 48,
+        "attaques": "",
+        "vitesse": 77
+    },
+    {
+        "nom": "Malamandre",
+        "type1": "Poison",
+        "type2": "Feu",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 117
+    },
+    {
+        "nom": "Nounourson",
+        "type1": "Normal",
+        "type2": "Combat",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Chelours",
+        "type1": "Normal",
+        "type2": "Combat",
+        "pv": 120,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Croquine",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 42,
+        "attaques": "",
+        "vitesse": 32
+    },
+    {
+        "nom": "Candine",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 52,
+        "attaques": "",
+        "vitesse": 62
+    },
+    {
+        "nom": "Sucreine",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Guérilande",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 51,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Gouroutan",
+        "type1": "Normal",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Quartermac",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Sovkipou",
+        "type1": "Insecte",
+        "type2": "Eau",
+        "pv": 25,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Sarmuraï",
+        "type1": "Insecte",
+        "type2": "Eau",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Bacabouh",
+        "type1": "Spectre",
+        "type2": "Sol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Trépassable",
+        "type1": "Spectre",
+        "type2": "Sol",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Concombaffe",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 5
+    },
+    {
+        "nom": "Type:0",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 59
+    },
+    {
+        "nom": "Silvallié",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Météno",
+        "type1": "Roche",
+        "type2": "Vol",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Dodoala",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Boumata",
+        "type1": "Feu",
+        "type2": "Dragon",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 36
+    },
+    {
+        "nom": "Togedemaru",
+        "type1": "Électrik",
+        "type2": "Acier",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 96
+    },
+    {
+        "nom": "Mimiqui",
+        "type1": "Spectre",
+        "type2": "Fée",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 96
+    },
+    {
+        "nom": "Denticrisse",
+        "type1": "Eau",
+        "type2": "Psy",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 92
+    },
+    {
+        "nom": "Draïeul",
+        "type1": "Normal",
+        "type2": "Dragon",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 36
+    },
+    {
+        "nom": "Sinistrail",
+        "type1": "Spectre",
+        "type2": "Plante",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Bébécaille",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Écaïd",
+        "type1": "Dragon",
+        "type2": "Combat",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Ékaïser",
+        "type1": "Dragon",
+        "type2": "Combat",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Tokorico",
+        "type1": "Électrik",
+        "type2": "Fée",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 130
+    },
+    {
+        "nom": "Tokopiyon",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Tokotoro",
+        "type1": "Plante",
+        "type2": "Fée",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Tokopisco",
+        "type1": "Eau",
+        "type2": "Fée",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Cosmog",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 43,
+        "attaques": "",
+        "vitesse": 37
+    },
+    {
+        "nom": "Cosmovum",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 43,
+        "attaques": "",
+        "vitesse": 37
+    },
+    {
+        "nom": "Solgaleo",
+        "type1": "Psy",
+        "type2": "Acier",
+        "pv": 137,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Lunala",
+        "type1": "Psy",
+        "type2": "Spectre",
+        "pv": 137,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Zéroïd",
+        "type1": "Roche",
+        "type2": "Poison",
+        "pv": 109,
+        "attaques": "",
+        "vitesse": 103
+    },
+    {
+        "nom": "Mouscoto",
+        "type1": "Insecte",
+        "type2": "Combat",
+        "pv": 107,
+        "attaques": "",
+        "vitesse": 79
+    },
+    {
+        "nom": "Cancrelove",
+        "type1": "Insecte",
+        "type2": "Combat",
+        "pv": 71,
+        "attaques": "",
+        "vitesse": 151
+    },
+    {
+        "nom": "Câblifère",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 83,
+        "attaques": "",
+        "vitesse": 83
+    },
+    {
+        "nom": "Bamboiselle",
+        "type1": "Acier",
+        "type2": "Vol",
+        "pv": 97,
+        "attaques": "",
+        "vitesse": 61
+    },
+    {
+        "nom": "Katagami",
+        "type1": "Plante",
+        "type2": "Acier",
+        "pv": 59,
+        "attaques": "",
+        "vitesse": 109
+    },
+    {
+        "nom": "Engloutyran",
+        "type1": "Ténèbres",
+        "type2": "Dragon",
+        "pv": 223,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Necrozma",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 97,
+        "attaques": "",
+        "vitesse": 79
+    },
+    {
+        "nom": "Magearna",
+        "type1": "Acier",
+        "type2": "Fée",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Marshadow",
+        "type1": "Combat",
+        "type2": "Spectre",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 125
+    },
+    {
+        "nom": "Vémini",
+        "type1": "Poison",
+        "type2": "",
+        "pv": 67,
+        "attaques": "",
+        "vitesse": 73
+    },
+    {
+        "nom": "Mandrillon",
+        "type1": "Poison",
+        "type2": "Dragon",
+        "pv": 73,
+        "attaques": "",
+        "vitesse": 121
+    },
+    {
+        "nom": "Ama-ama",
+        "type1": "Roche",
+        "type2": "Acier",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 13
+    },
+    {
+        "nom": "Pierroteknik",
+        "type1": "Feu",
+        "type2": "Spectre",
+        "pv": 53,
+        "attaques": "",
+        "vitesse": 107
+    },
+    {
+        "nom": "Zeraora",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 143
+    },
+    {
+        "nom": "Meltan",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 46,
+        "attaques": "",
+        "vitesse": 34
+    },
+    {
+        "nom": "Melmetal",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 135,
+        "attaques": "",
+        "vitesse": 34
+    },
+    {
+        "nom": "Rattata d'Alola",
+        "type1": "Ténèbres",
+        "type2": "Normal",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Rattatac d'Alola",
+        "type1": "Ténèbres",
+        "type2": "Normal",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 77
+    },
+    {
+        "nom": "Raichu d'Alola",
+        "type1": "Électrik",
+        "type2": "Psy",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Sabelette d'Alola",
+        "type1": "Glace",
+        "type2": "Acier",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Sablaireau d'Alola",
+        "type1": "Glace",
+        "type2": "Acier",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Goupix d'Alola",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Feunard d'Alola",
+        "type1": "Glace",
+        "type2": "Fée",
+        "pv": 73,
+        "attaques": "",
+        "vitesse": 109
+    },
+    {
+        "nom": "Taupiqueur d'Alola",
+        "type1": "Sol",
+        "type2": "Acier",
+        "pv": 10,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Triopikeur d'Alola",
+        "type1": "Sol",
+        "type2": "Acier",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Miaouss d'Alola",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Persian d'Alola",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Racaillou d'Alola",
+        "type1": "Roche",
+        "type2": "Électrik",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Gravalanch d'Alola",
+        "type1": "Roche",
+        "type2": "Électrik",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Grolem d'Alola",
+        "type1": "Roche",
+        "type2": "Électrik",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Tadmorv d'Alola",
+        "type1": "Poison",
+        "type2": "Ténèbres",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Grotadmorv d'Alola",
+        "type1": "Poison",
+        "type2": "Ténèbres",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Noadkoko d'Alola",
+        "type1": "Plante",
+        "type2": "Dragon",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Ossatueur d'Alola",
+        "type1": "Feu",
+        "type2": "Spectre",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Ouistempo",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Badabouin",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Gorythmic",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Flambino",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 69
+    },
+    {
+        "nom": "Lapyro",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 94
+    },
+    {
+        "nom": "Pyrobut",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 119
+    },
+    {
+        "nom": "Larméléon",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Arrozard",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Lézargus",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Rongourmand",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Rongrigou",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 120,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Minisange",
+        "type1": "Vol",
+        "type2": "",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 57
+    },
+    {
+        "nom": "Bleuseille",
+        "type1": "Vol",
+        "type2": "",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 77
+    },
+    {
+        "nom": "Corvaillus",
+        "type1": "Vol",
+        "type2": "Acier",
+        "pv": 98,
+        "attaques": "",
+        "vitesse": 67
+    },
+    {
+        "nom": "Larvadar",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 28,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Coléodôme",
+        "type1": "Insecte",
+        "type2": "Psy",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Astronelle",
+        "type1": "Insecte",
+        "type2": "Psy",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Goupilou",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Roublenard",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Tournicoton",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 10
+    },
+    {
+        "nom": "Blancoton",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Moumouton",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 42,
+        "attaques": "",
+        "vitesse": 48
+    },
+    {
+        "nom": "Moumouflon",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 88
+    },
+    {
+        "nom": "Khélocrok",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 44
+    },
+    {
+        "nom": "Torgamord",
+        "type1": "Eau",
+        "type2": "Roche",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 74
+    },
+    {
+        "nom": "Voltoutou",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 59,
+        "attaques": "",
+        "vitesse": 26
+    },
+    {
+        "nom": "Fulgudog",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 69,
+        "attaques": "",
+        "vitesse": 121
+    },
+    {
+        "nom": "Charbi",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Wagomine",
+        "type1": "Roche",
+        "type2": "Feu",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Monthracite",
+        "type1": "Roche",
+        "type2": "Feu",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Verpom",
+        "type1": "Plante",
+        "type2": "Dragon",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Pomdrapi",
+        "type1": "Plante",
+        "type2": "Dragon",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Dratatin",
+        "type1": "Plante",
+        "type2": "Dragon",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Dunaja",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 52,
+        "attaques": "",
+        "vitesse": 46
+    },
+    {
+        "nom": "Dunaconda",
+        "type1": "Sol",
+        "type2": "",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 71
+    },
+    {
+        "nom": "Nigosier",
+        "type1": "Vol",
+        "type2": "Eau",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Embrochet",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 41,
+        "attaques": "",
+        "vitesse": 66
+    },
+    {
+        "nom": "Hastacuda",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 136
+    },
+    {
+        "nom": "Toxizap",
+        "type1": "Électrik",
+        "type2": "Poison",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Salarsen",
+        "type1": "Électrik",
+        "type2": "Poison",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Grillepattes",
+        "type1": "Feu",
+        "type2": "Insecte",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Scolocendre",
+        "type1": "Feu",
+        "type2": "Insecte",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Poulpaf",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 32
+    },
+    {
+        "nom": "Krakos",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 42
+    },
+    {
+        "nom": "Théffroi",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Polthégeist",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Bibichut",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 42,
+        "attaques": "",
+        "vitesse": 39
+    },
+    {
+        "nom": "Chapotus",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 57,
+        "attaques": "",
+        "vitesse": 49
+    },
+    {
+        "nom": "Sorcilence",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 57,
+        "attaques": "",
+        "vitesse": 29
+    },
+    {
+        "nom": "Grimalin",
+        "type1": "Ténèbres",
+        "type2": "Fée",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Fourbelin",
+        "type1": "Ténèbres",
+        "type2": "Fée",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Angoliath",
+        "type1": "Ténèbres",
+        "type2": "Fée",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Ixon",
+        "type1": "Ténèbres",
+        "type2": "Normal",
+        "pv": 93,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Berserkatt",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Corayôme",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Palarticho",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 62,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "M. Glaquette",
+        "type1": "Glace",
+        "type2": "Psy",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Tutétékri",
+        "type1": "Sol",
+        "type2": "Spectre",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Crèmy",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 34
+    },
+    {
+        "nom": "Charmilly",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 64
+    },
+    {
+        "nom": "Hexadron",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Wattapik",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 48,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Frissonille",
+        "type1": "Glace",
+        "type2": "Insecte",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Beldeneige",
+        "type1": "Glace",
+        "type2": "Insecte",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Dolman",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Bekaglaçon",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Wimessir",
+        "type1": "Psy",
+        "type2": "Normal",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Morpeko",
+        "type1": "Électrik",
+        "type2": "Ténèbres",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Charibari",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Pachyradjah",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 122,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Galvagon",
+        "type1": "Électrik",
+        "type2": "Dragon",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Galvagla",
+        "type1": "Électrik",
+        "type2": "Glace",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Hydragon",
+        "type1": "Eau",
+        "type2": "Dragon",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Hydragla",
+        "type1": "Eau",
+        "type2": "Glace",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Duralugon",
+        "type1": "Acier",
+        "type2": "Dragon",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Fantyrm",
+        "type1": "Dragon",
+        "type2": "Spectre",
+        "pv": 28,
+        "attaques": "",
+        "vitesse": 82
+    },
+    {
+        "nom": "Dispareptil",
+        "type1": "Dragon",
+        "type2": "Spectre",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 102
+    },
+    {
+        "nom": "Lanssorien",
+        "type1": "Dragon",
+        "type2": "Spectre",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 142
+    },
+    {
+        "nom": "Zacian",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 92,
+        "attaques": "",
+        "vitesse": 148
+    },
+    {
+        "nom": "Zamazenta",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 92,
+        "attaques": "",
+        "vitesse": 128
+    },
+    {
+        "nom": "Éthernatos",
+        "type1": "Poison",
+        "type2": "Dragon",
+        "pv": 140,
+        "attaques": "",
+        "vitesse": 130
+    },
+    {
+        "nom": "Wushours",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Shifours",
+        "type1": "Combat",
+        "type2": "Ténèbres",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 97
+    },
+    {
+        "nom": "Zarude",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Regieleki",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 200
+    },
+    {
+        "nom": "Regidrago",
+        "type1": "Dragon",
+        "type2": "",
+        "pv": 200,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Blizzeval",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Spectreval",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 130
+    },
+    {
+        "nom": "Sylveroy",
+        "type1": "Psy",
+        "type2": "Plante",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Cerbyllin",
+        "type1": "Normal",
+        "type2": "Psy",
+        "pv": 103,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Hachécateur",
+        "type1": "Insecte",
+        "type2": "Roche",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Ursaking",
+        "type1": "Sol",
+        "type2": "Normal",
+        "pv": 130,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Paragruel",
+        "type1": "Eau",
+        "type2": "Spectre",
+        "pv": 120,
+        "attaques": "",
+        "vitesse": 78
+    },
+    {
+        "nom": "Farfurex",
+        "type1": "Combat",
+        "type2": "Poison",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Qwilpik",
+        "type1": "Ténèbres",
+        "type2": "Poison",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Amovénus",
+        "type1": "Fée",
+        "type2": "Vol",
+        "pv": 74,
+        "attaques": "",
+        "vitesse": 106
+    },
+    {
+        "nom": "Miaouss de Galar",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Ponyta de Galar",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Galopa de Galar",
+        "type1": "Psy",
+        "type2": "Fée",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Ramoloss de Galar",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 15
+    },
+    {
+        "nom": "Flagadoss de Galar",
+        "type1": "Poison",
+        "type2": "Psy",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Canarticho de Galar",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 52,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Smogogo de Galar",
+        "type1": "Poison",
+        "type2": "Fée",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "M.Mime de Galar",
+        "type1": "Glace",
+        "type2": "Psy",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Artikodin de Galar",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Électhor de Galar",
+        "type1": "Combat",
+        "type2": "Vol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Sulfura de Galar",
+        "type1": "Ténèbres",
+        "type2": "Vol",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Roigada de Galar",
+        "type1": "Poison",
+        "type2": "Psy",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Corayon de Galar",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Zigzaton de Galar",
+        "type1": "Ténèbres",
+        "type2": "Normal",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Linéon de Galar",
+        "type1": "Ténèbres",
+        "type2": "Normal",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Darumarond de Galar",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Darumacho de Galar",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Tutafeh de Galar",
+        "type1": "Sol",
+        "type2": "Spectre",
+        "pv": 38,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Limonde de Galar",
+        "type1": "Sol",
+        "type2": "Acier",
+        "pv": 109,
+        "attaques": "",
+        "vitesse": 32
+    },
+    {
+        "nom": "Caninos de Hisui",
+        "type1": "Feu",
+        "type2": "Roche",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Arcanin de Hisui",
+        "type1": "Feu",
+        "type2": "Roche",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Voltorbe de Hisui",
+        "type1": "Électrik",
+        "type2": "Plante",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Électrode de Hisui",
+        "type1": "Électrik",
+        "type2": "Plante",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 150
+    },
+    {
+        "nom": "Typhlosion de Hisui",
+        "type1": "Feu",
+        "type2": "Spectre",
+        "pv": 73,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Qwilfish de Hisui",
+        "type1": "Ténèbres",
+        "type2": "Poison",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Farfuret de Hisui",
+        "type1": "Combat",
+        "type2": "Poison",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 115
+    },
+    {
+        "nom": "Clamiral de Hisui",
+        "type1": "Eau",
+        "type2": "Ténèbres",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Fragilady de Hisui",
+        "type1": "Plante",
+        "type2": "Combat",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Zorua de Hisui",
+        "type1": "Normal",
+        "type2": "Spectre",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Zoroark de Hisui",
+        "type1": "Normal",
+        "type2": "Spectre",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Gueriaigle de Hisui",
+        "type1": "Psy",
+        "type2": "Vol",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Colimucus de Hisui",
+        "type1": "Acier",
+        "type2": "Dragon",
+        "pv": 58,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Muplodocus de Hisui",
+        "type1": "Acier",
+        "type2": "Dragon",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Séracrawl de Hisui",
+        "type1": "Glace",
+        "type2": "Roche",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 38
+    },
+    {
+        "nom": "Archéduc de Hisui",
+        "type1": "Plante",
+        "type2": "Combat",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Poussacha",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Matourgeon",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 83
+    },
+    {
+        "nom": "Miascarade",
+        "type1": "Plante",
+        "type2": "Ténèbres",
+        "pv": 76,
+        "attaques": "",
+        "vitesse": 123
+    },
+    {
+        "nom": "Chochodile",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 67,
+        "attaques": "",
+        "vitesse": 36
+    },
+    {
+        "nom": "Crocogril",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 81,
+        "attaques": "",
+        "vitesse": 49
+    },
+    {
+        "nom": "Flâmigator",
+        "type1": "Feu",
+        "type2": "Spectre",
+        "pv": 104,
+        "attaques": "",
+        "vitesse": 66
+    },
+    {
+        "nom": "Coiffeton",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Canarbello",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Palmaval",
+        "type1": "Eau",
+        "type2": "Combat",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Gourmelet",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 54,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Fragroin",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 110,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Tissenboule",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Filentrappe",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Lilliterelle",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 33,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Gambex",
+        "type1": "Insecte",
+        "type2": "Ténèbres",
+        "pv": 71,
+        "attaques": "",
+        "vitesse": 92
+    },
+    {
+        "nom": "Pohm",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Pohmotte",
+        "type1": "Électrik",
+        "type2": "Combat",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Pohmarmotte",
+        "type1": "Électrik",
+        "type2": "Combat",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Compagnol",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Famignol",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 74,
+        "attaques": "",
+        "vitesse": 111
+    },
+    {
+        "nom": "Pâtachiot",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 37,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Briochien",
+        "type1": "Fée",
+        "type2": "",
+        "pv": 57,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Olivini",
+        "type1": "Plante",
+        "type2": "Normal",
+        "pv": 41,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Olivado",
+        "type1": "Plante",
+        "type2": "Normal",
+        "pv": 52,
+        "attaques": "",
+        "vitesse": 33
+    },
+    {
+        "nom": "Arboliva",
+        "type1": "Plante",
+        "type2": "Normal",
+        "pv": 78,
+        "attaques": "",
+        "vitesse": 39
+    },
+    {
+        "nom": "Tapatoès",
+        "type1": "Normal",
+        "type2": "Vol",
+        "pv": 82,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Selutin",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 25
+    },
+    {
+        "nom": "Amassel",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Gigansel",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Charbambin",
+        "type1": "Feu",
+        "type2": "",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Carmadura",
+        "type1": "Feu",
+        "type2": "Psy",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Malvalame",
+        "type1": "Feu",
+        "type2": "Spectre",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Têtampoule",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 61,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Ampibidou",
+        "type1": "Électrik",
+        "type2": "",
+        "pv": 109,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Zapétrel",
+        "type1": "Électrik",
+        "type2": "Vol",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Fulgulairo",
+        "type1": "Électrik",
+        "type2": "Vol",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 125
+    },
+    {
+        "nom": "Grondogue",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 60,
+        "attaques": "",
+        "vitesse": 51
+    },
+    {
+        "nom": "Dogrino",
+        "type1": "Ténèbres",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Gribouraigne",
+        "type1": "Poison",
+        "type2": "Normal",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Tag-Tag",
+        "type1": "Poison",
+        "type2": "Normal",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Virovent",
+        "type1": "Plante",
+        "type2": "Spectre",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Virevorreur",
+        "type1": "Plante",
+        "type2": "Spectre",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Terracool",
+        "type1": "Sol",
+        "type2": "Plante",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Terracruel",
+        "type1": "Sol",
+        "type2": "Plante",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Craparoi",
+        "type1": "Roche",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Pimito",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 52,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Scovilain",
+        "type1": "Plante",
+        "type2": "Feu",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Léboulérou",
+        "type1": "Insecte",
+        "type2": "",
+        "pv": 41,
+        "attaques": "",
+        "vitesse": 30
+    },
+    {
+        "nom": "Bérasca",
+        "type1": "Insecte",
+        "type2": "Psy",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Flotillon",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 30,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Cléopsytra",
+        "type1": "Psy",
+        "type2": "",
+        "pv": 95,
+        "attaques": "",
+        "vitesse": 105
+    },
+    {
+        "nom": "Forgerette",
+        "type1": "Fée",
+        "type2": "Acier",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 58
+    },
+    {
+        "nom": "Forgella",
+        "type1": "Fée",
+        "type2": "Acier",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 78
+    },
+    {
+        "nom": "Forgelina",
+        "type1": "Fée",
+        "type2": "Acier",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 94
+    },
+    {
+        "nom": "Taupikeau",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 10,
+        "attaques": "",
+        "vitesse": 95
+    },
+    {
+        "nom": "Triopikeau",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 35,
+        "attaques": "",
+        "vitesse": 120
+    },
+    {
+        "nom": "Lestombaile",
+        "type1": "Vol",
+        "type2": "Ténèbres",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 82
+    },
+    {
+        "nom": "Dofin",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Superdofin",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Vrombi",
+        "type1": "Acier",
+        "type2": "Poison",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 47
+    },
+    {
+        "nom": "Vrombotor",
+        "type1": "Acier",
+        "type2": "Poison",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Motorizard",
+        "type1": "Dragon",
+        "type2": "Normal",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 121
+    },
+    {
+        "nom": "Ferdeter",
+        "type1": "Acier",
+        "type2": "",
+        "pv": 70,
+        "attaques": "",
+        "vitesse": 65
+    },
+    {
+        "nom": "Germéclat",
+        "type1": "Roche",
+        "type2": "Poison",
+        "pv": 48,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Floréclat",
+        "type1": "Roche",
+        "type2": "Poison",
+        "pv": 83,
+        "attaques": "",
+        "vitesse": 86
+    },
+    {
+        "nom": "Toutombe",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 50,
+        "attaques": "",
+        "vitesse": 34
+    },
+    {
+        "nom": "Tomberro",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 72,
+        "attaques": "",
+        "vitesse": 68
+    },
+    {
+        "nom": "Flamenroule",
+        "type1": "Vol",
+        "type2": "Combat",
+        "pv": 82,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Piétacé",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 108,
+        "attaques": "",
+        "vitesse": 43
+    },
+    {
+        "nom": "Balbalèze",
+        "type1": "Glace",
+        "type2": "",
+        "pv": 170,
+        "attaques": "",
+        "vitesse": 73
+    },
+    {
+        "nom": "Délestin",
+        "type1": "Eau",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Oyacata",
+        "type1": "Eau",
+        "type2": "",
+        "pv": 150,
+        "attaques": "",
+        "vitesse": 35
+    },
+    {
+        "nom": "Nigirigon",
+        "type1": "Dragon",
+        "type2": "Eau",
+        "pv": 68,
+        "attaques": "",
+        "vitesse": 82
+    },
+    {
+        "nom": "Courrousinge",
+        "type1": "Combat",
+        "type2": "Spectre",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 90
+    },
+    {
+        "nom": "Terraiste",
+        "type1": "Poison",
+        "type2": "Sol",
+        "pv": 130,
+        "attaques": "",
+        "vitesse": 20
+    },
+    {
+        "nom": "Farigiraf",
+        "type1": "Normal",
+        "type2": "Psy",
+        "pv": 120,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Deusolourdo",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 125,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Scalpereur",
+        "type1": "Ténèbres",
+        "type2": "Acier",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Fort-Ivoire",
+        "type1": "Sol",
+        "type2": "Combat",
+        "pv": 115,
+        "attaques": "",
+        "vitesse": 87
+    },
+    {
+        "nom": "Hurle-Queue",
+        "type1": "Fée",
+        "type2": "Psy",
+        "pv": 115,
+        "attaques": "",
+        "vitesse": 111
+    },
+    {
+        "nom": "Fongus-Furie",
+        "type1": "Plante",
+        "type2": "Ténèbres",
+        "pv": 111,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Flotte-Mèche",
+        "type1": "Spectre",
+        "type2": "Fée",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 135
+    },
+    {
+        "nom": "Rampe-Ailes",
+        "type1": "Insecte",
+        "type2": "Combat",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 81
+    },
+    {
+        "nom": "Pelage-Sablé",
+        "type1": "Électrik",
+        "type2": "Sol",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 101
+    },
+    {
+        "nom": "Roue-de-Fer",
+        "type1": "Sol",
+        "type2": "Acier",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 106
+    },
+    {
+        "nom": "Hotte-de-Fer",
+        "type1": "Glace",
+        "type2": "Eau",
+        "pv": 56,
+        "attaques": "",
+        "vitesse": 136
+    },
+    {
+        "nom": "Paume-de-Fer",
+        "type1": "Combat",
+        "type2": "Électrik",
+        "pv": 154,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Têtes-de-Fer",
+        "type1": "Ténèbres",
+        "type2": "Vol",
+        "pv": 94,
+        "attaques": "",
+        "vitesse": 108
+    },
+    {
+        "nom": "Mite-de-Fer",
+        "type1": "Feu",
+        "type2": "Poison",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Épine-de-Fer",
+        "type1": "Roche",
+        "type2": "Électrik",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 72
+    },
+    {
+        "nom": "Frigodo",
+        "type1": "Dragon",
+        "type2": "Glace",
+        "pv": 65,
+        "attaques": "",
+        "vitesse": 55
+    },
+    {
+        "nom": "Cryodo",
+        "type1": "Dragon",
+        "type2": "Glace",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 62
+    },
+    {
+        "nom": "Glaivodo",
+        "type1": "Dragon",
+        "type2": "Glace",
+        "pv": 115,
+        "attaques": "",
+        "vitesse": 87
+    },
+    {
+        "nom": "Mordudor",
+        "type1": "Spectre",
+        "type2": "",
+        "pv": 45,
+        "attaques": "",
+        "vitesse": 10
+    },
+    {
+        "nom": "Gromago",
+        "type1": "Acier",
+        "type2": "Spectre",
+        "pv": 87,
+        "attaques": "",
+        "vitesse": 84
+    },
+    {
+        "nom": "Chongjian",
+        "type1": "Ténèbres",
+        "type2": "Plante",
+        "pv": 85,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Baojian",
+        "type1": "Ténèbres",
+        "type2": "Glace",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 135
+    },
+    {
+        "nom": "Dinglu",
+        "type1": "Ténèbres",
+        "type2": "Sol",
+        "pv": 155,
+        "attaques": "",
+        "vitesse": 45
+    },
+    {
+        "nom": "Yuyu",
+        "type1": "Ténèbres",
+        "type2": "Feu",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Rugit-Lune",
+        "type1": "Dragon",
+        "type2": "Ténèbres",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 119
+    },
+    {
+        "nom": "Garde-de-Fer",
+        "type1": "Fée",
+        "type2": "Combat",
+        "pv": 74,
+        "attaques": "",
+        "vitesse": 116
+    },
+    {
+        "nom": "Koraidon",
+        "type1": "Combat",
+        "type2": "Dragon",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 135
+    },
+    {
+        "nom": "Miraidon",
+        "type1": "Électrik",
+        "type2": "Dragon",
+        "pv": 100,
+        "attaques": "",
+        "vitesse": 135
+    },
+    {
+        "nom": "Serpente-Eau",
+        "type1": "Eau",
+        "type2": "Dragon",
+        "pv": 99,
+        "attaques": "",
+        "vitesse": 109
+    },
+    {
+        "nom": "Vert-de-Fer",
+        "type1": "Plante",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 104
+    },
+    {
+        "nom": "Pomdramour",
+        "type1": "Plante",
+        "type2": "Dragon",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 40
+    },
+    {
+        "nom": "Poltchageist",
+        "type1": "Plante",
+        "type2": "Spectre",
+        "pv": 40,
+        "attaques": "",
+        "vitesse": 50
+    },
+    {
+        "nom": "Théffroyable",
+        "type1": "Plante",
+        "type2": "Spectre",
+        "pv": 71,
+        "attaques": "",
+        "vitesse": 70
+    },
+    {
+        "nom": "Félicanis",
+        "type1": "Poison",
+        "type2": "Combat",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 80
+    },
+    {
+        "nom": "Fortusimia",
+        "type1": "Poison",
+        "type2": "Psy",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 106
+    },
+    {
+        "nom": "Favianos",
+        "type1": "Poison",
+        "type2": "Fée",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 99
+    },
+    {
+        "nom": "Ogerpon",
+        "type1": "Plante",
+        "type2": "",
+        "pv": 80,
+        "attaques": "",
+        "vitesse": 110
+    },
+    {
+        "nom": "Pondralugon",
+        "type1": "Acier",
+        "type2": "Dragon",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 85
+    },
+    {
+        "nom": "Pomdorochi",
+        "type1": "Plante",
+        "type2": "Dragon",
+        "pv": 106,
+        "attaques": "",
+        "vitesse": 44
+    },
+    {
+        "nom": "Feu-Perçant",
+        "type1": "Feu",
+        "type2": "Dragon",
+        "pv": 105,
+        "attaques": "",
+        "vitesse": 91
+    },
+    {
+        "nom": "Ire-Foudre",
+        "type1": "Électrik",
+        "type2": "Dragon",
+        "pv": 125,
+        "attaques": "",
+        "vitesse": 75
+    },
+    {
+        "nom": "Roc-de-Fer",
+        "type1": "Roche",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 124
+    },
+    {
+        "nom": "Chef-de-Fer",
+        "type1": "Acier",
+        "type2": "Psy",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 98
+    },
+    {
+        "nom": "Terapagos",
+        "type1": "Normal",
+        "type2": "",
+        "pv": 90,
+        "attaques": "",
+        "vitesse": 60
+    },
+    {
+        "nom": "Pêchaminus",
+        "type1": "Poison",
+        "type2": "Spectre",
+        "pv": 88,
+        "attaques": "",
+        "vitesse": 88
+    },
+    {
+        "nom": "Tauros de Paldea",
+        "type1": "Combat",
+        "type2": "",
+        "pv": 75,
+        "attaques": "",
+        "vitesse": 100
+    },
+    {
+        "nom": "Axoloto de Paldea",
+        "type1": "Poison",
+        "type2": "Sol",
+        "pv": 55,
+        "attaques": "",
+        "vitesse": 15
+    }
+]
