@@ -51,12 +51,12 @@ public:
 			std::cout << "J’espère que t’es prêt à encaisser, " << ennemis.getNom() << ". Car moi, je viens pour tout rafler." << std::endl;
 			break;
 		}
-			
+
 
 	}
 
 	virtual void parler_defaiteCombat(Entraineurs& ennemis) {//ce que dis le perso apres avoir perdu
-		int random = rand() % 3; 
+		int random = rand() % 3;
 		switch (random) {
 		case 0:
 			std::cout << "Je m'admets vaincu, " << ennemis.getNom() << ". Tu as su prendre le dessus cette fois..." << std::endl;
@@ -70,7 +70,7 @@ public:
 		}
 	}
 
-	virtual void parler_victoireCombat(Entraineurs& ennemis){//ce que dis le perso apres avoir gagné
+	virtual void parler_victoireCombat(Entraineurs& ennemis) {//ce que dis le perso apres avoir gagné
 		int random = rand() % 3;
 		switch (random) {
 		case 0:
@@ -85,50 +85,50 @@ public:
 		}
 	}
 
-	 std::string getNom() const { return nom; }
-	 std::vector<Pokemon> getEquipePokemon() const { return Equipe; }
-	 bool getVaincu() const { return vaincu; }
+	std::string getNom() const { return nom; }
+	std::vector<Pokemon> getEquipePokemon() const { return Equipe; }
+	bool getVaincu() const { return vaincu; }
 
-	 //sort le i eme pokemon de l'équipe, le if pour éviter les erreurs mais faut gérer ça aussi côté combat genre si ya plus de poke le gars est vaincu (fais gaffe)
+	//sort le i eme pokemon de l'équipe, le if pour éviter les erreurs mais faut gérer ça aussi côté combat genre si ya plus de poke le gars est vaincu (fais gaffe)
 
-	 Pokemon& getPokemon(int i)  { 
-		 if (i < Equipe.size()) {
-			 return Equipe[i];
-		 }
-		 throw std::out_of_range("Index hors de l'équipe !");
-	 } 
+	Pokemon& getPokemon(int i) {
+		if (i < Equipe.size()) {
+			return Equipe[i];
+		}
+		throw std::out_of_range("Index hors de l'équipe !");
+	}
 
-	 void setNom(std::string newNom) { nom = newNom; }
-	 //setPokemon
-	 void setVaincu(bool Vaincu) { vaincu = Vaincu; }
-	
+	void setNom(std::string newNom) { nom = newNom; }
+	//setPokemon
+	void setVaincu(bool Vaincu) { vaincu = Vaincu; }
 
-	 bool estVaincu() { //verif si le dresseur est vaincu
 
-		 if (getVaincu()) { return true; }
+	bool estVaincu() { //verif si le dresseur est vaincu
 
-		 for (Pokemon& poke : Equipe) {
-			 if (!poke.getKO()) { return false; }
-		 }
-		 setVaincu(true);
-		 return true;
-		
-	 }
+		if (getVaincu()) { return true; }
 
-	 void afficherEquipe() { //va afficher l'equipe du dresseur pour avoir leurs stats (ça servira pour l'interface mais c'est surtout pour verif si ya un bug dans le main)
-		 std::cout << " Equipe de " << nom << " : " << std::endl;
-		 
-		 for (Pokemon& poke : Equipe) {
-			 std::cout << poke.getNom() << " : HP = " << poke.getHP() << " : KO = " << poke.getKO() << std::endl;
-		 }
-	 }
+		for (Pokemon& poke : Equipe) {
+			if (!poke.getKO()) { return false; }
+		}
+		setVaincu(true);
+		return true;
+
+	}
+
+	void afficherEquipe() { //va afficher l'equipe du dresseur pour avoir leurs stats (ça servira pour l'interface mais c'est surtout pour verif si ya un bug dans le main)
+		std::cout << " Equipe de " << nom << " : " << std::endl;
+
+		for (Pokemon& poke : Equipe) {
+			std::cout << poke.getNom() << " : HP = " << poke.getHP() << " : KO = " << poke.getKO() << std::endl;
+		}
+	}
 };
 
 
 
 class Leaders : public Entraineurs {
 private:
-	
+
 	std::string Badge;
 	std::string Gymnase;
 public:
@@ -136,17 +136,17 @@ public:
 		std::vector<Pokemon> Equipe,
 		std::string Badge,
 		std::string Gymnase) : Entraineurs(nom, Equipe), Badge(Badge), Gymnase(Gymnase) {}
-		
-	std::string getBadge() const { return Badge;  }
+
+	std::string getBadge() const { return Badge; }
 	std::string getGymnase() const { return Gymnase; }
 
 	virtual void parler_debutCombat(Entraineurs& ennemis) override { //ce que dis le leader au debut du combat
 		int random = rand() % 4;
 		switch (random) {
 		case 0:
-			std::cout << "Je suis " << nom << ", Leader dy gymnase "<<Gymnase<<". Si tu veux mon "<<Badge<<", il va falloir mériter chaque seconde de ce combat, " << ennemis.getNom() << "." << std::endl;
+			std::cout << "Je suis " << nom << ", Leader du gymnase " << Gymnase << ". Si tu veux mon " << Badge << ", il va falloir mériter chaque seconde de ce combat, " << ennemis.getNom() << "." << std::endl;
 			break;
-		
+
 		case 1:
 			std::cout << "Ce badge n’est pas qu’un symbole. C’est la preuve que tu peux survivre à ma tempête. Montre-moi ce que tu as dans le ventre !" << std::endl;
 			break;
@@ -214,35 +214,35 @@ private:
 	//capacité speciale qui augmente de 25% les dégats de leurs pokemon
 	float maitrise = 1.25;
 public:
-	
+
 
 	Maitres(std::string nom,
 		std::vector<Pokemon> Equipe) : Entraineurs(nom, Equipe) {
-		for (Pokemon& pokemon : this -> Equipe) {
+		for (Pokemon& pokemon : this->Equipe) {
 			pokemon.setDegats(pokemon.getDegats() * maitrise);
 		}
 	}
 
-	
-	
+
+
 
 	void parler_debutCombat(Entraineurs& ennemis) override {
 		int random = rand() % 3;
 
 		switch (random) {
-		case 0 : 		
-			std::cout << "Mon chère "<< ennemis.getNom()<<", les flammes de ton courage ont illuminé le chemin jusqu’à ce sanctuaire sacré... Me voilà, gardien du sommet. Prouve-moi que tu peux détrôner le grand " << nom << " et graver ton nom au Panthéon éternel des Dresseurs !" << std::endl; //quel flow
+		case 0:
+			std::cout << "Mon cher " << ennemis.getNom() << ", les flammes de ton courage ont illuminé le chemin jusqu’à ce sanctuaire sacré... Me voilà, gardien du sommet. Prouve-moi que tu peux détrôner le grand " << nom << " et graver ton nom au Panthéon éternel des Dresseurs !" << std::endl; //quel flow
 			break;
 		case 1:
 			std::cout << "Ton parcours jusqu’ici n’est pas le fruit du hasard. Mais sache-le : ici, seul le véritable Maître survit à l’épreuve finale. Approche, " << nom << " t’attend." << std::endl;
 			break;
 
 		case 2:
-			std::cout << "Chaque badge, chaque victoire… t'ont mené jusqu’à moi, "<<nom<<". Mais l’ultime ascension n’a rien de paisible. Prépare-toi à affronter la tempête, celle que seul un véritable champion peut dompter." << std::endl;
+			std::cout << "Chaque badge, chaque victoire… t'ont mené jusqu’à moi, " << nom << ". Mais l’ultime ascension n’a rien de paisible. Prépare-toi à affronter la tempête, celle que seul un véritable champion peut dompter." << std::endl;
 			break;
 
 		}
-		
+
 	}
 
 	virtual void parler_defaiteCombat(Entraineurs& ennemis) override { // ce que dit le maitre après avoir perdu
