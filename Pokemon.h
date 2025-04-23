@@ -675,7 +675,7 @@ public:
             std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". C'est super efficace !" << std::endl;
 
         }
-        else if ((0 < multiplicateur) and (multiplicateur < 1)) {
+        else if ((0 < multiplicateur) && (multiplicateur < 1)) {
             std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << std::endl;
 
         }
