@@ -1,5 +1,7 @@
-#pragma once
+
+
 #include <iostream>
+
 #include <vector>
 #include <utility>
 #include <algorithm>
@@ -20,20 +22,21 @@ void toLowerVect(std::vector<std::string>& vect) {
 }
 
 class Type {
-protected: 
-	std::string nom; //nom du type (eau, feu...)
-	std::unordered_map<std::string, float> faiblesses;
-	//c'est juste un dico, la clef est un string et la valeurs un float (type : multiplicateur)
+protected:
 
-	std::unordered_map<std::string, float> resistances;
+    std::string nom; //nom du type (eau, feu...)
+    std::unordered_map<std::string, float> faiblesses;
+    //c'est juste un dico, la clef est un string et la valeurs un float (type : multiplicateur)
+
+    std::unordered_map<std::string, float> resistances;
 
 public:
-	Type(std::string n) : nom(n) {}
+    Type(std::string n) : nom(n) {}
 
-    ~Type() = default;
+    virtual ~Type() = default;
 
-	virtual void defFaiblesses() = 0; //on va les override dans les ss classes
-	virtual void defResistances() = 0;
+    virtual void defFaiblesses() = 0; //on va les override dans les ss classes
+    virtual void defResistances() = 0;
 
     std::unordered_map<std::string, float> getFaiblesses() const { return faiblesses; }
     std::unordered_map<std::string, float> getResistances() const { return resistances; }
@@ -42,102 +45,102 @@ public:
 };
 
 /*
-les faiblesses et resistances sot def a partir des données du jeu trouvées 
+les faiblesses et resistances sot def a partir des données du jeu trouvées
 sur internet et non sur le tableau du sujet qui est incomplet
 
 */
 
 class TypeNormal : public Type {
 public:
-    TypeNormal() : Type("normal") {
+    TypeNormal() : Type("Normal") {
         defFaiblesses();
         defResistances(); //on appel nos fonctions pour le constructeur
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["combat"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
+        faiblesses["Combat"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
     }
 
     void defResistances() override {
-        resistances["spectre"] = 0.0; 
+        resistances["Spectre"] = 0.0;
         // pareil avec les résistances, ici le type Normal n'est pas affécté par le type spectre donc mult = 0
-        
+
     }
 };
 
 class TypeFeu : public Type {
 public:
-    TypeFeu() : Type("feu") {
+    TypeFeu() : Type("Feu") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["eau"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
+        faiblesses["Eau"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
         //faiblesses["roche"] = 2.0;
-        faiblesses["sol"] = 2.0;
+        faiblesses["Sol"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["plante"] = 0.5; // pareil avec les résistances
-        resistances["glace"] = 0.5;
-        resistances["insecte"] = 0.5;
-        resistances["acier"] = 0.5;
-        //resistances["fee"] = 0.5;
-        resistances["feu"] = 0.5;
+        resistances["Plante"] = 0.5; // pareil avec les résistances
+        resistances["Glace"] = 0.5;
+        resistances["Insecte"] = 0.5;
+        resistances["Acier"] = 0.5;
+        //resistances["Fée"] = 0.5;
+        resistances["Feu"] = 0.5;
     }
 };
 
 class TypeEau : public Type {
 public:
-    TypeEau() : Type("eau") {
+    TypeEau() : Type("Eau") {
         defFaiblesses();
-        defResistances(); 
-        
+        defResistances();
+
     }
 
     void defFaiblesses() override {
-        faiblesses["plante"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
-        faiblesses["electrik"] = 2.0;
+        faiblesses["Plante"] = 2.0; // on met à jour le dico des faiblesses avec le multiplicateur
+        faiblesses["Électrik"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["feu"] = 0.5; // pareil avec les résistances
-        resistances["eau"] = 0.5;
-        resistances["glace"] = 0.5;
-        //resistances["acier"] = 0.5;
+        resistances["Feu"] = 0.5; // pareil avec les résistances
+        resistances["Eau"] = 0.5;
+        resistances["Glace"] = 0.5;
+        //resistances["Acier"] = 0.5;
     }
 };
 
 class TypePlante : public Type {
 public:
-    TypePlante() : Type("plante") {
+    TypePlante() : Type("Plante") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["feu"] = 2.0;
-        faiblesses["glace"] = 2.0;
-        faiblesses["poison"] = 2.0;
-        faiblesses["sol"] = 2.0;
-        faiblesses["insecte"] = 2.0;
+        faiblesses["Feu"] = 2.0;
+        faiblesses["Glace"] = 2.0;
+        faiblesses["Poison"] = 2.0;
+        faiblesses["Sol"] = 2.0;
+        faiblesses["Insecte"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["eau"] = 0.5;
-        resistances["sol"] = 0.5;
-        //resistances["roche"] = 0.5;
-        resistances["plante"] = 0.5;
-        resistances["electrik"] = 0.5;
-        resistances["acier"] = 0.5;
-        resistances["fee"] = 0.5;
+        resistances["Eau"] = 0.5;
+        resistances["Sol"] = 0.5;
+        //resistances["Roche"] = 0.5;
+        resistances["Plante"] = 0.5;
+        resistances["Électrik"] = 0.5;
+        resistances["Acier"] = 0.5;
+        resistances["Fée"] = 0.5;
 
 
 
@@ -147,108 +150,108 @@ public:
 
 class TypeElectrik : public Type {
 public:
-    TypeElectrik() : Type("electrik") {
+    TypeElectrik() : Type("Électrik") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["sol"] = 2.0;
+        faiblesses["Sol"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["vol"] = 0.5;
-        resistances["acier"] = 0.5;
-        resistances["electrik"] = 0.5;
+        resistances["Vol"] = 0.5;
+        resistances["Acier"] = 0.5;
+        resistances["Électrik"] = 0.5;
     }
 };
 
 class TypeGlace : public Type {
 public:
-    TypeGlace() : Type("glace") {
+    TypeGlace() : Type("Glace") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-       
+
     }
 
     void defFaiblesses() override {
-        faiblesses["feu"] = 2.0;
-        faiblesses["combat"] = 2.0;
-        faiblesses["roche"] = 2.0;
-        faiblesses["acier"] = 2.0;
+        faiblesses["Feu"] = 2.0;
+        faiblesses["Combat"] = 2.0;
+        faiblesses["Roche"] = 2.0;
+        faiblesses["Acier"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["glace"] = 0.5;
+        resistances["Glace"] = 0.5;
     }
 };
 
 class TypeCombat : public Type {
 public:
-    TypeCombat() : Type("combat") {
+    TypeCombat() : Type("Combat") {
         defFaiblesses();
-        defResistances(); 
-        
+        defResistances();
+
     }
 
     void defFaiblesses() override {
-        faiblesses["vol"] = 2.0;
-        faiblesses["psy"] = 2.0;
-        faiblesses["fee"] = 2.0;
+        faiblesses["Vol"] = 2.0;
+        faiblesses["Psy"] = 2.0;
+        faiblesses["Fée"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["roche"] = 0.5;
-        resistances["insecte"] = 0.5;
-        resistances["tenebres"] = 0.5;
+        resistances["Roche"] = 0.5;
+        resistances["Insecte"] = 0.5;
+        resistances["Ténèbres"] = 0.5;
     }
 };
 
 class TypePoison : public Type {
 public:
-    TypePoison() : Type("poison") {
+    TypePoison() : Type("Poison") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["sol"] = 2.0;
-        faiblesses["psy"] = 2.0;
+        faiblesses["Sol"] = 2.0;
+        faiblesses["Psy"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["plante"] = 0.5;
-        resistances["fee"] = 0.5;
-        resistances["combat"] = 0.5;
-        resistances["poison"] = 0.5;
-        resistances["insecte"] = 0.5;
+        resistances["Plante"] = 0.5;
+        resistances["Fée"] = 0.5;
+        resistances["Combat"] = 0.5;
+        resistances["Poison"] = 0.5;
+        resistances["Insecte"] = 0.5;
     }
 };
 
 class TypeSol : public Type {
 public:
-    TypeSol() : Type("sol") {
+    TypeSol() : Type("Sol") {
         defFaiblesses();
         defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["eau"] = 2.0;
-        faiblesses["plante"] = 2.0;
-        faiblesses["glace"] = 2.0;
+        faiblesses["Eau"] = 2.0;
+        faiblesses["Plante"] = 2.0;
+        faiblesses["Glace"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["poison"] = 0.5;
-        resistances["roche"] = 0.5;
-        resistances["electrik"] = 0.0; //sol pas affecté par elec
+        resistances["Poison"] = 0.5;
+        resistances["Roche"] = 0.5;
+        resistances["Électrik"] = 0.0; //sol pas affecté par elec
 
 
     }
@@ -256,111 +259,111 @@ public:
 
 class TypeVol : public Type {
 public:
-    TypeVol() : Type("vol") {
+    TypeVol() : Type("Vol") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-       
+
     }
 
     void defFaiblesses() override {
-        faiblesses["electrik"] = 2.0;
-        faiblesses["glace"] = 2.0;
-        faiblesses["roche"] = 2.0;
+        faiblesses["Électrik"] = 2.0;
+        faiblesses["Glace"] = 2.0;
+        faiblesses["Roche"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["plante"] = 0.5;
-        resistances["combat"] = 0.5;
-        resistances["insecte"] = 0.5;
+        resistances["Plante"] = 0.5;
+        resistances["Combat"] = 0.5;
+        resistances["Insecte"] = 0.5;
     }
 };
 
 class TypePsy : public Type {
 public:
-    TypePsy() : Type("psy") {
+    TypePsy() : Type("Psy") {
         defFaiblesses();
-        defResistances(); 
-        
+        defResistances();
+
     }
 
     void defFaiblesses() override {
-        faiblesses["insecte"] = 2.0;
-        faiblesses["spectre"] = 2.0;
-        faiblesses["tenebres"] = 2.0;
+        faiblesses["Insecte"] = 2.0;
+        faiblesses["Spectre"] = 2.0;
+        faiblesses["Ténèbres"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["combat"] = 0.5;
-        resistances["psy"] = 0.5;
+        resistances["Combat"] = 0.5;
+        resistances["Psy"] = 0.5;
     }
 };
 
 class TypeInsecte : public Type {
 public:
-    TypeInsecte() : Type("insecte") {
+    TypeInsecte() : Type("Insecte") {
         defFaiblesses();
-        defResistances(); 
-        
+        defResistances();
+
     }
 
     void defFaiblesses() override {
-        faiblesses["feu"] = 2.0;
-        faiblesses["vol"] = 2.0;
-        faiblesses["roche"] = 2.0;
+        faiblesses["Feu"] = 2.0;
+        faiblesses["Vol"] = 2.0;
+        faiblesses["Roche"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["plante"] = 0.5;
-        resistances["combat"] = 0.5;
-        resistances["sol"] = 0.5;
+        resistances["Plante"] = 0.5;
+        resistances["Combat"] = 0.5;
+        resistances["Sol"] = 0.5;
     }
 };
 
 class TypeRoche : public Type {
 public:
-    TypeRoche() : Type("roche") {
+    TypeRoche() : Type("Roche") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["eau"] = 2.0;
-        faiblesses["plante"] = 2.0;
-        faiblesses["combat"] = 2.0;
-        faiblesses["sol"] = 2.0;
-        faiblesses["acier"] = 2.0;
+        faiblesses["Eau"] = 2.0;
+        faiblesses["Plante"] = 2.0;
+        faiblesses["Combat"] = 2.0;
+        faiblesses["Sol"] = 2.0;
+        faiblesses["Acier"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["feu"] = 0.5;
-        resistances["vol"] = 0.5;
-        resistances["poison"] = 0.5;
-        resistances["normal"] = 0.5;
+        resistances["Feu"] = 0.5;
+        resistances["Vol"] = 0.5;
+        resistances["Poison"] = 0.5;
+        resistances["Normal"] = 0.5;
     }
 };
 
 class TypeSpectre : public Type {
 public:
-    TypeSpectre() : Type("spectre") {
+    TypeSpectre() : Type("Spectre") {
         defFaiblesses();
         defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["spectre"] = 2.0;
-        faiblesses["tenebres"] = 2.0;
+        faiblesses["Spectre"] = 2.0;
+        faiblesses["Ténèbres"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["poison"] = 0.5;
-        resistances["insecte"] = 0.5;
-        resistances["normal"] = 0.0; //spectre pas affecté par normal
-        resistances["combat"] = 0.0; //spectre pas affecté par combat
+        resistances["Poison"] = 0.5;
+        resistances["Insecte"] = 0.5;
+        resistances["Normal"] = 0.0; //spectre pas affecté par normal
+        resistances["Combat"] = 0.0; //spectre pas affecté par combat
 
 
     }
@@ -368,98 +371,98 @@ public:
 
 class TypeDragon : public Type {
 public:
-    TypeDragon() : Type("dragon") {
+    TypeDragon() : Type("Dragon") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["glace"] = 2.0;
-        faiblesses["dragon"] = 2.0;
-        faiblesses["fee"] = 2.0;
+        faiblesses["Glace"] = 2.0;
+        faiblesses["Dragon"] = 2.0;
+        faiblesses["Fée"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["feu"] = 0.5;
-        resistances["eau"] = 0.5;
-        resistances["electrik"] = 0.5;
-        resistances["plante"] = 0.5;
+        resistances["Feu"] = 0.5;
+        resistances["Eau"] = 0.5;
+        resistances["Électrik"] = 0.5;
+        resistances["Plante"] = 0.5;
     }
 };
 
 class TypeTenebres : public Type {
 public:
-    TypeTenebres() : Type("tenebres") {
+    TypeTenebres() : Type("Ténèbres") {
         defFaiblesses();
         defResistances();
 
     }
 
     void defFaiblesses() override {
-        faiblesses["combat"] = 2.0;
-        faiblesses["insecte"] = 2.0;
-        faiblesses["fee"] = 2.0;
+        faiblesses["Combat"] = 2.0;
+        faiblesses["Insecte"] = 2.0;
+        faiblesses["Fée"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["spectre"] = 0.5;
-        resistances["psy"] = 0.0; //tenebre pas affecté par psy
-        resistances["tenebres"] = 0.5;
+        resistances["Spectre"] = 0.5;
+        resistances["Psy"] = 0.0; //tenebre pas affecté par psy
+        resistances["Ténèbres"] = 0.5;
     }
 };
 
 class TypeAcier : public Type {
 public:
-    TypeAcier() : Type("acier") {
+    TypeAcier() : Type("Acier") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["feu"] = 2.0;
-        faiblesses["combat"] = 2.0;
-        faiblesses["sol"] = 2.0;
+        faiblesses["Feu"] = 2.0;
+        faiblesses["Combat"] = 2.0;
+        faiblesses["Sol"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["normal"] = 0.5;
-        resistances["plante"] = 0.5;
-        resistances["glace"] = 0.5;
-        resistances["vol"] = 0.5;
-        resistances["psy"] = 0.5;
-        resistances["insecte"] = 0.5;
-        resistances["roche"] = 0.5;
-        resistances["dragon"] = 0.5;
-        resistances["acier"] = 0.5;
-        resistances["fee"] = 0.5;
-        resistances["poison"] = 0.0;
+        resistances["Normal"] = 0.5;
+        resistances["Plante"] = 0.5;
+        resistances["Glace"] = 0.5;
+        resistances["Vol"] = 0.5;
+        resistances["Psy"] = 0.5;
+        resistances["Insecte"] = 0.5;
+        resistances["Roche"] = 0.5;
+        resistances["Dragon"] = 0.5;
+        resistances["Acier"] = 0.5;
+        resistances["Fée"] = 0.5;
+        resistances["Poison"] = 0.0;
 
     }
 };
 
 class TypeFee : public Type {
 public:
-    TypeFee() : Type("fee") {
+    TypeFee() : Type("Fée") {
         defFaiblesses();
-        defResistances(); 
+        defResistances();
 
-        
+
     }
 
     void defFaiblesses() override {
-        faiblesses["poison"] = 2.0;
-        faiblesses["acier"] = 2.0;
+        faiblesses["Poison"] = 2.0;
+        faiblesses["Acier"] = 2.0;
     }
 
     void defResistances() override {
-        resistances["combat"] = 0.5;
-        resistances["insecte"] = 0.5;
-        resistances["tenebres"] = 0.5;
-        resistances["dragon"] = 0.0; //fée pas affecté par dragon
+        resistances["Combat"] = 0.5;
+        resistances["Insecte"] = 0.5;
+        resistances["Ténèbres"] = 0.5;
+        resistances["Dragon"] = 0.0; //fée pas affecté par dragon
     }
 };
 
@@ -467,7 +470,7 @@ public:
 
 class Pokemon {
 private:
-    
+
     std::string nom;
 
     std::vector<std::string> types; //vecteur qui prend 1 ou 2 noms de types
@@ -485,7 +488,7 @@ private:
     bool KO;
 
 
-public:  
+public:
     Pokemon(std::string nom,
         std::vector<std::string> t,
         int HP,
@@ -493,13 +496,13 @@ public:
         std::string TypeAttaque,
         int degats,
         int vitesse) : nom(nom), types(t), HP(HP), attaque(attaque),
-        TypeAttaque(TypeAttaque) , degats(degats) , vitesse(vitesse) { //debut constructeur
+        TypeAttaque(TypeAttaque), degats(degats), vitesse(vitesse) { //debut constructeur
 
         HPmax = HP;
         KO = false;
-        toLowerVect(t);
-        toLowerCase(TypeAttaque);
-        
+        //toLowerVect(t);
+        //toLowerCase(TypeAttaque);
+
 
         instanceType(t); //on predn le vecteur de string des types et on met les faiblesses du pokemon a jours
         leRoiKai();//ptite fonction qui s'active si on créer kaiminus
@@ -518,26 +521,26 @@ public:
 
 
         for (std::string& typeNom : t) {
-            toLowerCase(typeNom); //pour eviter de causer des prblms si on oublis les majuscules (pour les accents c'est trop chiant on fait sans)
+            //toLowerCase(typeNom); //pour eviter de causer des prblms si on oublis les majuscules (pour les accents c'est trop chiant on fait sans)
 
-            if (typeNom == "feu") { typePokemon.push_back(new TypeFeu()); }
-            else if (typeNom == "eau") { typePokemon.push_back(new TypeEau()); }
-            else if (typeNom == "plante") { typePokemon.push_back(new TypePlante()); }
-            else if (typeNom == "electrik") { typePokemon.push_back(new TypeElectrik()); }
-            else if (typeNom == "glace") { typePokemon.push_back(new TypeGlace()); }
-            else if (typeNom == "combat") { typePokemon.push_back(new TypeCombat()); }
-            else if (typeNom == "poison") { typePokemon.push_back(new TypePoison()); }
-            else if (typeNom == "sol") { typePokemon.push_back(new TypeSol()); }
-            else if (typeNom == "vol") { typePokemon.push_back(new TypeVol()); }
-            else if (typeNom == "psy") { typePokemon.push_back(new TypePsy()); }
-            else if (typeNom == "insecte") { typePokemon.push_back(new TypeInsecte()); }
-            else if (typeNom == "roche") { typePokemon.push_back(new TypeRoche()); }
-            else if (typeNom == "spectre") { typePokemon.push_back(new TypeSpectre()); }
-            else if (typeNom == "dragon") { typePokemon.push_back(new TypeDragon()); }
-            else if (typeNom == "tenebres") { typePokemon.push_back(new TypeTenebres()); }
-            else if (typeNom == "acier") { typePokemon.push_back(new TypeAcier()); }
-            else if (typeNom == "fee") { typePokemon.push_back(new TypeFee()); }
-            else if (typeNom == "normal") { typePokemon.push_back(new TypeNormal()); }
+            if (typeNom == "Feu") { typePokemon.push_back(new TypeFeu()); }
+            else if (typeNom == "Eau") { typePokemon.push_back(new TypeEau()); }
+            else if (typeNom == "Plante") { typePokemon.push_back(new TypePlante()); }
+            else if (typeNom == "Électrik") { typePokemon.push_back(new TypeElectrik()); }
+            else if (typeNom == "Glace") { typePokemon.push_back(new TypeGlace()); }
+            else if (typeNom == "Combat") { typePokemon.push_back(new TypeCombat()); }
+            else if (typeNom == "Poison") { typePokemon.push_back(new TypePoison()); }
+            else if (typeNom == "Sol") { typePokemon.push_back(new TypeSol()); }
+            else if (typeNom == "Vol") { typePokemon.push_back(new TypeVol()); }
+            else if (typeNom == "Psy") { typePokemon.push_back(new TypePsy()); }
+            else if (typeNom == "Insecte") { typePokemon.push_back(new TypeInsecte()); }
+            else if (typeNom == "Roche") { typePokemon.push_back(new TypeRoche()); }
+            else if (typeNom == "Spectre") { typePokemon.push_back(new TypeSpectre()); }
+            else if (typeNom == "Dragon") { typePokemon.push_back(new TypeDragon()); }
+            else if (typeNom == "Ténèbres") { typePokemon.push_back(new TypeTenebres()); }
+            else if (typeNom == "Acier") { typePokemon.push_back(new TypeAcier()); }
+            else if (typeNom == "Fée") { typePokemon.push_back(new TypeFee()); }
+            else if (typeNom == "Normal") { typePokemon.push_back(new TypeNormal()); }
 
         }
         /*
@@ -580,132 +583,132 @@ public:
         for (auto instance : typePokemon) {
             delete instance;
         }
-        
+
     }
-    
+
     //les getters
 
-     std::string getNom() const { return nom; }
+    std::string getNom() const { return nom; }
 
-     int getHP() const { return HP; }
-     int getHPmax() const { return HPmax; }
-     int getDegats() const { return degats; }
-     int getVitesse() { return vitesse; }
+    int getHP() const { return HP; }
+    int getHPmax() const { return HPmax; }
+    int getDegats() const { return degats; }
+    int getVitesse() const { return vitesse; }
 
 
-     std::unordered_map<std::string, float> getFaiblesses_Pokemon() const {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
+    std::unordered_map<std::string, float> getFaiblesses_Pokemon() const {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
         return faiblesses_Pokemon;
     }
 
-     std::unordered_map<std::string, float> getResistances_Pokemon() const {
+    std::unordered_map<std::string, float> getResistances_Pokemon() const {
         return resistances_Pokemon;
     }
 
-     bool getKO() { return KO; }
+    bool getKO() const { return KO; }
 
     //les setters
-   
 
-     void setDegats(float newDegats) {
+
+    void setDegats(float newDegats) {
         degats = static_cast<int>(std::round(newDegats)); //pour garder les degats en int j'arrondie et je met en int (le mult du maitre est un float ça m'a bien cassé la tete)
     } //c'est pour set les degats infligé par l'attaque c'est pas la methode degats reçus !!
 
-     void setHP(int newHP) {
+    void setHP(int newHP) {
         HP = newHP;
     }
-     void setHPmax(int newHPmax) {
-         HPmax = newHPmax;
-     }
-
-     void setVitesse(int newVitesse) {
-         vitesse = newVitesse;
-     }
-
-     void setKO(bool ko) {
-         KO = ko;
-     }
-
-     void leRoiKai() { //si on a kaiminus
-         if (nom == "Kaiminus") {
-             int KaiBonus = 5; //bonus de puissance pour le roi Kaiminus
-
-           
-             std::cout << "Le roi entre en scène" << std::endl;
-
-             std::cout << nom << " active sa capacité 'Aura du roi'" << std::endl;
-
-             setDegats(degats * KaiBonus);
-             setHP(HP * KaiBonus);
-             setVitesse(vitesse * KaiBonus);
-             setHPmax(HPmax * KaiBonus);
-         }
-        
+    void setHPmax(int newHPmax) {
+        HPmax = newHPmax;
     }
-    
 
-     void attaquer(Pokemon& cible) { 
+    void setVitesse(int newVitesse) {
+        vitesse = newVitesse;
+    }
+
+    void setKO(bool ko) {
+        KO = ko;
+    }
+
+    void leRoiKai() { //si on a kaiminus
+        if (nom == "Kaiminus") {
+            int KaiBonus = 5; //bonus de puissance pour le roi Kaiminus
+
+
+            std::cout << "Le roi entre en scène" << std::endl;
+
+            std::cout << nom << " active sa capacité 'Aura du roi'" << std::endl;
+
+            setDegats(degats * KaiBonus);
+            setHP(HP * KaiBonus);
+            setVitesse(vitesse * KaiBonus);
+            setHPmax(HPmax * KaiBonus);
+        }
+
+    }
+
+
+    void attaquer(Pokemon& cible) {
         float multiplicateur = 1.0;
         //on regarde les faiblesses et res de la cible
-        
-        
+
+
         if (cible.faiblesses_Pokemon.find(TypeAttaque) != cible.faiblesses_Pokemon.end()) {
-                /*faiblesse.find() = faiblesse.end() ça veut dire que find n'a rien trouvé */
+            /*faiblesse.find() = faiblesse.end() ça veut dire que find n'a rien trouvé */
 
-                multiplicateur *= cible.faiblesses_Pokemon[TypeAttaque];
+            multiplicateur *= cible.faiblesses_Pokemon[TypeAttaque];
 
-            }
+        }
         if (cible.resistances_Pokemon.find(TypeAttaque) != cible.resistances_Pokemon.end()) {
 
-                multiplicateur *= cible.resistances_Pokemon[TypeAttaque];
+            multiplicateur *= cible.resistances_Pokemon[TypeAttaque];
 
-            }
+        }
 
-            int degatsFinal = static_cast<int>(degats * multiplicateur); //statit_cast pour mettre en int
+        int degatsFinal = static_cast<int>(degats * multiplicateur); //statit_cast pour mettre en int
 
-            cible.recevoireDegats(degatsFinal); //la cible prend un pied bouche
+        cible.recevoireDegats(degatsFinal); //la cible prend un pied bouche
 
-            if (multiplicateur == 1) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque <<"."<< std::endl;
+        if (multiplicateur == 1) {
+            std::cout << nom << " attaque " << cible.nom << " avec " << attaque << "." << std::endl;
 
-            }
-            else if (multiplicateur > 1) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque <<". C'est super efficace !" << std::endl;
+        }
+        else if (multiplicateur > 1) {
+            std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". C'est super efficace !" << std::endl;
 
-            }
-            else if ((0 < multiplicateur) and (multiplicateur < 1)) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << std::endl;
+        }
+        else if ((0 < multiplicateur) and (multiplicateur < 1)) {
+            std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << std::endl;
 
-            }
-            else if (multiplicateur == 0) {
-                std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet ! (noob)" << std::endl;
+        }
+        else if (multiplicateur == 0) {
+            std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". L'attaque n'a aucun effet ! (noob)" << std::endl;
 
-            }
+        }
 
-            cible.afficherDegats(degatsFinal);
-            cible.estKO(); //on verif si la cible est ko et ça met a jours son statut
+        cible.afficherDegats(degatsFinal);
+        cible.estKO(); //on verif si la cible est ko et ça met a jours son statut
 
-    
+
     }
 
 
-     void recevoireDegats(int degatsReçus) {
+    void recevoireDegats(int degatsReçus) {
         HP -= degatsReçus;
         if (HP < 0) { HP = 0; }
     }
 
-     void afficherDegats(int degatsFinal) {
-    std::cout << nom << " reçoit " << degatsFinal << " dégats. Il lui reste " << HP << "/"<<HPmax<<" HP." << std::endl;
+    void afficherDegats (int degatsFinal) const {
+        std::cout << nom << " reçoit " << degatsFinal << " dégats. Il lui reste " << HP << "/" << HPmax << " HP." << std::endl;
 
     }
 
-     void afficherFaiblesses() {
-        std::cout << "Faiblesses de " << nom << " : "<<std::endl;
+    void afficherFaiblesses() {
+        std::cout << "Faiblesses de " << nom << " : " << std::endl;
         for (const auto& f : faiblesses_Pokemon) {
-            std::cout << f.first << " : "  << f.second << std::endl;
+            std::cout << f.first << " : " << f.second << std::endl;
         }
     }
 
-     void afficherResistances() {
+    void afficherResistances() {
         std::cout << "Resistances de " << nom << " : " << std::endl;
 
         for (const auto& r : resistances_Pokemon) {
@@ -713,19 +716,19 @@ public:
         }
     }
 
-     bool estKO() { //verif si le Pokemon est KO
+    bool estKO() { //verif si le Pokemon est KO
 
-         if (getKO()) { return true; } //si il est deja KO
-         else if (HP == 0) { //s'il vient d'etre mis KO
-             
+        if (getKO()) { return true; } //si il est deja KO
+        else if (HP == 0) { //s'il vient d'etre mis KO
+
             setKO(true);
-             return true;
-         }
-         return false;
-        
-     }
-    
-     
+            return true;
+        }
+        return false;
+
+    }
+
+
 
 };
 
