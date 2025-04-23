@@ -77,7 +77,7 @@ public:
         std::cout << adversaire.getNom() << " envoie " << pokemonActuel_Adversaire->getNom() << " !" << std::endl;
 
 
-        while (!joueur.getVaincu() and !adversaire.getVaincu()) {
+        while (!joueur.getVaincu() && !adversaire.getVaincu()) {
             std::cout << "on commence une nouvelle boucle" << std::endl;
             //joueur.afficherEquipe();
              //adversaire.afficherEquipe();
