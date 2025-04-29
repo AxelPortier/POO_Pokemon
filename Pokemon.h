@@ -1,4 +1,5 @@
 
+#pragma once
 
 #include <iostream>
 
@@ -646,7 +647,7 @@ public:
     }
 
 
-    void attaquer(Pokemon& cible) {
+    void attaquer(Pokemon& cible) { //faudrait quelle prenne en param l'attaque et la puissance
         float multiplicateur = 1.0;
         //on regarde les faiblesses et res de la cible
 
@@ -675,7 +676,7 @@ public:
             std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". C'est super efficace !" << std::endl;
 
         }
-        else if ((0 < multiplicateur) && (multiplicateur < 1)) {
+        else if ((0 < multiplicateur) and (multiplicateur < 1)) {
             std::cout << nom << " attaque " << cible.nom << " avec " << attaque << ". Ce n'est pas très efficace." << std::endl;
 
         }
