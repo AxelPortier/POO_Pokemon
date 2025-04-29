@@ -1,6 +1,6 @@
 #include "Pokemon.h"
 #include "Entraineurs.h"
-//#include "Données.h"
+#include "Données.h"
 
 #include <iostream>
 #include <vector>
@@ -32,6 +32,15 @@ Leaders (string nom , Pokemon{equipe} , string Badge , string Gym)
 Maitres(string nom , Pokemon{equipe})
 
 Joueurs (string nom , Pokemon{equipe} , int nbBadges , int nbVictoires , int nbDefaites)
+
+
+si je veux ameliorer le combat il faut que je fasse des fonctions d'attaque liées aux dresseurs
+plutot que d'appeler fct attaquer du pokemon dans le main je dois appeler attaquer.joueur et attaquer.dresseur qui font appels a la fonction attaquer.pokemon
+du coup jdois faire en sorte que le dresseurs ais acces au pokemin actuel et coder la logique de combat
+les entrainneurs ont la meme methode attaquer sauf les joueurs que je vais override, faut que le joueurs demande a l'utilisateur quelle attaque effectuer
+les entrainneurs je leurs fais une logique de combat simple, pour commencer il va choisir l'attaque qui fais le plus de degats mais si j'ajoute les problemes de stauts je devrais l'ameliorer
+
+faut vois aussi si la fonction attaquer du pokemon pourrait etre fait autrement parce qu'elle attaque et verif si la cible est Ko jpense qu'on devrait séparer les 2
 */
 
 class Combat {
@@ -78,9 +87,9 @@ public:
 
 
         while (!joueur.getVaincu() && !adversaire.getVaincu()) {
-            std::cout << "on commence une nouvelle boucle" << std::endl;
-            //joueur.afficherEquipe();
-             //adversaire.afficherEquipe();
+            
+            joueur.afficherEquipe();
+            adversaire.afficherEquipe();
 
 
 
@@ -202,56 +211,25 @@ public:
 int main() {
     srand(time(0)); //on initialise le random pour les dialogues 
 
-    Pokemon Pikachu("Pikachu", { "Électrik" }, 10, "Eclair", "Électrik", 50, 15);
-
-    Pokemon Salameche("Salameche", { "Feu" }, 10, "flameche", "Feu", 30, 10);
-    Pokemon Carapuce("Carapuce", { "Eau" }, 10, "pistolet a o", "Eau", 30, 8);
-
-    Pokemon Filou("Filou", { "Normal" }, 150, "ecras face", "Normal", 50, 6);
-
+   
 
     Pokemon Mia("Mia", { "Ténèbre" }, 100, "Morsure", "Ténèbre", 60, 12);
     Pokemon Marius("Marius", { "Sol" }, 160, "Seisme", "Sol", 100, 5);
 
-    Pokemon Picush("Picush", { "Ténèbre" }, 100, "Jet d'acide", "Poison", 70, 10);
-
-    Pokemon Tigrou("Tigrou", { "Feu" }, 120, "Combo Griffes", "Combat", 90, 14);
-
-
-    Leaders Nicolas("Nicolas", { Filou , Picush , Tigrou }, "Badge du brakmar", "chibre");
+    
 
     Joueurs Victor("Victor", { Mia , Marius }, 0, 0, 0);
 
 
 
-    //Leaders Pierre = defLeaders("Pierre"); 
+    Leaders Pierre = defLeaders("Pierre"); 
 
 
-    Combat(Victor, Nicolas);
+    Combat(Victor, Pierre);
 
 
 }
 
-
-
-
-//prblm d'execution
-/*prblm
-le prblm viens de la methode getKO de pokemon et estVaincu de entraineur vu qu'elle y fait ref, ya aussi la simu de combat qui tourne a l'inf et jpense c'est juste un prblm avec estvaincu vu que
-l'arret du while end epend
-
-ok j'ai redef les fcts estKO et estVaincu, j'ai rajouté des get set pour mettre a jour direct les attributs bool KO de pokemon et bool vaincu de entraineur
-du coup j'ai setKO qui met KO a true ou false, setVaincu qui met vaincu a true ou false
-maintenant faut que ces fonction soit appelées quelquepart
-
-le probleme viens probablement du fait que j'ai oublié de mettre un & dans une fonction et du coup l'ordi taf sur des copies
-et non sur l'equipe de poke et les dresseurs direct du coup ça met pas bien a jours leurs statut
-
-j'ai enfin trouvé le probleme, en fait j'utilisaos pas des pointeurs pour le pokemon actuel parce que je suis le roi des cons
-j'utilisais une ref et du coup quand on changeait le pokemon actuel il effaçait l'ancien pokemon et le remplaçait par le nouveau
-du coup ça modifiait l'equipe du dresseur et ça causait des prblms pour mettre a jours les attribus des poke et donc du dresseur
-donc cause des soucis dans le combat
-*/
 
 
 
