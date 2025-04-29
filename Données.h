@@ -32,8 +32,49 @@ public:
 
 using json = nlohmann::json;
 
+//la finction defPokemon a besoin des infos sur les attaques pare que c'est dispo que dans le json des dresseurs
+
+
+Pokemon defPokemon(const std::string& nomPokemon, std::string attaque, std::string type_attaque, int degats) {
+	std::string chemin_fichier = "C:/Users/pitig/Desktop/Cours/ESILV/A3/S6/Langage C - C++/Projet Pokemon/Pokemon.json";
+	std::ifstream fichier(chemin_fichier); //on ouvre le fichier
+
+	if (!fichier.is_open()) {
+		throw std::runtime_error("Impossible d'ouvrir le fichier Pokemon.json. ");
+
+	}
+
+	nlohmann::json data; //creation objet json nommé data
+	fichier >> data;
+	std::vector<std::string> types; //initalise le vecteur des types du poke
+	int HP = 0;
+	int vitesse = 0;
+	for (const auto& poke : data) {
+		int HP;
+		int vitesse;
+		if ( poke["nom"] == nomPokemon) { //si on trouve celui qu'on veut
+
+			types.push_back(poke["type1"]); //on met le premier type
+			if (poke["type2"] != "") {
+				types.push_back(poke["type2"]); //si y'en a un 2e on le met aussi
+			}
+
+			HP = poke["pv"];
+			vitesse = poke["vitesse"];
+			std::cout << "bah le poke est créée" << std::endl;
+
+		}
+	}
+
+	return Pokemon(nomPokemon, types, HP, attaque, type_attaque, degats, vitesse);
+}
+
+
+
+
 
 Leaders defLeaders(const std::string& nomLeader) {
+
 	std::string chemin_fichier = "C:/Users/pitig/Desktop/Cours/ESILV/A3/S6/Langage C - C++/Projet Pokemon/Leaders_Kanto.json";
 	//changer ele fichier source quand j'aurais tout les dresseurs
 
@@ -45,6 +86,8 @@ Leaders defLeaders(const std::string& nomLeader) {
 
 	nlohmann::json data; //creation objet json nommé data
 	fichier >> data; //la surcharge de >> est fournis dans json.hpp donc on met le fichier dans data
+
+
 
 	for (const auto& leader : data["champions"]) { //a changer en fonction de la structure du json !!
 		//on boucle sur les leaders du json
@@ -76,36 +119,3 @@ Leaders defLeaders(const std::string& nomLeader) {
 	throw std::runtime_error("Leader '" + nomLeader + "' introuvable dans le fichier.");//si on trouve pas le leader
 
 }
-
-Pokemon defPokemon(const std::string& nomPokemon, std::string attaque, std::string type_attaque, int degats) {
-	std::string chemin_fichier = "C:/Users/pitig/Desktop/Cours/ESILV/A3/S6/Langage C - C++/Projet Pokemon/Pokemon.json";
-	std::ifstream fichier(chemin_fichier); //on ouvre le fichier
-
-	if (!fichier.is_open()) {
-		throw std::runtime_error("Impossible d'ouvrir le fichier Pokemon.json.");
-
-	}
-	nlohmann::json data; //creation objet json nommé data
-	fichier >> data;
-	std::vector<std::string> types; //initalise le vecteur des types du poke
-	int HP = 0;
-	int vitesse = 0;
-	for (const auto& poke : data) {
-		int HP;
-		int vitesse;
-		if (poke.contains("nom") && poke["nom"] == nomPokemon) { //si on trouve celui qu'on veut
-
-			types.push_back(poke["type1"]); //on met le premier type
-			if (poke["type2"] != "") {
-				types.push_back(poke["type2"]); //si y'en a un 2e on le met aussi
-			}
-
-			HP = poke["pv"];
-			vitesse = poke["vitesse"];
-
-		}
-	}
-
-	return Pokemon(nomPokemon, types, HP, attaque, type_attaque, degats, vitesse);
-}
-
