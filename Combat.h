@@ -100,8 +100,32 @@ public:
         int tour = 1;
 
         while (!joueur.getVaincu() && !adversaire.getVaincu()) {
+            bool attaquer = false;
+         
             std::cout << "Tour " << tour << std::endl;
+            while (true) {
+                std::cout << "voulez-vous : 1) Attaquer   |  2) Changer de Pokemon " << std::endl;
+                int choix;
+                std::cin >> choix;
 
+                if (choix == 1) {
+                    attaquer = true; //le joueur décide d'attaquer ce tour
+                    break;
+                }
+
+                else if (choix == 2) {
+                    numPokemon_Joueur = changerPokemon(joueur, numPokemon_Joueur);
+                    pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
+                    std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
+
+                    break;
+                }
+                else {
+                    std::cout << "entrée incorect" << std::endl;
+                    continue;
+                }
+
+            }
 
             //attention si un pokemon est ko le prochain pokemon peut attaquer si le dresseur a pas encroe joué, le poke le plus rapide peut pas buter le poke et attaquer celui qui arrive direct
 
@@ -113,30 +137,10 @@ public:
 
 //j'ai un soucis, le joueur doit pouvoir faire son choix avant que l'adversaire attaque, je choisis atatque ou changer poke,
 // si je change de poke je jiue en premier meme si jsuis plus lent et adve attaque ensuite, si j'attauqe c'est le plus rapide qui tape
-
-                while (true) { 
-                    std::cout << "voulez-vous : 1) Attaquer   |  2) Changer de Pokemon " << std::endl;
-                    int choix;
-                    std::cin >> choix;
-
-                    if (choix == 1) {
-                        pokemonActuel_Joueur->attaquer(*pokemonActuel_Adversaire); //la fonction estKO est appelé dans la fonction attaque donc si l'attaque bute le poke son etat ets mis a jours direct
-                        break;
-                    }
-
-                    else if (choix == 2) {
-                        numPokemon_Joueur = changerPokemon(joueur , numPokemon_Joueur);
-                        pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
-                        std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
-
-                        break;
-                    }
-                    else {
-                        std::cout << "entrée incorect" << std::endl;
-                        continue;
-                    }
-
+                if (attaquer) {
+                    pokemonActuel_Joueur->attaquer(*pokemonActuel_Adversaire); //la fonction estKO est appelé dans la fonction attaque donc si l'attaque bute le poke son etat ets mis a jours direct
                 }
+                
                 //peut etre que la phrase qui dis que la cible est KO devrait aller dans la fonction attaquer
 
                 //la fonction recevoir degats est intégré donc la cible devrait voir ses hp diminuer
@@ -201,27 +205,10 @@ public:
 
 
                 //joueur riposte (s'il a pas perdu son pokemon)
-                while (true) {
-                    std::cout << "voulez-vous : 1) Attaquer   |  2) Changer de Pokemon " << std::endl;
-                    int choix;
-                    std::cin >> choix;
-                   
-                    if (choix ==1) {
-                        pokemonActuel_Joueur->attaquer(*pokemonActuel_Adversaire); //la fonction estKO est appelé dans la fonction attaque donc si l'attaque bute le poke son etat ets mis a jours direct
-                        break;
-                    }
-                        
-                    else if(choix == 2) {
-                        numPokemon_Joueur = changerPokemon(joueur, numPokemon_Joueur);
-                        pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
-                        std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
-
-                        break;
-                    }
-                        
-
-
+                if (attaquer) {
+                    pokemonActuel_Joueur->attaquer(*pokemonActuel_Adversaire); //la fonction estKO est appelé dans la fonction attaque donc si l'attaque bute le poke son etat ets mis a jours direct
                 }
+
                 if (pokemonActuel_Adversaire->getKO()) {
                     std::cout << pokemonActuel_Adversaire->getNom() << " est KO !" << std::endl;
                     adversaire.estVaincu();
@@ -329,6 +316,11 @@ public:
 
         }
         std::cout << std::endl;
+    }
+
+    void choisirAttaque(Pokemon& pokemonActuel) const {
+        std::cout << "Choissir l'attaque : " << std::endl;
+        //faut changer tout le code pour transfo l'attaque du pokemon qui est un string en unorderd map avec attaque : type attaque
     }
 
        
