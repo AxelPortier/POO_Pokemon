@@ -22,6 +22,19 @@ void toLowerVect(std::vector<std::string>& vect) {
     for (std::string str : vect) { toLowerCase(str); }
 }
 
+//surcharge de << pour les vector<string>
+
+std::ostream& operator<<(std::ostream& os, const std::vector<std::string>& vec) {
+    os << "[";
+    for (int i = 0; i < vec.size(); ++i) {
+        os << vec[i] ;
+        if (i != vec.size() - 1) os << " , "; //si on est pas a la fin on met une virgume
+
+    }
+    os << "]";
+    return os;
+}
+
 class Type {
 protected:
 
@@ -587,6 +600,20 @@ public:
 
     }
 
+    //surcharges pour afficher les pokemons 
+
+   
+
+    friend std::ostream& operator << (std::ostream& os, const Pokemon& p) {
+        os << "Pokemon: " << p.getNom()
+            << " | PV: " << p.getHP()<< " / " << p.getHPmax()
+
+            << " | KO : " << p.getKO();
+
+        return os;
+              
+    }
+
     //les getters
 
     std::string getNom() const { return nom; }
@@ -596,6 +623,9 @@ public:
     int getDegats() const { return degats; }
     int getVitesse() const { return vitesse; }
 
+    std::vector<std::string> getTypes() const { return types; }
+
+    //peut etre faudrait une surcharge pour afficher les unorderd map mais flemme
 
     std::unordered_map<std::string, float> getFaiblesses_Pokemon() const {  //on a faillis avoir un gros soucis olalalala, je renomme les fcts pour les diff des methodes de la class type
         return faiblesses_Pokemon;
