@@ -15,10 +15,15 @@
 #include <cstdlib> // Pour rand() et srand()
 #include <ctime>   // Pour time()
 
+#include <thread>   // pour sleep_for
+#include <chrono>   // pour chrono::milliseconds
+
 #include "Pokemon.h"
 #include "Entraineurs.h"
 #include "Données.h"
 
+//pour un meilleurs rendu j'aimerais mettre un timer entre les phrases et ne pas tout afficher a la suite mais parfois
+//remplacer les lignes avce les bibli thread et chrono
 
 //idées et rappels
 /*
@@ -79,6 +84,7 @@ public:
 
     void bagarre() {
 
+
         //2 pointeurs qui pointent vers le pokemon au combat
 
         Pokemon* pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
@@ -91,9 +97,10 @@ public:
         std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << " !" << std::endl;
         std::cout << adversaire.getNom() << " envoie " << pokemonActuel_Adversaire->getNom() << " !" << std::endl;
 
+        int tour = 1;
 
         while (!joueur.getVaincu() && !adversaire.getVaincu()) {
-
+            std::cout << "Tour " << tour << std::endl;
 
 
             //attention si un pokemon est ko le prochain pokemon peut attaquer si le dresseur a pas encroe joué, le poke le plus rapide peut pas buter le poke et attaquer celui qui arrive direct
@@ -103,9 +110,11 @@ public:
 
             //si joueur est plus rapide
             if (vitesseJoueur >= vitesseAdversaire) { //joueur attaque
-                std::cout << "joueur plus rapide" << std::endl;
-                //si je traduis cette phrase ça donne : utiliser la fonction attaquer du pokemon pointé par  pokemonActuel_Joueur sur ce que pointe  pokemonActuel_Adversaire
-                while (true) {
+
+//j'ai un soucis, le joueur doit pouvoir faire son choix avant que l'adversaire attaque, je choisis atatque ou changer poke,
+// si je change de poke je jiue en premier meme si jsuis plus lent et adve attaque ensuite, si j'attauqe c'est le plus rapide qui tape
+
+                while (true) { 
                     std::cout << "voulez-vous : 1) Attaquer   |  2) Changer de Pokemon " << std::endl;
                     int choix;
                     std::cin >> choix;
@@ -116,7 +125,14 @@ public:
                     }
 
                     else if (choix == 2) {
-                        std::cout << "j'ai pas encore codé le changement de pokemon lol" << std::endl;
+                        numPokemon_Joueur = changerPokemon(joueur , numPokemon_Joueur);
+                        pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
+                        std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
+
+                        break;
+                    }
+                    else {
+                        std::cout << "entrée incorect" << std::endl;
                         continue;
                     }
 
@@ -163,7 +179,6 @@ public:
 
             //si adversaire est plus rapide
             else { //adversaire attaque
-                std::cout << "adve plus rapide" << std::endl;
 
                 //si j'ai bien fais la classe pokemon j'ai juste a dire pokemon attaque (cible)
                 pokemonActuel_Adversaire->attaquer(*pokemonActuel_Joueur);
@@ -197,8 +212,11 @@ public:
                     }
                         
                     else if(choix == 2) {
-                        std::cout << "j'ai pas encore codé le changement de pokemon lol" << std::endl;
-                        continue;
+                        numPokemon_Joueur = changerPokemon(joueur, numPokemon_Joueur);
+                        pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
+                        std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
+
+                        break;
                     }
                         
 
@@ -218,6 +236,7 @@ public:
                 }
 
             }
+            tour++;
 
 
 
@@ -263,6 +282,54 @@ public:
     void setAdversaire(Entraineurs newAdversaire ) { adversaire = newAdversaire; }
 
 
+    //renvoie une liste de pointeurs vers les pokemon pas KO pour gérer le changement de pokemon
+
+
+    int changerPokemon(Entraineurs& e , int numActuel) {
+        std::cout << "Equipe Pokemon"<< std::endl;
+        
+        std::vector<Pokemon>& equipe = e.getEquipePokemon(); 
+
+        
+        
+        int numPoke;
+        while (true) {
+            std::cout << "Quel Pokemon choisissez-vous ?"<<std::endl;
+
+            int i = 1;
+
+            for (Pokemon& poke : equipe) {
+                std::cout << i << ") " << poke << std::endl;
+                ++i;
+            }
+
+            std::cin >> numPoke;
+            numPoke--; //je retire 1 pour que ça corresponde aux indices et evite de crash
+            if (numPoke > equipe.size()) { std::cout << "Entré invalide."; continue; }
+
+            else if (!equipe[numPoke].getKO() && numPoke != numActuel) {
+                break;
+            }
+            else if (equipe[numPoke].getKO()) {
+                std::cout << "Ce Pokemon est KO ! Vous ne pouvez plus l'envoyer au combat" << std::endl;
+                continue;
+            }
+            else if (numPoke == numActuel) {
+                std::cout << "Ce Pokemon est dèjà sur le terrain !" << std::endl;
+                continue;
+            }
+        }
+        return numPoke;
+    }
+
+    void afficherTexteDelais(const std::string& texte, int delaisMs = 20) {
+        for (char c : texte) {
+            std::cout << c << std::flush; //flush pour que ça apparraisse au fur et a mesure apparement
+            std::this_thread::sleep_for(std::chrono::milliseconds(delaisMs));
+
+        }
+        std::cout << std::endl;
+    }
 
        
 };
