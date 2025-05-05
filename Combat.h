@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "raylib.h"
+
 
 #include <iostream>
 #include <vector>
@@ -94,8 +96,10 @@ public:
         std::cout << "Le combat entre " << joueur.getNom() << " et " << adversaire.getNom() << " peut commencer !" << std::endl;
         joueur.parler_debutCombat(adversaire);
         adversaire.parler_debutCombat(joueur);
-        std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << " !" << std::endl;
         std::cout << adversaire.getNom() << " envoie " << pokemonActuel_Adversaire->getNom() << " !" << std::endl;
+
+        std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << " !" << std::endl;
+        RoiKai(pokemonActuel_Joueur);
 
         int tour = 1;
 
@@ -117,6 +121,7 @@ public:
                     numPokemon_Joueur = changerPokemon(joueur, numPokemon_Joueur);
                     pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
                     std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
+                    RoiKai(pokemonActuel_Joueur);
 
                     break;
                 }
@@ -174,6 +179,7 @@ public:
                         numPokemon_Joueur++;
                         pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
                         std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
+                        RoiKai(pokemonActuel_Joueur);
 
                     }
 
@@ -196,6 +202,7 @@ public:
                         numPokemon_Joueur++; //pourra pas dépacer Equipe.size vu que le gars sera vaincu
                         pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur); //on envoie le poke suivant
                         std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
+                        RoiKai(pokemonActuel_Joueur);
 
                     }
 
@@ -235,14 +242,26 @@ public:
 
         if (joueur.getVaincu()) {
             std::cout << joueur.getNom() << " a perdu le combat !" << std::endl;
+            joueur.Defaite();
             joueur.parler_defaiteCombat(adversaire);
             adversaire.parler_victoireCombat(joueur);
+
+
 
         }
         else {
             std::cout << joueur.getNom() << " a remporté le combat !" << std::endl;
+
+            joueur.Victoire();
+
             joueur.parler_victoireCombat(adversaire);
             adversaire.parler_defaiteCombat(joueur);
+
+            if (Leaders* leader = dynamic_cast<Leaders*>(&adversaire)) { //si je dis pas de betise ça verif si l'adversaire est bien un leader et donc possede un badge a te filer chef
+
+
+                joueur.ajouterBadge(*leader); //pk ça marche pas, adversaire c'est un entrainneur par defaut et si c'est un leader ça devrait pas poser de prblm pk il veut pas ce rat
+            }
 
         }
 
@@ -268,8 +287,17 @@ public:
     void setJoueur(Joueurs newJoueur) { joueur = newJoueur; }
     void setAdversaire(Entraineurs newAdversaire ) { adversaire = newAdversaire; }
 
+    void RoiKai(const Pokemon* p) { //si on a kaiminus
+        if (p->getNom() == "Kaiminus") {
 
-    //renvoie une liste de pointeurs vers les pokemon pas KO pour gérer le changement de pokemon
+
+            std::cout << "Le roi entre en scène" << std::endl;
+
+            std::cout << "Kaiminus active sa capacité 'Aura du roi'" << std::endl;
+
+        }
+
+    }
 
 
     int changerPokemon(Entraineurs& e , int numActuel) {
