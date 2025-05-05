@@ -1,5 +1,10 @@
+
+
 #pragma once
-#include "Pokemon.h"
+
+#include "raylib.h"
+
+
 #include <iostream>
 #include <vector>
 #include <utility>
@@ -7,12 +12,13 @@
 #include <map>
 #include <set>
 #include <string>
-#include <Windows.h>
+//#include <Windows.h>
 #include <unordered_map>
 #include <cstdlib> // Pour rand() et srand()
 #include <ctime>   // Pour time()
 
 
+#include "Pokemon.h"
 
 
 
@@ -37,6 +43,28 @@ public:
 			Equipe = equipe;
 		}
 	}
+
+	//fonction virtuel que la surcharge appelera (si ça marche je suis un dieu)
+
+	virtual std::ostream& affichage(std::ostream& os) const {
+		os << getNom() << " | Equipe : [";
+		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
+			os << poke.getNom() << " ";
+
+		}
+		os << "] , vaincu : " << getVaincu();
+		return os;
+	}
+
+
+	//petite surcharge pour afficher les persos
+	
+	friend std::ostream& operator<<(std::ostream& os , const Entraineurs& e) {
+		return e.affichage(os); //on a l'appel polymorphe ici, ça marche, je suis un boss bordel, reste a override dans les ss classes
+	}
+
+	
+
 
 	virtual void parler_debutCombat(Entraineurs& ennemis) { //ce que dis le perso au debut du combat
 		int random = rand() % 3;
@@ -85,13 +113,13 @@ public:
 	}
 
 	std::string getNom() const { return nom; }
-	std::vector<Pokemon> getEquipePokemon() const { return Equipe; }
+	std::vector<Pokemon>& getEquipePokemon()  { return Equipe; }//& pour pas renvoyer de copie
 	bool getVaincu() const { return vaincu; }
 
 	//sort le i eme pokemon de l'équipe, le if pour éviter les erreurs mais faut gérer ça aussi côté combat genre si ya plus de poke le gars est vaincu (fais gaffe)
 
 	Pokemon& getPokemon(int i) {
-		if (i < Equipe.size()) {
+		if (i >= 0 && i < Equipe.size()) {
 			return Equipe[i];
 		}
 		throw std::out_of_range("Index hors de l'équipe !");
@@ -118,7 +146,7 @@ public:
 		std::cout << " Equipe de " << nom << " : " << std::endl;
 
 		for (Pokemon& poke : Equipe) {
-			std::cout << poke.getNom() << " : HP = " << poke.getHP() << " : KO = " << poke.getKO() << std::endl;
+			std::cout << poke << " : KO = " << poke.getKO() << std::endl;
 		}
 	}
 
@@ -142,6 +170,18 @@ public:
 
 	std::string getBadge() const { return Badge; }
 	std::string getGymnase() const { return Gymnase; }
+
+	//pour afficher les leaders
+
+	virtual std::ostream& affichage(std::ostream& os) const override {
+		os << getNom() << " | Equipe : [";
+		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
+			os << poke.getNom() << " ";
+
+		}
+		os << "] , vaincu : " << getVaincu() << " | Badge : " << Badge << " | Gymnase : " << Gymnase;
+		return os;
+	}
 
 	virtual void parler_debutCombat(Entraineurs& ennemis) override { //ce que dis le leader au debut du combat
 		int random = rand() % 4;
@@ -226,7 +266,17 @@ public:
 		}
 	}
 
+	//afficher les maitres
 
+	virtual std::ostream& affichage(std::ostream& os) const override {
+		os <<"Maitre " << getNom() << " | Equipe : [";
+		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
+			os << poke.getNom() << " ";
+
+		}
+		os << "] , vaincu : " << getVaincu();
+		return os;
+	}
 
 
 	void parler_debutCombat(Entraineurs& ennemis) override {
@@ -306,6 +356,7 @@ private:
 	int nbBadges;
 	int nbVictoires;
 	int nbDefaites;
+	std::vector<std::string> Badges; //la liste des badges qu'on a gagné qui va permettre de proprement compter les badges qu'on gagne
 
 public:
 	Joueurs(std::string nom,
@@ -321,11 +372,41 @@ public:
 	int getNbVictoire() const { return nbVictoires; }
 	int getNbDefaites() const { return nbDefaites; }
 
+	void setNbBadges(int newNbBadge)  { nbBadges = newNbBadge; }
+	void setNbVictoires(int newNbVictoires) { nbVictoires = newNbVictoires; }
+	void setNbDefaites(int newNbDefaites) { nbDefaites = newNbDefaites; }
+
+	void Victoire() { nbVictoires++; }
+	void Defaite() { nbDefaites++; }
+
+
+
+
+
+	//afficher les joueurs
+
+	virtual std::ostream& affichage(std::ostream& os) const override {
+		os << getNom() << " | Equipe : [";
+		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
+			os << poke.getNom() << " ";
+
+		}
+		os << "] , vaincu : " << getVaincu() << " | nb de Badges : " << nbBadges << " | nb de Victoires : " << nbVictoires << " | nb de Défaites : " << nbDefaites;
+		return os;
+	}
+	
 	void parler_debutCombat(Entraineurs& ennemis) override {
 		/*
 		dynamic_cast<class*>(&adversaire) verif si l'adversaire est bien de la class qu'on regarde
 		et sinon elle renvoie un nullptr qu'on utilise comme condition pour savoir si c'est le bon type d'adversaire
 		si on utilisaot static cast ça renverrais juste une erreur de con
+
+		mais attend, dynamic_cast<Leaders*>(&ennemis) ça verif si ennemis (qu'on prend en alias avec & pour pas faire de copie)
+		est un pointeur vers un leader, pas si c'est un leader, normalement je devrais pas mettre de * mais un & plutot nn?
+		si je met Leaders& ça renvoie une erreur, hmmmmmmmmmmmmmmmmm
+
+		nn ça verif pas imbecile, tu transforme 
+
 		*/
 		int random = rand() % 3; //sort un nb entre 0 et 2
 
@@ -426,7 +507,7 @@ public:
 			case 6:
 				std::cout << nom << " : " << "Ce badge est presque le dernier. Mon parcours touche à son sommet." << std::endl;
 				break;
-			default:
+			case 7:
 				std::cout << nom << " : " << "Ce dernier badge marque la fin d’un chapitre, mais le vrai défi ne fait que commencer." << std::endl;
 				break;
 			}
@@ -518,7 +599,16 @@ public:
 		}
 	}
 
-
+	void ajouterBadge(const Leaders& leader) {
+		std::string badge = leader.getBadge();
+		
+		if (std::find(Badges.begin() , Badges.end() , badge) == Badges.end()) {  //si le badge est pas deja dans les badges gagné genre si on re combat le leader
+			Badges.push_back(badge);
+			nbBadges++;
+			std::cout << nom << " obtient le badge " << badge << " !" << std::endl;
+		}
+	}
 };
+
 
 
