@@ -1,6 +1,9 @@
 
 #pragma once
 
+#include "raylib.h"
+
+
 #include <iostream>
 
 #include <vector>
@@ -9,7 +12,7 @@
 #include <map>
 #include <set>
 #include <string>
-#include <Windows.h>
+//#include <Windows.h>
 #include <unordered_map>
 #include <cstdlib> // Pour rand() et srand()
 #include <ctime>   // Pour time()
@@ -495,6 +498,9 @@ private:
     int HP;
     std::string attaque; //pour l'instant que une attaque (on verra si on en fait plus apres)
     std::string TypeAttaque;
+
+    //std::unordered_map<std::string, std::string> Attaques; //je met les types en string ou en Type ?? jsp encore on verra
+
     int degats;
     int HPmax; //juste pour faire HP/HPmax sur l'interface (les pv restants quoi)
 
@@ -664,9 +670,9 @@ public:
             int KaiBonus = 5; //bonus de puissance pour le roi Kaiminus
 
 
-            std::cout << "Le roi entre en scène" << std::endl;
+            //std::cout << "Le roi entre en scène" << std::endl;
 
-            std::cout << nom << " active sa capacité 'Aura du roi'" << std::endl;
+            //std::cout << nom << " active sa capacité 'Aura du roi'" << std::endl;
 
             setDegats(degats * KaiBonus);
             setHP(HP * KaiBonus);
