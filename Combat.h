@@ -93,6 +93,7 @@ public:
         Pokemon* pokemonActuel_Adversaire = &adversaire.getPokemon(numPokemon_Adversaire);
 
 
+
         std::cout << "Le combat entre " << joueur.getNom() << " et " << adversaire.getNom() << " peut commencer !" << std::endl;
         joueur.parler_debutCombat(adversaire);
         adversaire.parler_debutCombat(joueur);
