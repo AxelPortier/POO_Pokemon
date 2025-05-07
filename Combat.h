@@ -56,6 +56,21 @@ les entrainneurs je leurs fais une logique de combat simple, pour commencer il v
 faut vois aussi si la fonction attaquer du pokemon pourrait etre fait autrement parce qu'elle attaque et verif si la cible est Ko jpense qu'on devrait séparer les 2
 */
 
+
+
+//je dois transfo ça en machien a etat, ça doit avancer etape par etape et envoyer les infos a 
+// raylib, j'ai une idée, je vais faire 2 fonctions, une adv plus rapide une joueur plus rapide, si jrv a les mixer en une 4
+// juste en changeant les param ça serait cool aussi, bref, des fonctions qui prenne un case et utilise un switch
+// suffis de def un enumerateur d'etat, en fonction de l'etat du combat on fait diff actions qui vont modif les persos 
+// a chaques etapes du tour on met a jours l'etat et une nouvelle partie de la boucle se fait ensuite, au debut on est intrp
+// ça va dans la case intro on fait le truc, on met a jours l'etat et on break
+// maintenant l'etat est en mode demander au joeurus ce qu'il veut faire 
+// donc on va dasn cette partie du code et on met ensuite a jours .....
+// a chaques fois qu'on fait un truc raylib l'affiche,
+//va demander a la class combat a chaques boucles d'affichage quel est le statut du combat et ce statut changge donc on affiche des trucs diff
+
+
+
 class Combat {
 private:
 
