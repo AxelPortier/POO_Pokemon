@@ -70,6 +70,19 @@ faut vois aussi si la fonction attaquer du pokemon pourrait etre fait autrement 
 //va demander a la class combat a chaques boucles d'affichage quel est le statut du combat et ce statut changge donc on affiche des trucs diff
 
 
+//pour aller plus loins, transfo la boucle while de combat en while avec un switch et etat combat comme dans l'algo de jeu comme ça jpuex faire un gui tout beau
+
+
+void ClearScreen() {
+    for (int i = 0; i < 50; ++i)
+        std::cout << std::endl;
+} //pour l'affichage clean en commande
+
+void SpaceScreen() {
+    for (int i = 0; i < 5; ++i)
+        std::cout << std::endl;
+}
+
 
 class Combat {
 private:
@@ -77,9 +90,9 @@ private:
     //on fait ref au joueur et a son adversaire on les recréer pas en lançant la bagarre donc on met &
 
     Joueurs& joueur;
-    int numPokemon_Joueur = 0; //le num du poke qu'on envoie, faudra verif qu'il depasse Equipe.size
+    int numPokemon_Joueur; //le num du poke qu'on envoie, faudra verif qu'il depasse Equipe.size
     Entraineurs& adversaire;
-    int numPokemon_Adversaire = 0;
+    int numPokemon_Adversaire;
 
     //pointeurs vers le pokemon qui se bagarre actuellement, il va pointer vers diff pokemon au cours du combat du coup
       //en fait on fait pas de pointeur parce que getPokemon() renvoie un Pokemon et pas un pointeur donc c'est foireu
@@ -99,31 +112,50 @@ public:
 
 
 
+
     void bagarre() {
 
 
+        
+        // Trouver le premier Pokémon non KO dans l'équipe du joueur
+        for (int i = 0; i < joueur.getEquipePokemon().size(); ++i) {
+            if (!joueur.getPokemon(i).getKO()) {
+                numPokemon_Joueur = i;
+                break;
+            }
+        }
+        for (int i = 0; i < adversaire.getEquipePokemon().size(); ++i) {
+            if (!adversaire.getPokemon(i).getKO()) {
+                numPokemon_Adversaire = i;
+                break;
+            }
+        }
         //2 pointeurs qui pointent vers le pokemon au combat
-
         Pokemon* pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
         Pokemon* pokemonActuel_Adversaire = &adversaire.getPokemon(numPokemon_Adversaire);
 
 
 
-        std::cout << "Le combat entre " << joueur.getNom() << " et " << adversaire.getNom() << " peut commencer !" << std::endl;
         joueur.parler_debutCombat(adversaire);
+        std::cout << "\n" << std::endl;
         adversaire.parler_debutCombat(joueur);
+        std::cout << "Le combat entre " << joueur.getNom() << " et " << adversaire.getNom() << " peut commencer !" << std::endl;
+
         std::cout << adversaire.getNom() << " envoie " << pokemonActuel_Adversaire->getNom() << " !" << std::endl;
 
         std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << " !" << std::endl;
         RoiKai(pokemonActuel_Joueur);
 
-        int tour = 1;
+        //int tour = 1;
 
         while (!joueur.getVaincu() && !adversaire.getVaincu()) {
+            SpaceScreen();
             bool attaquer = false;
-         
-            std::cout << "Tour " << tour << std::endl;
+           // std::cout << "Tour " << tour << std::endl;
+           // std::cout  << joueur <<  std::endl;
+            // std::cout << adversaire << std::endl;
             while (true) {
+
                 std::cout << "voulez-vous : 1) Attaquer   |  2) Changer de Pokemon " << std::endl;
                 int choix;
                 std::cin >> choix;
@@ -135,11 +167,15 @@ public:
 
                 else if (choix == 2) {
                     numPokemon_Joueur = changerPokemon(joueur, numPokemon_Joueur);
-                    pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
-                    std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
-                    RoiKai(pokemonActuel_Joueur);
+                    if (numPokemon_Joueur == 10) { continue; }
+                    else 
+                    {
+                        pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
+                        std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
+                        RoiKai(pokemonActuel_Joueur);
 
-                    break;
+                        break;
+                    }
                 }
                 else {
                     std::cout << "entrée incorect" << std::endl;
@@ -156,12 +192,12 @@ public:
             //si joueur est plus rapide
             if (vitesseJoueur >= vitesseAdversaire) { //joueur attaque
 
-//j'ai un soucis, le joueur doit pouvoir faire son choix avant que l'adversaire attaque, je choisis atatque ou changer poke,
-// si je change de poke je jiue en premier meme si jsuis plus lent et adve attaque ensuite, si j'attauqe c'est le plus rapide qui tape
+                //j'ai un soucis, le joueur doit pouvoir faire son choix avant que l'adversaire attaque, je choisis atatque ou changer poke,
+                // si je change de poke je jiue en premier meme si jsuis plus lent et adve attaque ensuite, si j'attauqe c'est le plus rapide qui tape
                 if (attaquer) {
                     pokemonActuel_Joueur->attaquer(*pokemonActuel_Adversaire); //la fonction estKO est appelé dans la fonction attaque donc si l'attaque bute le poke son etat ets mis a jours direct
                 }
-                
+
                 //peut etre que la phrase qui dis que la cible est KO devrait aller dans la fonction attaquer
 
                 //la fonction recevoir degats est intégré donc la cible devrait voir ses hp diminuer
@@ -192,7 +228,7 @@ public:
                     joueur.estVaincu();
 
                     if (!joueur.getVaincu()) {
-                        numPokemon_Joueur++;
+                        numPokemon_Joueur = changerPokemonMidCombat(joueur, numPokemon_Joueur);
                         pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur);
                         std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
                         RoiKai(pokemonActuel_Joueur);
@@ -215,7 +251,8 @@ public:
                     std::cout << pokemonActuel_Joueur->getNom() << " est KO !" << std::endl;
                     joueur.estVaincu();
                     if (!joueur.getVaincu()) {
-                        numPokemon_Joueur++; //pourra pas dépacer Equipe.size vu que le gars sera vaincu
+                        numPokemon_Joueur = changerPokemonMidCombat(joueur, numPokemon_Joueur);
+                        //pourra pas dépacer Equipe.size vu que le gars sera vaincu
                         pokemonActuel_Joueur = &joueur.getPokemon(numPokemon_Joueur); //on envoie le poke suivant
                         std::cout << joueur.getNom() << " envoie " << pokemonActuel_Joueur->getNom() << std::endl;
                         RoiKai(pokemonActuel_Joueur);
@@ -246,16 +283,16 @@ public:
                 }
 
             }
-            tour++;
+            //tour++;
 
 
 
         }
 
-        
+
 
         //combat finis
-
+        SpaceScreen();
         if (joueur.getVaincu()) {
             std::cout << joueur.getNom() << " a perdu le combat !" << std::endl;
             joueur.Defaite();
@@ -280,7 +317,12 @@ public:
             }
 
         }
-
+       
+        joueur.setVaincu(false);
+        for (auto& poke : adversaire.getEquipePokemon()) {
+            poke.setHP(poke.getHPmax());
+            poke.setKO(false);
+        }
 
     }
 
@@ -301,7 +343,7 @@ public:
     void setNumPokemon_Adversaire(int num) { numPokemon_Adversaire = num; }
 
     void setJoueur(Joueurs newJoueur) { joueur = newJoueur; }
-    void setAdversaire(Entraineurs newAdversaire ) { adversaire = newAdversaire; }
+    void setAdversaire(Entraineurs newAdversaire) { adversaire = newAdversaire; }
 
     void RoiKai(const Pokemon* p) { //si on a kaiminus
         if (p->getNom() == "Kaiminus") {
@@ -316,16 +358,18 @@ public:
     }
 
 
-    int changerPokemon(Entraineurs& e , int numActuel) {
-        std::cout << "Equipe Pokemon"<< std::endl;
-        
-        std::vector<Pokemon>& equipe = e.getEquipePokemon(); 
+    int changerPokemon(Entraineurs& e, int numActuel) {
+        std::cout << "Choisissez le Pokemon que vous voulez envoyer au combat.\n" << std::endl;
+        std::cout << "Equipe Pokemon" << std::endl;
 
-        
-        
+        std::vector<Pokemon>& equipe = e.getEquipePokemon();
+
+
+
         int numPoke;
         while (true) {
-            std::cout << "Quel Pokemon choisissez-vous ?"<<std::endl;
+
+            std::cout << "Quel Pokemon choisissez-vous ?" << std::endl;
 
             int i = 1;
 
@@ -333,10 +377,13 @@ public:
                 std::cout << i << ") " << poke << std::endl;
                 ++i;
             }
+            std::cout << "0) Retour" << std::endl;
+
 
             std::cin >> numPoke;
+            if (numPoke == 0) { return 10; } //10 pour le retour jsp j'ai mis au pif
             numPoke--; //je retire 1 pour que ça corresponde aux indices et evite de crash
-            if (numPoke > equipe.size()) { std::cout << "Entré invalide."; continue; }
+            if (numPoke > equipe.size() && numPoke < -1) { std::cout << "Entré invalide."; continue; }
 
             else if (!equipe[numPoke].getKO() && numPoke != numActuel) {
                 break;
@@ -349,6 +396,54 @@ public:
                 std::cout << "Ce Pokemon est dèjà sur le terrain !" << std::endl;
                 continue;
             }
+            
+        }
+        return numPoke;
+    }
+
+    int changerPokemonMidCombat(Entraineurs& e, int numActuel) {
+        std::cout << "Choisissez le Pokemon que vous voulez envoyer au combat.\n" << std::endl;
+
+        std::cout << "Equipe Pokemon" << std::endl;
+
+        std::vector<Pokemon>& equipe = e.getEquipePokemon();
+
+
+
+        int numPoke;
+        while (true) {
+
+            std::cout << "Quel Pokemon choisissez-vous ?" << std::endl;
+
+            int i = 1;
+
+            for (Pokemon& poke : equipe) {
+                std::cout << i << ") " << poke << std::endl;
+                ++i;
+            }
+
+
+            std::cin >> numPoke;
+            
+            numPoke--; //je retire 1 pour que ça corresponde aux indices et evite de crash
+            if (numPoke > equipe.size() && numPoke < -1) { std::cout << "Entré invalide."; continue; }
+
+            else if (!equipe[numPoke].getKO() && numPoke != numActuel) {
+                break;
+            }
+            else if (equipe[numPoke].getKO()) {
+                std::cout << "Ce Pokemon est KO ! Vous ne pouvez plus l'envoyer au combat" << std::endl;
+                continue;
+            }
+            else if (numPoke == numActuel) {
+                std::cout << "Ce Pokemon est dèjà sur le terrain !" << std::endl;
+                continue;
+            }
+            else {
+                std::cout << "Entrée Invalide." << std::endl;
+                continue;
+            }
+
         }
         return numPoke;
     }
@@ -367,5 +462,5 @@ public:
         //faut changer tout le code pour transfo l'attaque du pokemon qui est un string en unorderd map avec attaque : type attaque
     }
 
-       
+
 };
