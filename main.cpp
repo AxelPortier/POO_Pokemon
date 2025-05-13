@@ -1,6 +1,6 @@
 /*
-Bienvenu sur le code du Projet Pokemon de Pitigliano Victor et Portier Axel 
-note importante, nous avons réussis à surcharger les opérateurs tard dans le projet donc certaines fonctions sont inutiles, si elles sont encore présentes dasn le code final 
+Bienvenu sur le code du Projet Pokemon de Pitigliano Victor et Portier Axel
+note importante, nous avons réussis à surcharger les opérateurs tard dans le projet donc certaines fonctions sont inutiles, si elles sont encore présentes dasn le code final
 c'est un simple oublis
 
 */
@@ -13,7 +13,6 @@ c'est un simple oublis
 
 
 
-
 #include <iostream>
 #include <vector>
 #include <utility>
@@ -21,8 +20,6 @@ c'est un simple oublis
 #include <map>
 #include <set>
 #include <string>
-#include <algorithm> // pour std::clamp
-
 //#include <Windows.h> je tej parce que ca rentre en conflit avec raylib
 #include <unordered_map>
 #include <cstdlib> // Pour rand() et srand()
@@ -41,28 +38,46 @@ c'est un simple oublis
 //relire tout le code et verif les liens entre les fonctions, si les & et * sont bien utilisés.
 
 
-//la class qui va gérer les diffs aspects du jeu, les combats, choisir adversaire et equipe pokemon, interagir, voir qui on a battu et nos badges
-//faut tout faire avec raylib dès le debut et comme ça j'apprend a l'utiliser sur un truc simple et je ferais le combat apres
+
+//ya des soucis, je redef tout les adversaires a chaques fois que jveux combattre
+//faut instancier les leaders et le conseil quand je choisis la region mais quand je veux combattre je dois acceder a la liste deja faite
+//soultion, quand je choisis combattre, ça met le jeu en etat choix region, instancie les adversaire, ensuite on passe en choix adversaire
+
+
+
+
+
 class Jeu {
 public:
 
     enum class EtatJeu {
+
         Accueil, //ecran d'acceuil
-        ChoixEquipe, 
-        ChoixAdversaire,
+        ChoixEquipe,
+        ChoixRegion,
+        ChoixAdversaireChampions,
+        Ligue,
+        InteragireLigue,
         Combat,
-        Interagire,
+        Interagire
+       
     };
+
+    //peut etre qu'il fut plutot un etat choix region et ensuite dans combat ça choisis auto notre adversaire vu qu'on dit les combattres dans l'ordre
 
 
 private:
+    std::string nomJoueur;
+    std::string nomDuJeu;
+
     EtatJeu etatJeu = EtatJeu::Accueil;
 
     std::vector< PokemonData> listePokemonDispo; //les infos sur tout les pokemons
     std::vector<std::string> nomsPokemonsChoisie;
 
-    std::vector<Pokemon> EquipePokemon;
+    std::vector<Pokemon> EquipePokemon;  //juste pour la fonction choisir equipe graphiquement
 
+    std::vector<Pokemon>* Equipe; //pointeur veers l'equipe du joueurs
     bool EquipeChoisie = false;
 
     //pour scroller dans le choix des pokemons
@@ -71,117 +86,601 @@ private:
     float scrollStartMouseY = 0;
     float scrollStartOffset = 0;
 
+    bool quitter = false;
+    bool aUneEquipe = false;
+    int choixRegion = 0; //pour savoir dans quel region on va jouer
+
+    Joueurs* Joueur;
+    Entraineurs* Adversaire;
+    Maitres* Maitre;
+
+    std::vector<Leaders> listeChampions;
+    std::vector<Conseil> listeConseil;
+    
+    std::string region;//region tu bagarre
+
+    bool ligue = false; //true quand t'auras les 8 badges
+    bool maitre = false; //true quand tu bat le co,siel des 4
+    
+
+
 
 public:
 
-    Jeu() {
+    Jeu(std::string nomDuJeu) : nomDuJeu(nomDuJeu) {
         srand(time(0)); //on initialise le random pour les dialogues 
         listePokemonDispo = ListeCompletePokemon();
-
         Jouer();
+    }
+    
+    ~Jeu() { //on delete les pointeurs dynamique
+        delete Joueur;
+        //delete Adversaire;
+        delete Maitre;
+    }
+    
+    void ListeAdversaires_Region(std::string region) {
+        std::cout << "Chargement des adversaires..." << std::endl;
+        listeChampions = ListeChampions(region); //met a jours la liste des leaders
+        //std::cout << "on a finis les leaders" << std::endl;
+        listeConseil = ListeConseil(region); //la liste du conseil
+        //std::cout << "on tente le maitre" << std::endl;
+
+        Maitre = new Maitres( ListeMaitre(region)); //renvoie juste le maitre 'est pas un vector
+        std::cout << "Chargement terminée." << std::endl;
     }
 
     void Jouer() {
-        const int screenWidth = 1000;
-        const int screenHeight = 600;
-        InitWindow(screenWidth, screenHeight, "Combat Pokémon");
+        std::cout << nomDuJeu << std::endl;
+        std::cout << "Comment vous appelez-vous ?" << std::endl;
+        std::cin >> nomJoueur;
+       
+
+        std::cout << "Bienvenue " << nomJoueur << std::endl;
+        Joueur =  new Joueurs(defJoueur(nomJoueur)); //on le def avec une equipe vide pour commencer, Joueur pointe vers un joueur du coup
+        
+        Equipe = &Joueur->getEquipePokemon(); //on pointe vers l'equipe (vide pour l'instant)
+
+        while (!quitter) {
+            if (Joueur->getBadges().size() == 8 && choixRegion != 0) { //si on a les 8 badges et qu'on a choisis une region
+                ligue = true;
+                std::cout << "Vous avez obtenu les 8 badges de la region. Vous pouvez désormais affronter la Ligue des Dresseurs de " << region << "." << std::endl;;
+            }
+            switch (etatJeu) {
+
+                
+           
+
+            case EtatJeu::Accueil: {
+                SpaceScreen();
+                std::cout << *Joueur;
+                std::cout << "Selectioner une action : " << std::endl;
+                std::cout << "1) Choisir vos Pokemon  |  2) Combattre  |  3) Intéragire avec vos Pokemons  |  4) Quitter" << std::endl;
+                int choix;
+                std::cin >> choix;
+                if (choix == 1) {
+                    etatJeu = EtatJeu::ChoixEquipe; //ça fonctionne
+                    break;
+                }
+
+                else if (choix == 2) {
+                    if (aUneEquipe && std::all_of(Joueur->getEquipePokemon().begin(), Joueur->getEquipePokemon().end(), [](const Pokemon& poke) {return poke.getKO();}))
+                    {
+                        std::cout << "Tes Pokemon ont besoin de soins d'urgence !" << std::endl;
+                        continue;
+                    }
+                    if (aUneEquipe){ 
+                        if (!ligue) {
+                            etatJeu = EtatJeu::ChoixAdversaireChampions;
+                            break;
+                        }
+                        else {
+                            etatJeu = EtatJeu::Ligue;
+                            break;
+
+                        }
+                        
+                    }
+                    else {
+                        std::cout << "Vous avez besoin d'une Equipe !" << std::endl;
+                        continue;
+                    }
+                  
+
+                }
+                else if (choix == 3) {
+                    etatJeu = EtatJeu::Interagire;
+                    break;
+
+                }
+                else if (choix == 4) {
+                    std::cout << "Merci d'avoir jouée !" << std::endl;
+                    quitter = true;
+                    break;
+                }
+                else { std::cout << "Entrée invalide." << std::endl; continue; }
+                break;
+            }
+
+            case EtatJeu::ChoixEquipe: {
+                ChoisirEquipeGraphiquement();
+                Joueur->setEquipe(EquipePokemon); //on met l'equipe temporaire de choix poke graphe dans l'equipe du joueur
+                aUneEquipe = true;
+                ClearScreen();
+                etatJeu = EtatJeu::Accueil;
+                break;
+            }
+
+                                     //pour charger les adversaires
+            case EtatJeu::ChoixRegion: { 
+                switch (choixRegion) {
+                case 0: {
+                    std::cout << "Quelle region voulez-vous conquérire ?" << std::endl;
+                    std::cout << "1) Kanto | 2) Johto | 3) Hoenn | 4) Sinnoh " << std::endl;
+                    std::cin >> choixRegion;
+                    break;
+                }
+                case 1: {
+                    region = "Kanto";
+                    ListeAdversaires_Region("Kanto"); //instancie les adversaire de kanto
+                    etatJeu = EtatJeu::ChoixAdversaireChampions;
+
+                    break;
+                }
+                case 2: {
+                    region = "Johto";
+                    ListeAdversaires_Region("Johto");
+                    etatJeu = EtatJeu::ChoixAdversaireChampions;
+
+                    break;
+
+                }
+                case 3: {
+                    region = "Hoenn";
+                    ListeAdversaires_Region("Hoenn");
+                    etatJeu = EtatJeu::ChoixAdversaireChampions;
+
+                    break;
+
+                }
+                case 4: {
+                    region = "Sinnoh";
+                    ListeAdversaires_Region("Sinnoh");
+                    etatJeu = EtatJeu::ChoixAdversaireChampions;
+
+                    break;
+
+                }
+             
+                break;//sors du switch choix region
+                }
+                break;//sors du switch choix region
+            }
+            case EtatJeu::ChoixAdversaireChampions:
+            {
+                if (choixRegion == 0) {
+
+                    etatJeu = EtatJeu::ChoixRegion; //on a pas encore choisis la region donc on part vers ChoixRegion
+                }
+                
+                else {
+                    if (nomJoueur == "moi") { //cheat code pour aller a la ligue direct
+                        ligue = true;
+                        //maitre = true;
+                        etatJeu = EtatJeu::Ligue;
+                    }
+                    //affiche les adversaires qui sont deja instancié normalement
+                    while (etatJeu == EtatJeu::ChoixAdversaireChampions) {
+                        SpaceScreen();
+;                        std::cout << "0) Retour au Menu \n" << std::endl;
+
+                        std::cout << "Qui voulez-vous affronter ? \n" << std::endl;
+
+                        int i = 1;
+                        for (const auto& champ : listeChampions) {
+                            std::cout << i << ") " << champ << std::endl;
+                            ++i;
+                        }
+
+
+                        int choixAdv = 10;
+                        std::cin >> choixAdv;
+                        if (choixAdv > 0 && choixAdv <= listeChampions.size()) {
+                            ClearScreen();
+                            
+                            std::cout << "Vous entrez dans l'arène de " << listeChampions[choixAdv - 1].getGymnase() << " du champion " << listeChampions[choixAdv - 1].getNom() << std::endl;
+                            Adversaire = &listeChampions[choixAdv - 1]; //on fait pointer adversaire vers celui qu'on affronte
+                            if (Adversaire->getVaincu()) { Adversaire->setVaincu(false); }
+                            etatJeu = EtatJeu::Combat;
+
+                            break;
+                        }
+                        else if (choixAdv == 0) {
+                            etatJeu = EtatJeu::Accueil;
+                            break;
+                        }
+
+
+                        else {
+                            std::cout << "Entrée invalide." << std::endl;
+                            continue;
+                        }
+
+                    }
+                }
+
+           
+                break;//sors de choixAdversaire
+            }
+            case EtatJeu::Ligue: {
+                SpaceScreen();
+                std::cout << "Vous entrez dans la Ligue de " << region << std::endl;
+                while (etatJeu == EtatJeu::Ligue) {
+                    
+
+                    std::cout << "Vous sentez vous près à relever le défis du Conseil ? \n" << std::endl;
+                    std::cout << "1) Oui  |  2) Non" << std::endl;
+                    int choix;
+                    std::cin >> choix;
+                    if (choix == 2) {
+                        etatJeu = EtatJeu::Accueil;
+                        break;
+
+                    }
+                    else if (choix != 1) { std::cout << "Entrée Invalide." << std::endl; continue; }
+                    else if (choix == 1) {
+                        std::vector<bool> Porte = { true , true , true , true }; //si les portes sont ouvertes
+
+                        
+                        //affronter le conseil
+                        while ((!maitre) && (etatJeu == EtatJeu::Ligue)) {
+                            if (!Porte[0] && !Porte[1] && !Porte[2] && !Porte[3]) {
+                                maitre = true;
+                                break;
+                            }
+                            std::cout << "Vous avez devant vous 4 portes \n" << std::endl;
+                            int porte;
+                            
+                            
+                            std::cout << "|   Porte 1   |   Porte 2   |   Porte 3   |   Porte 4   |" << std::endl;
+                            std::cout << "Emprunter la porte : ";
+                            std::cin >> porte;
+
+                            if (porte < 1 || porte > 4) { std::cout << "Entrée Invalide." << std::endl; SpaceScreen(); continue; }
+                            else if (!Porte[porte - 1]) { std::cout << "La porte est fermé, on dirait que " << listeConseil[porte - 1].getNom() << " ne veux pas vous revoir" << std::endl; continue; }
+                            else if ((porte >= 1 || porte <=4 ) && Porte[porte-1] == true) {
+                                std::cout << "Vous passez la porte " << porte <<". \n" << listeConseil[porte - 1].getNom() << " vous attend." << std::endl;
+                               
+                                std::cout << "Que voulez-vous faire ?" << std::endl;
+                                std::cout << "1) Interagire avec vos Pokemon  |  2) Combattre" << std::endl;
+
+                                int action;
+                                std::cin >> action;
+                                switch(action) //si 1 on soigen d'abord puis combat si 2 on combat direct
+                                {
+                                case 1: {
+                                        while (true) {
+                                            SpaceScreen();
+
+                                            std::cout << "Votre Equipe \n" << std::endl;
+
+                                            int i = 1;
+
+                                            for (const auto& poke : *Equipe) { //bah oui on boucle sur l'equipe donc ce que pointe Equipe pas sur Equipe c'est un pointeur gros beta
+                                                std::cout << i << ") " << poke << std::endl;
+                                                ++i;
+                                            }
+
+                                            SpaceScreen();
+
+                                            std::cout << "Que voulez-vous faire ?" << std::endl;
+                                            std::cout << "0) Retour " << std::endl;
+                                            std::cout << "1) Soigner l'équipe" << std::endl;
+
+                                            int choix;
+                                            std::cin >> choix;
+                                            if (choix == 1) {
+                                                for (auto& poke : *Equipe) {
+                                                    poke.setHP(poke.getHPmax()); //on soigne le poke
+
+                                                    poke.setKO(false);
+                                                }
+                                                std::cout << "Vos Pokemon sont en pleine forme !" << std::endl;
+                                                SpaceScreen();
+
+                                                continue;
+                                            }
+                                            else if (choix == 0) { break; }
+
+                                            else { std::cout << "Entrée invalide." << std::endl; continue; }
+
+
+                                        }
+                                    }
+                                case 2:
+                                    {
+                                        Adversaire = &listeConseil[porte - 1];
+                                        std::cout << *Adversaire << std::endl;
+
+                                        Combat combat(*Joueur, *Adversaire);
+                                        if (Adversaire->getVaincu()) {
+                                            std::cout << "Vous sortez de la chambre de " << listeConseil[porte - 1].getNom() << ". La porte se ferme derriere vous." << std::endl;
+                                            Porte[porte - 1] = false; //on ferme la porte
+                                            continue;
+                                        }
+                                        else {
+                                            std::cout << "Vous avez échoué. Revenez quand vous serez à la hauteur." << std::endl;
+                                            for (auto& conseil : listeConseil) {
+
+                                                for (auto& poke : conseil.getEquipePokemon()) {
+                                                    poke.setHP(poke.getHPmax()); //on soigne les poke du conseil
+                                                    poke.setKO(false);
+
+                                                }
+                                                conseil.setVaincu(false);
+                                            }
+                                            etatJeu = EtatJeu::Accueil;
+                                            break;
+                                        }
+                                    }
+                                }
+
+
+                            }
+                            else { std::cout << "Entrée Invalide." << std::endl; continue; }
+                        }
+                        if (maitre)
+                        {
+                            std::cout << "Vous avez réussi l'épreuve du conseil, un escalier apparait devant vous, un sentiment d'effroi vous traverse. \n Voulez-vous emprunter cet escalier ? \n 1) Oui  |  2) Non" << std::endl;
+                            int esc;
+                            std::cin >> esc;
+                            if (esc == 2) {
+                                std::cout << Maitre->getNom() << " : Ne t'inquiete pas ça vas bien se passer, viens" << std::endl;
+                            }
+                            std::cout << "Vous prenez l'escalier et entrez dans une salle obscure et vide" << std::endl;
+                            std::cout << Maitre->getNom() << " : Je t'attendais " << Joueur->getNom() << "." << std::endl;
+                            SpaceScreen();
+                            std::cout << "Que voulez-vous faire ?" << std::endl;
+                            std::cout << "1) Interagire avec vos Pokemon  |  2) Combattre" << std::endl;
+                            int action;
+                            std::cin >> action;
+                            switch(action)
+                            {
+                            case 1: {
+                                    while (true) {
+                                        SpaceScreen();
+
+                                        std::cout << "Votre Equipe \n" << std::endl;
+
+                                        int i = 1;
+
+                                        for (const auto& poke : *Equipe) { //bah oui on boucle sur l'equipe donc ce que pointe Equipe pas sur Equipe c'est un pointeur gros beta
+                                            std::cout << i << ") " << poke << std::endl;
+                                            ++i;
+                                        }
+
+                                        SpaceScreen();
+
+                                        std::cout << "Que voulez-vous faire ?" << std::endl;
+                                        std::cout << "0) Retour " << std::endl;
+                                        std::cout << "1) Soigner l'équipe" << std::endl;
+
+                                        int choix;
+                                        std::cin >> choix;
+                                        if (choix == 1) {
+                                            for (auto& poke : *Equipe) {
+                                                poke.setHP(poke.getHPmax()); //on soigne le poke
+
+                                                poke.setKO(false);
+                                            }
+                                            std::cout << "Vos Pokemon sont en pleine forme !" << std::endl;
+                                            SpaceScreen();
+
+                                            continue;
+                                        }
+                                        else if (choix == 0) { break; }
+
+                                        else { std::cout << "Entrée invalide." << std::endl; continue; }
+
+
+                                    }
+                                }
+                            case 2:
+                                {
+                                std::cout << "Vous approchez du Maitre" << std::endl;
+                                    
+                                    std::cout << *Maitre << std::endl;
+                                    Combat combat(*Joueur, *Maitre);
+                                    if (!Maitre->getVaincu()) {
+                                        std::cout << "Vous avez échoué. Revenez quand vous serez à la hauteur." << std::endl;
+                                        for (auto& conseil : listeConseil) {
+
+                                            for (auto& poke : conseil.getEquipePokemon()) {
+                                                poke.setHP(poke.getHPmax()); //on soigne les poke du conseil
+                                                poke.setKO(false);
+
+                                            }
+                                            conseil.setVaincu(false);
+                                        }
+                                        for (auto& poke : Maitre->getEquipePokemon()) {
+                                            poke.setHP(poke.getHPmax()); //on soigne les poke du conseil
+                                            poke.setKO(false);
+
+                                        }
+                                        Maitre->setVaincu(false); //sers a rien mais jle laisse quand meme
+
+                                        etatJeu = EtatJeu::Accueil;
+                                        break;
+                                    }
+                                    else {
+                                        std::cout << Maitre->getNom() << " : suis moi " << Joueur->getNom() << ". Tu fais desormais partis de l'elite des dresseurs de " << region << ".\nC'est avec un immense honneur que je t'acompagne pour inscrire ton nom au Pantheon des Dresseurs !" << std::endl;
+                                        std::cout << "Veuillez entrer le nom que vous souhaitez graver dans l'histoire." << std::endl;
+                                        std::string pantheon;
+                                        std::cin >> pantheon;
+                                        std::cout << "Pantheon des Dresseurs \nMaitre Dresseurs de " << region << " : " << pantheon << std::endl;
+                                        std::cout << "Equipe Pokemon :\n";
+                                        for (auto& poke : Joueur->getEquipePokemon()) { std::cout << poke.getNom() << "\n"; }
+                                        while (true)
+                                        {
+                                            std::cout << "Appuyez sur 0 pour revenir au Menu" << std::endl;
+                                            int menu;
+                                            std::cin >> menu;
+                                            if (menu == 0) { choixRegion = 0;Joueur->clearBadge() ;ligue = false; maitre = false; etatJeu = EtatJeu::Accueil; break; } //choix region 0 pour pouvoir recommencer le jeu avec la region qu'on veut
+                                            else { std::cout << "Entrée invalide." << std::endl; continue; }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+                    }
+                    else std::cout << "Entrée Invalide." << std::endl; continue;
+                   
+                   
+
+
+                }
+                break;//sors de ligue
+            }
+
+            case EtatJeu::Combat:
+            {
+
+                Combat combat(*Joueur, *Adversaire);
+                etatJeu = EtatJeu::Accueil;
+                SpaceScreen();
+                break; //sors de combat
+            }
+
+            case EtatJeu::Interagire: {
+                if (!aUneEquipe) {
+                    std::cout << "Vous n'avez pas encore de Pokemon !" << std::endl;
+                    etatJeu = EtatJeu::Accueil;
+                    break;
+                }
+                while (etatJeu == EtatJeu::Interagire) {
+                    SpaceScreen();
+
+                    std::cout << "Votre Equipe \n" << std::endl;
+
+                    int i = 1;
+
+                    for (const auto& poke : *Equipe) { //bah oui on boucle sur l'equipe donc ce que pointe Equipe pas sur Equipe c'est un pointeur gros beta
+                        std::cout << i << ") " << poke << std::endl;
+                        ++i;
+                    }
+
+                    SpaceScreen();
+
+                    std::cout << "Que voulez-vous faire ?" << std::endl;
+                    std::cout << "0) Menu" << std::endl;
+                    std::cout << "1) Soigner l'équipe" << std::endl;
+                    for (int j = 0; j < Joueur->getEquipePokemon().size(); ++j) {
+                        std::cout << j+2 << ") Sortir " << Joueur->getEquipePokemon()[j].getNom() << " de sa pokeball" << std::endl;
+                    }
+                    int choix;
+                    std::cin >> choix;
+                    if (choix == 1) {
+                        for (auto& poke : *Equipe) {
+                            poke.setHP(poke.getHPmax()); //on soigne le poke
+
+                            poke.setKO(false);
+                        }
+                        std::cout << "Vos Pokemon sont en pleine forme !" << std::endl;
+                        SpaceScreen();
+
+                        continue;
+                    }
+                    else if (choix == 0) {
+                        etatJeu = EtatJeu::Accueil;
+                        break;
+                    }
+                    else if (choix > 1 || choix < Joueur->getEquipePokemon().size()+1) {
+                        std::cout << "vous sortez " << Joueur->getEquipePokemon()[choix - 2].getNom() << " de sa pokeball, il gambade à vos cotés puis retourne dans sa boite." << std::endl;
+                        SpaceScreen();
+
+                        continue;
+                    }
+                    else { std::cout << "Entrée invalide." << std::endl; continue; }
+
+                
+                    }
+                    etatJeu = EtatJeu::Accueil;
+                    break; //sors de Interagire
+                }
+            
+
+                break; //break final du switch etat jeu
+
+            }//fin du switch etatjeu
+                
+        }//fin de while !quitter
+
+
+        
+
+    }//fin de joueur()
+
+
+  
+
+
+    
+    //affiche l'équipe et te demande si tu veux leurs parler ou les soigner ou changer l'ordre
+
+    void InteragireDresseur() {
+
+    }
+
+    void ChoisirEquipeGraphiquement() {
+        InitWindow(1000, 600, "Choix de l'équipe");
         SetTargetFPS(60);
-//je met tout dans le while pour l'instant mais je vais séparer en diff fonction comme ça ya que des appels de fonctions dans la bu=oucle
 
+        std::string recherche = "";
+        bool searchBoxActive = false;
+        Rectangle searchBox = { 100, 60, 400, 30 };
 
-        while (!WindowShouldClose()) {
+        
 
-
+        while (!WindowShouldClose() && etatJeu == EtatJeu::ChoixEquipe) {
             BeginDrawing();
             ClearBackground(RAYWHITE);
-            Rectangle boutonAccueil = { 10, 10, 100, 30 };
-            Vector2 mouse = GetMousePosition(); //lon prend la position de la souris
 
-            if (etatJeu != EtatJeu::Accueil) {
-                DrawRectangleRec(boutonAccueil, LIGHTGRAY);
-                DrawText("Accueil", boutonAccueil.x + 10, boutonAccueil.y + 8, 18, BLACK);
 
-                if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(mouse, boutonAccueil)) {
-                    etatJeu = EtatJeu::Accueil;
+            //barre de recherche
+            DrawRectangleRec(searchBox, LIGHTGRAY);
+            DrawText(("Recherche : " + recherche).c_str(), searchBox.x + 5, searchBox.y + 5, 20, BLACK);
+
+            // Clic dans la zone de recherche
+            if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+                searchBoxActive = CheckCollisionPointRec(GetMousePosition(), searchBox);
+            }
+
+            // Saisie clavier dans la barre de recherche
+            if (searchBoxActive) {
+                int key = GetCharPressed();
+                while (key > 0) {
+                    if (key >= 32 && key <= 125) {  // caractères imprimables
+                        recherche += (char)key;
+                    }
+                    key = GetCharPressed();
+                }
+
+                if (IsKeyPressed(KEY_BACKSPACE) && !recherche.empty()) {
+                    recherche.pop_back();
                 }
             }
 
-            switch (etatJeu) {
-                
-            case EtatJeu::Accueil:{
-                DrawText("Pokemon - Le Retour de Axel le maudis", 120, 50, 30, BLACK);
 
-                //on def les boutons
-
-                Rectangle boutonEquipe = { 50, 150, 200, 50 };  
-                Rectangle boutonCombat = { 50, 230, 200, 50 };
-                Rectangle boutonQuitter = { 50, 310, 200, 50 };
-
-                //on les dessines
-
-
-                DrawRectangleRec(boutonEquipe, LIGHTGRAY);
-                DrawRectangleRec(boutonCombat, LIGHTGRAY);
-                DrawRectangleRec(boutonQuitter, LIGHTGRAY);
-
-                DrawText("Choisir équipe", boutonEquipe.x + 20, boutonEquipe.y + 15, 20, BLACK);
-                DrawText("Combattre", boutonCombat.x + 40, boutonCombat.y + 15, 20, BLACK);
-                DrawText("Quitter", boutonQuitter.x + 60, boutonQuitter.y + 15, 20, BLACK);
-
-                // Position et dimensions
-                int equipeX = 500; // Position X à droite
-                int equipeY = 150; // Position Y du premier Pokémon
-                int pokemonHeight = 50; // Hauteur de chaque case
-                int caseWidth = 200;
-                int caseHeight = 40;
-
-                // Titre "Equipe Pokémon"
-                DrawText("Equipe Pokémon :", equipeX, equipeY - 40, 20, BLACK);
-
-                // Affiche toujours 6 cases, même si certaines sont vides
-                for (int i = 0; i < 6; i++) {
-                    Rectangle zonePokemon = { equipeX, equipeY + i * pokemonHeight, (float)caseWidth, (float)caseHeight };
-
-                    if (i < nomsPokemonsChoisie.size()) {
-                        // Case remplie : Pokémon sélectionné
-                        DrawRectangleRec(zonePokemon, GREEN);
-                        DrawText(nomsPokemonsChoisie[i].c_str(), equipeX + 10, equipeY + i * pokemonHeight + 10, 20, BLACK);
-                    }
-                    else {
-                        // Case vide : rectangle gris clair
-                        DrawRectangleRec(zonePokemon, LIGHTGRAY);
-                    }
-                }
-
-
-                //on regarde où la souris pointe quand on clique et on attribut un etat a ce clique
-                
-                if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-                    if (CheckCollisionPointRec(mouse, boutonEquipe)) {
-                        etatJeu = EtatJeu::ChoixEquipe;
-                    }
-                    else if (CheckCollisionPointRec(mouse, boutonCombat)) {
-                        etatJeu = EtatJeu::Combat;
-                    }
-                    else if (CheckCollisionPointRec(mouse, boutonQuitter)) {
-                        CloseWindow();
-                        return;
-                    }
-                }
-
-                break;
-                }
-
-          
-
-            case EtatJeu::ChoixEquipe:{
+         
 
                 DrawText("Choisissez votre équipe (1 à 6 Pokémon)", 100, 20, 20, BLACK);
 
                 Vector2 mouse = GetMousePosition();
                 const int visibleHeight = 440; // Espace visible entre 60 et 500
                 const int totalHeight = listePokemonDispo.size() * 50;
-                const int yMin = 60;
+                const int yMin = 100;
 
                 // Scrollbar dimensions
                 Rectangle scrollBarArea = { 720, yMin, 20, (float)visibleHeight };
@@ -223,9 +722,18 @@ public:
                 }
 
                 // Affichage de la liste avec scroll
+                // Filtrage en fonction de la recherche
+                std::vector<PokemonData> pokemonsFiltres;
+                for (const auto& p : listePokemonDispo) {
+                    if (recherche.empty() || p.nom.find(recherche) != std::string::npos) {
+                        pokemonsFiltres.push_back(p);
+                    }
+                }
+
                 int y = yMin - (int)scrollOffset;
-                for (int i = 0; i < listePokemonDispo.size(); i++) {
-                    const PokemonData& p = listePokemonDispo[i];
+                for (int i = 0; i < pokemonsFiltres.size(); i++) {
+                    const PokemonData& p = pokemonsFiltres[i];
+
                     Rectangle zone = { 100, static_cast<float>(y), 600, 40 };
 
                     if (zone.y + zone.height > yMin && zone.y < 500) {
@@ -237,7 +745,7 @@ public:
                         DrawText(ligne.c_str(), 110, y + 10, 20, BLACK);
 
                         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(mouse, zone)) {
-                            if (nomsPokemonsChoisie.size() < 6 ) {
+                            if (nomsPokemonsChoisie.size() < 6) {
                                 nomsPokemonsChoisie.push_back(p.nom);
                             }
                         }
@@ -245,6 +753,7 @@ public:
 
                     y += 50;
                 }
+
                 // Affichage des Pokémon sélectionnés à droite
                 const int xEquipe = 780;  // Position des Pokémon sélectionnés à droite
                 DrawText("Équipe choisie:", xEquipe, 20, 20, BLACK);
@@ -291,51 +800,14 @@ public:
                 DrawRectangleRec(scrollBarArea, GRAY);
                 DrawRectangleRec(scrollThumb, DARKGRAY);
 
-                break;
-
-
-               
-            }
-
-            case EtatJeu::Combat:
-            {
-                DrawText("Écran de combat (à coder)", 100, 100, 20, DARKGRAY);
-                break;
-            }
-
-            default:
-                break;
-            }
-
-
             
 
-
             EndDrawing();
-        } // fin du whilde
+        }
 
         CloseWindow();
-    }//fin de joueur()
-
-    void CreationEquipe() {
-
     }
 
-    void ChoixAdversaire() {
-
-    }
-
-    void Bagarre() {
-    
-    }
-
-    void InteragirePokemon() {
-
-    }
-
-    void InteragireDresseur() {
-
-    }
 
 
 
@@ -344,42 +816,16 @@ public:
 };
 
 
-
-
-
-
-
-
-
-//Leaders Ondine = defLeaders("Ondine");
-
-//on est ibkigé de faire la boucle whilde de raylib parce qu'on est censé pouoir faire plusieurs combat
-//suffis juste de renvoyer les infos de la boucle de combat a raylib!!!!! pas besoin de se casser les couilles, raylib affiche juste les infos de la logique
-// 
-// 
-// Pokemon Strassie = InstancePokemon("Strassie");
-
-//on est censé 
-
 int main() {
 
-    
+    Jeu zepartis("Pokemon - Le Retour de Axel le Maudit");
+    //Joueurs vico = defJoueur("vico", { "Kaiminus" });
+    //Maitres Cynthia = defMaitres("Cynthia", "Sinnoh");
+  //  Combat combat(vico, Cynthia);
 
-   
-
-    Joueurs Victor = defJoueur("Victor", { "Mia" , "Marius" , "Kaiminus" }); 
-    Leaders Pierre = defLeaders("Pierre");
-
-    //std::cout << Victor << std::endl;
-
-    //Combat combat(Victor, Pierre);
-
-    Jeu zepartis;
-
- 
     return 0;
 
-    
+
 
 }
 
