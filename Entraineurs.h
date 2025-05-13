@@ -49,10 +49,10 @@ public:
 	virtual std::ostream& affichage(std::ostream& os) const {
 		os << getNom() << " | Equipe : [";
 		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
-			os << poke.getNom() << " ";
+			os << poke.getNom() << " " << poke.getHP() << "/" << poke.getHPmax() << " | ";
 
 		}
-		os << "] , vaincu : " << getVaincu();
+		os << "] , vaincu : " << getVaincu() << std::endl;
 		return os;
 	}
 
@@ -63,6 +63,7 @@ public:
 		return e.affichage(os); //on a l'appel polymorphe ici, ça marche, je suis un boss bordel, reste a override dans les ss classes
 	}
 
+	
 	
 
 
@@ -176,10 +177,10 @@ public:
 	virtual std::ostream& affichage(std::ostream& os) const override {
 		os << getNom() << " | Equipe : [";
 		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
-			os << poke.getNom() << " ";
+			os << poke.getNom() << " " << poke.getHP() << "/" << poke.getHPmax() << " | ";
 
 		}
-		os << "] , vaincu : " << getVaincu() << " | Badge : " << Badge << " | Gymnase : " << Gymnase;
+		os << "] , vaincu : " << getVaincu() << " | Badge : " << Badge << " | Gymnase : " << Gymnase << std::endl;
 		return os;
 	}
 
@@ -266,15 +267,15 @@ public:
 		}
 	}
 
-	//afficher les maitres
+	//afficher les maitres 
 
 	virtual std::ostream& affichage(std::ostream& os) const override {
 		os <<"Maitre " << getNom() << " | Equipe : [";
 		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
-			os << poke.getNom() << " ";
+			os << poke.getNom() << " " << poke.getHP() << "/" << poke.getHPmax() << " | ";
 
 		}
-		os << "] , vaincu : " << getVaincu();
+		os << "] , vaincu : " << getVaincu() << std::endl;
 		return os;
 	}
 
@@ -349,6 +350,415 @@ public:
 
 };
 
+class Conseil : public Entraineurs {
+private:
+	std::string specialite;
+
+public:
+
+
+	Conseil(std::string nom,
+		std::vector<Pokemon> Equipe , std::string specialite) : Entraineurs(nom, Equipe) , specialite(specialite) {}
+
+	//afficher les Membres du Conseil 
+
+	virtual std::ostream& affichage(std::ostream& os) const override {
+		os << "Membre du Conseil " << getNom() << " | Equipe : [";
+		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
+			os << poke.getNom() << " " << poke.getHP() << "/" << poke.getHPmax() << " | ";
+
+		}
+		os << "] , vaincu : " << getVaincu() << std::endl;
+		return os;
+	}
+
+
+	void parler_debutCombat(Entraineurs& ennemis) override {
+		int random = rand() % 3;
+		std::string nomEnnemi = ennemis.getNom();
+
+		if (specialite == "Spectre") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Bienvenue dans l’au-delà, " << nomEnnemi << "... Les esprits attendent leur danse." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Tu t’aventures dans un monde que peu osent toucher. Entends-tu les murmures ?" << std::endl; break;
+			case 2: std::cout << nom << " : " << "Tu fais face à l’invisible. Espérons que ton cœur ne vacille pas dans la brume." << std::endl; break;
+			}
+		}
+		else if (specialite == "Feu") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Les flammes rugissent d’impatience. Viens te brûler, " << nomEnnemi << "." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Je suis l’éruption, le brasier final. Montre-moi si ton esprit résiste aux cendres." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Chaque flamme est une épreuve. Seras-tu consumé ou transformé ?" << std::endl; break;
+			}
+		}
+		else if (specialite == "Eau") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Les flots sont traîtres. Ils emportent les imprudents sans avertir." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Comme l’eau, je m’adapte, je glisse, je terrasse. Que feras-tu ?" << std::endl; break;
+			case 2: std::cout << nom << " : " << "Ton courage sera-t-il submergé ou flottera-t-il ? Allons voir." << std::endl; break;
+			}
+		}
+		else if (specialite == "Plante") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Les racines de la victoire s’enfoncent profondément. Es-tu prêt à les arracher ?" << std::endl; break;
+			case 1: std::cout << nom << " : " << "Je suis la nature indomptable. Silencieuse, mais implacable." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Les lianes se resserrent. Le duel commence." << std::endl; break;
+			}
+		}
+		else if (specialite == "Glace") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Un frisson t’envahit ? C’est normal. L’hiver n’a pas de pitié." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Mon cœur est gelé, mes Pokémon aussi. Voyons si le tien résiste au froid." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Le givre a figé tant de rêves. Seras-tu le prochain, " << nomEnnemi << " ?" << std::endl; break;
+			}
+		}
+		else if (specialite == "Roche") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Ma volonté est aussi dure que la pierre. Viens t’y briser." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Même le temps ne peut éroder ma défense. Tente ta chance." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Comme une avalanche, je ne recule jamais." << std::endl; break;
+			}
+		}
+		else if (specialite == "Sol") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "La terre tremble à mon approche. Que restera-t-il de toi, " << nomEnnemi << " ?" << std::endl; break;
+			case 1: std::cout << nom << " : " << "Les fondations de ton espoir vont s'effondrer. Prépare-toi." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Je suis l'érosion, la fin de toute chose stable." << std::endl; break;
+			}
+		}
+		else if (specialite == "Électrik") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "L’air crépite. Ressens-tu cette tension ? C’est la tienne." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Un éclair ne prévient jamais. Seras-tu rapide, ou juste foudroyé ?" << std::endl; break;
+			case 2: std::cout << nom << " : " << "Je suis l’étincelle avant le chaos. Es-tu prêt ?" << std::endl; break;
+			}
+		}
+		else if (specialite == "Combat") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Pas de place pour les faibles ici. Montre-moi ton poing !" << std::endl; break;
+			case 1: std::cout << nom << " : " << "Chaque mouvement compte. Chaque erreur coûte cher." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Prépare-toi. Ce combat ne se réglera pas par les mots." << std::endl; break;
+			}
+		}
+		else if (specialite == "Acier") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Frappe aussi fort que tu veux. Mon acier ne ploie pas." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Je suis le mur froid et tranchant. Viens t’y heurter." << std::endl; break;
+			case 2: std::cout << nom << " : " << "La force brute ne suffit pas à briser la maîtrise." << std::endl; break;
+			}
+		}
+		else if (specialite == "Ténèbres") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "La lumière ne t’accompagnera pas ici. Bienvenue dans l’ombre." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Je combats sans pitié, sans remords. Montre-moi ce que vaut ta morale." << std::endl; break;
+			case 2: std::cout << nom << " : " << "La ruse, la peur, la pression… voilà mes armes. As-tu les tiennes ?" << std::endl; break;
+			}
+		}
+		else if (specialite == "Insecte") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Petit mais féroce. Tel est le monde que tu vas affronter." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Mes alliés rampent, volent, piquent… et gagnent." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Ne sous-estime pas les insectes. Beaucoup l’ont payé cher." << std::endl; break;
+			}
+		}
+		else if (specialite == "Vol") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Je domine les cieux. Es-tu prêt à tomber de haut ?" << std::endl; break;
+			case 1: std::cout << nom << " : " << "Mon style est rapide, élégant, tranchant. Comme le vent." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Tu crois pouvoir me suivre ? Même ton regard ne me rattrapera pas." << std::endl; break;
+			}
+		}
+		else if (specialite == "Poison") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Un simple contact… et déjà ton avenir s’assombrit." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Lentement, mais sûrement, mon poison fait son œuvre." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Tu crois pouvoir survivre à ce duel ? Rien n’est moins sûr." << std::endl; break;
+			}
+		}
+		else if (specialite == "Psy") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "J’ai déjà anticipé chaque mouvement. Le combat ne fait que commencer." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Ton esprit va vaciller. Mon pouvoir est au-delà du visible." << std::endl; break;
+			case 2: std::cout << nom << " : " << "La pensée est plus tranchante que l’acier. Prouve que tu es éveillé." << std::endl; break;
+			}
+		}
+		else if (specialite == "Dragon") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Les légendes prennent vie ici. Affronte le rugissement des dragons." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Tu es fort… mais les dragons ne respectent que l’élite." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Je suis la flamme ancestrale, la terreur ailée. Tiens bon, si tu peux." << std::endl; break;
+			}
+		}
+		else if (specialite == "Fée") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Ne te laisse pas tromper par les apparences. La magie frappe fort." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Derrière le sourire se cache un pouvoir redoutable. Approche donc." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Les contes ne finissent pas toujours bien. Le tien s’arrête peut-être ici." << std::endl; break;
+			}
+		}
+		else if (specialite == "Normal") {
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Sous-estimer l’ordinaire, c’est lui donner le pouvoir de surprendre." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Pas besoin de dons ou de magie pour vaincre. Juste de la maîtrise." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Le normal devient extraordinaire entre les bonnes mains." << std::endl; break;
+			}
+		}
+		else {
+			// Fallback si type inconnu
+			switch (random) {
+			case 0: std::cout << nom << " : " << "Tu as franchi les épreuves… mais celle-ci n’a rien de normal." << std::endl; break;
+			case 1: std::cout << nom << " : " << "Peu importe ton parcours. Ce combat décidera de tout." << std::endl; break;
+			case 2: std::cout << nom << " : " << "Ici, la gloire ou l’oubli t’attendent. Choisis bien tes prochains gestes." << std::endl; break;
+			}
+		}
+	}
+
+
+	virtual void parler_defaiteCombat(Entraineurs& ennemis) override {
+		int random = rand() % 2;
+		std::string nomEnnemi = ennemis.getNom();
+
+		if (specialite == "Spectre") {
+			if (random == 0)
+				std::cout << nom << " : " << "Même les âmes errantes ont leur fin... Tu as su apaiser mes esprits, " << nomEnnemi << "." << std::endl;
+			else
+				std::cout << nom << " : " << "Le voile s’est levé. Ma défaite est un murmure dans l’éternité..." << std::endl;
+		}
+		else if (specialite == "Feu") {
+			if (random == 0)
+				std::cout << nom << " : " << "Mes flammes se sont éteintes... Tu as dompté l’incendie, " << nomEnnemi << "." << std::endl;
+			else
+				std::cout << nom << " : " << "La cendre est tout ce qu’il reste de mon arrogance. Bravo." << std::endl;
+		}
+		else if (specialite == "Eau") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as dompté la vague... Je me retire, comme la marée." << std::endl;
+			else
+				std::cout << nom << " : " << "Mon courant s’est tari. Tu es plus fluide encore que l’eau elle-même." << std::endl;
+		}
+		else if (specialite == "Plante") {
+			if (random == 0)
+				std::cout << nom << " : " << "Mes racines n’étaient pas assez profondes. Tu as fauché ma forêt." << std::endl;
+			else
+				std::cout << nom << " : " << "Même les plus vieux chênes tombent un jour. Aujourd’hui, c’était moi." << std::endl;
+		}
+		else if (specialite == "Glace") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as brisé la glace… et avec elle, ma défense." << std::endl;
+			else
+				std::cout << nom << " : " << "Mon blizzard s’est dissipé. Ta chaleur l’a vaincu." << std::endl;
+		}
+		else if (specialite == "Roche") {
+			if (random == 0)
+				std::cout << nom << " : " << "Même les montagnes s’effondrent. Tu as fendu mon roc." << std::endl;
+			else
+				std::cout << nom << " : " << "La pierre a cédé… mais je renaîtrai plus solide encore." << std::endl;
+		}
+		else if (specialite == "Sol") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as ébranlé mes fondations. Le sol a parlé : tu es digne." << std::endl;
+			else
+				std::cout << nom << " : " << "L’érosion a eu raison de moi aujourd’hui. Sois digne de ta victoire." << std::endl;
+		}
+		else if (specialite == "Électrik") {
+			if (random == 0)
+				std::cout << nom << " : " << "Ma tension est tombée. L’éclair t’appartient." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu as su canaliser l’énergie. Le choc fut fatal." << std::endl;
+		}
+		else if (specialite == "Combat") {
+			if (random == 0)
+				std::cout << nom << " : " << "Un bon coup, bien placé. Tu m’as vaincu avec honneur." << std::endl;
+			else
+				std::cout << nom << " : " << "J’ai chuté, mais je me relèverai. Le combat ne s’arrête jamais." << std::endl;
+		}
+		else if (specialite == "Acier") {
+			if (random == 0)
+				std::cout << nom << " : " << "Même l’acier a ses failles. Tu les as trouvées, " << nomEnnemi << "." << std::endl;
+			else
+				std::cout << nom << " : " << "Mon armure a cédé... Ton tranchant était supérieur." << std::endl;
+		}
+		else if (specialite == "Ténèbres") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as illuminé mes ténèbres… mais n’oublie pas : l’ombre revient toujours." << std::endl;
+			else
+				std::cout << nom << " : " << "La ruse n’a pas suffi. Bien joué, " << nomEnnemi << "." << std::endl;
+		}
+		else if (specialite == "Insecte") {
+			if (random == 0)
+				std::cout << nom << " : " << "Même la colonie la plus unie peut être dispersée. Tu m’as vaincu." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu as su frapper là où ça fait mal. Bien joué, " << nomEnnemi << "." << std::endl;
+		}
+		else if (specialite == "Vol") {
+			if (random == 0)
+				std::cout << nom << " : " << "Mes ailes se sont brisées dans la tempête. Ce jour est tien." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu m’as ramené au sol… mais je m’élèverai à nouveau." << std::endl;
+		}
+		else if (specialite == "Poison") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu m’as purgé de toute menace. Le poison n’a pas agi." << std::endl;
+			else
+				std::cout << nom << " : " << "Mon venin s’est évaporé. Tu es plus résistant que je ne le pensais." << std::endl;
+		}
+		else if (specialite == "Psy") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as percé mon esprit… Peu y arrivent." << std::endl;
+			else
+				std::cout << nom << " : " << "Mon plan s’est écroulé sous ta volonté. Impressionnant." << std::endl;
+		}
+		else if (specialite == "Dragon") {
+			if (random == 0)
+				std::cout << nom << " : " << "Même les dragons peuvent être terrassés. Tu t’es hissé parmi les légendes." << std::endl;
+			else
+				std::cout << nom << " : " << "Le rugissement s’est éteint… pour cette fois." << std::endl;
+		}
+		else if (specialite == "Fée") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as dissipé mon enchantement. Ce duel t’appartient." << std::endl;
+			else
+				std::cout << nom << " : " << "Les contes parlent de héros… aujourd’hui, c’était toi." << std::endl;
+		}
+		else if (specialite == "Normal") {
+			if (random == 0)
+				std::cout << nom << " : " << "Parfois, la simplicité est la plus belle des forces. Tu as bien combattu." << std::endl;
+			else
+				std::cout << nom << " : " << "Ma normalité n’a pas suffi à contrer ton excellence." << std::endl;
+		}
+		else {
+			// Fallback générique
+			if (random == 0)
+				std::cout << nom << " : " << "La défaite fait partie du voyage. Aujourd’hui, c’est ton triomphe." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu as franchi mon obstacle. N’oublie pas ce moment." << std::endl;
+		}
+	}
+
+	virtual void parler_victoireCombat(Entraineurs& ennemis) override {
+		int random = rand() % 2;
+		std::string nomEnnemi = ennemis.getNom();
+
+		if (specialite == "Spectre") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu t’es aventuré dans l’au-delà… mais les ombres m’obéissent toujours." << std::endl;
+			else
+				std::cout << nom << " : " << "Les esprits ont tranché, " << nomEnnemi << ". Ce n’était pas ton heure." << std::endl;
+		}
+		else if (specialite == "Feu") {
+			if (random == 0)
+				std::cout << nom << " : " << "Ton ambition s’est consumée dans mes flammes." << std::endl;
+			else
+				std::cout << nom << " : " << "Le brasier que j’entretiens est éternel. Tu n’étais qu’une étincelle." << std::endl;
+		}
+		else if (specialite == "Eau") {
+			if (random == 0)
+				std::cout << nom << " : " << "Comme tant d’autres, tu as été emporté par ma marée." << std::endl;
+			else
+				std::cout << nom << " : " << "Ton feu s’est éteint dans mes flots, " << nomEnnemi << "." << std::endl;
+		}
+		else if (specialite == "Plante") {
+			if (random == 0)
+				std::cout << nom << " : " << "Ma nature est indomptable. Tu as tenté de couper mes racines, en vain." << std::endl;
+			else
+				std::cout << nom << " : " << "La forêt m’a offert sa force. Tu n’étais qu’un souffle face à l’ouragan." << std::endl;
+		}
+		else if (specialite == "Glace") {
+			if (random == 0)
+				std::cout << nom << " : " << "Ton ardeur s’est figée dans mon blizzard." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu n’as pas su survivre au froid éternel." << std::endl;
+		}
+		else if (specialite == "Roche") {
+			if (random == 0)
+				std::cout << nom << " : " << "Je suis inébranlable. Tu t’es brisé sur mon mur." << std::endl;
+			else
+				std::cout << nom << " : " << "Ma victoire est gravée dans la pierre." << std::endl;
+		}
+		else if (specialite == "Sol") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as été englouti par les forces souterraines." << std::endl;
+			else
+				std::cout << nom << " : " << "Ma puissance vient du sol. Tu n’as pas su y résister." << std::endl;
+		}
+		else if (specialite == "Électrik") {
+			if (random == 0)
+				std::cout << nom << " : " << "Un éclair t’a frappé, " << nomEnnemi << ", et tu n’as pas résisté." << std::endl;
+			else
+				std::cout << nom << " : " << "Ma victoire fut instantanée… comme un coup de foudre." << std::endl;
+		}
+		else if (specialite == "Combat") {
+			if (random == 0)
+				std::cout << nom << " : " << "Ma discipline a surpassé ta fougue." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu t’es battu avec cœur, mais la technique l’a emporté." << std::endl;
+		}
+		else if (specialite == "Acier") {
+			if (random == 0)
+				std::cout << nom << " : " << "Ma volonté est d’acier. Tu n’as pas réussi à la briser." << std::endl;
+			else
+				std::cout << nom << " : " << "Je suis forgé pour vaincre. Ta défaite était inévitable." << std::endl;
+		}
+		else if (specialite == "Ténèbres") {
+			if (random == 0)
+				std::cout << nom << " : " << "Les ombres t’ont enveloppé. Tu n’as pas trouvé la sortie." << std::endl;
+			else
+				std::cout << nom << " : " << "La nuit est mon domaine. Toi, tu n’étais qu’un rêve passager." << std::endl;
+		}
+		else if (specialite == "Insecte") {
+			if (random == 0)
+				std::cout << nom << " : " << "Comme une proie prise au piège… Tu n’avais aucune chance." << std::endl;
+			else
+				std::cout << nom << " : " << "Ma stratégie était millimétrée, comme une ruche bien ordonnée." << std::endl;
+		}
+		else if (specialite == "Vol") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu n’as pas su suivre mon vol. Je suis resté hors de portée." << std::endl;
+			else
+				std::cout << nom << " : " << "Mes ailes m’ont porté au sommet. Tu restes cloué au sol." << std::endl;
+		}
+		else if (specialite == "Poison") {
+			if (random == 0)
+				std::cout << nom << " : " << "Mon poison a lentement agi. Tu n’en avais pas conscience avant qu’il soit trop tard." << std::endl;
+			else
+				std::cout << nom << " : " << "Un affrontement toxique, et tu en es sorti affaibli." << std::endl;
+		}
+		else if (specialite == "Psy") {
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as combattu avec ton corps. Moi, avec mon esprit. Et j’ai gagné." << std::endl;
+			else
+				std::cout << nom << " : " << "Ton esprit était trop prévisible. Je l’ai dépassé sans effort." << std::endl;
+		}
+		else if (specialite == "Dragon") {
+			if (random == 0)
+				std::cout << nom << " : " << "Le rugissement des dragons a encore résonné plus fort que ta volonté." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu as tenté l’ascension… mais tu n’étais pas prêt à affronter les cieux." << std::endl;
+		}
+		else if (specialite == "Fée") {
+			if (random == 0)
+				std::cout << nom << " : " << "Même les rêves les plus brillants se terminent. Le conte ne parlait pas de toi." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu croyais en la magie ? Je suis celle qui la contrôle." << std::endl;
+		}
+		else if (specialite == "Normal") {
+			if (random == 0)
+				std::cout << nom << " : " << "La normalité cache une puissance insoupçonnée. Tu l’as apprise à tes dépens." << std::endl;
+			else
+				std::cout << nom << " : " << "Tu t’attendais à de la simplicité. J’ai répondu par l’efficacité." << std::endl;
+		}
+		else {
+			// Fallback générique
+			if (random == 0)
+				std::cout << nom << " : " << "Tu as donné le meilleur de toi-même, " << nomEnnemi << "... mais ce n’était pas suffisant." << std::endl;
+			else
+				std::cout << nom << " : " << "Une autre tentative, une autre chute. Prépare-toi mieux pour la prochaine fois." << std::endl;
+		}
+	}
+
+
+};
+
 
 class Joueurs : public Entraineurs {
 private:
@@ -379,6 +789,7 @@ public:
 	void Victoire() { nbVictoires++; }
 	void Defaite() { nbDefaites++; }
 
+	std::vector<std::string> getBadges() const { return Badges; }
 
 
 
@@ -388,10 +799,10 @@ public:
 	virtual std::ostream& affichage(std::ostream& os) const override {
 		os << getNom() << " | Equipe : [";
 		for (const Pokemon& poke : Equipe) { //oublis pas le const pokemon parce que sinon tu dis que tu peux modif le pokemon or ca modif l'equipe or on a dit que l'entraiineur est const donc on peut pas le modif
-			os << poke.getNom() << " ";
+			os << poke.getNom() << " " << poke.getHP() << "/" << poke.getHPmax() << " | ";
 
 		}
-		os << "] , vaincu : " << getVaincu() << " | nb de Badges : " << nbBadges << " | nb de Victoires : " << nbVictoires << " | nb de Défaites : " << nbDefaites;
+		os << "]  | Badges : " << Badges << " | nb de Victoires : " << nbVictoires << " | nb de Défaites : " << nbDefaites << std::endl;
 		return os;
 	}
 	
@@ -607,6 +1018,10 @@ public:
 			nbBadges++;
 			std::cout << nom << " obtient le badge " << badge << " !" << std::endl;
 		}
+	}
+
+	void clearBadge() {
+		Badges.clear();
 	}
 };
 
